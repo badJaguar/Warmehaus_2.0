@@ -11,6 +11,7 @@ const routes: Routes = [
       { path: 'warmehaus/mat-160Watt', component: WarmingMat160WComponent },
       { path: 'warmehaus/mat-200Watt', component: WarmingMat200WComponent },
       { path: 'warmehaus/cable-11Watt', component: Cab11WComponent },
+      
       // { path: 'cab-14W-thin', component: Cab14WThinComponent },
       // { path: 'cab-20W-uv-protection', component: Cab20WUvComponent },
       // { path: 'termostats', component: TermostatComponent },
