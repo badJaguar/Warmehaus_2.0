@@ -12,8 +12,8 @@ import { ELEMENT_DATA_TERMOSTATS } from '../../../../data/termostats.data';
   styleUrls: ['./termostats.component.scss'],
   animations: [
     trigger('detailExpand', [
-      state('collapsed', style({height: '0', minHeight: '0', display: 'none'})),
-      state('expanded', style({height: '*'})),
+      state('collapsed', style({ height: '0', minHeight: '0', display: 'none' })),
+      state('expanded', style({ height: '*' })),
       transition('expanded <=> collapsed', animate('0ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
     ]),
   ],

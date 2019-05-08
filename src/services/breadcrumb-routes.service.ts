@@ -19,12 +19,10 @@ export class BreadcrumbRoutesService {
           { name: 'Двужильный кабель 20ВТ UV', path: './cable-20Watt' },
           { name: 'Инфракрасная плёнка', path: './films' },
           { name: 'Антиобледенение', path: './anti-icing' },
+          { name: 'Терморегуляторы', path: './termostats' },
         ]
       },
       // { name: 'Главная / Контакты', path: './contacts'},
-
-      //     { name: 'Терморегуляторы', path: './termostats' },
-      //     { name: 'Антиобледенение', path: './anti-icing' },
       //   ]
       // },
     ];
