@@ -40,6 +40,7 @@ import { WarmingMat200WComponent } from './body-part/warmehaus/warming-mat200-w/
 import { Cab11WComponent } from './body-part/warmehaus/cab11-w/cab11-w.component';
 import { Cab14WComponent } from './body-part/warmehaus/cab14-w/cab14-w.component';
 import { Cab20WComponent } from './body-part/warmehaus/cab20-w/cab20-w.component';
+import { FilmsComponent } from './body-part/warmehaus/films/films.component';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { Cab20WComponent } from './body-part/warmehaus/cab20-w/cab20-w.component
     WarmingMat200WComponent,
     Cab11WComponent,
     Cab14WComponent,
-    Cab20WComponent
+    Cab20WComponent,
+    FilmsComponent
   ],
   imports: [
     AppRoutingModule,
