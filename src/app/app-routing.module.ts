@@ -14,6 +14,7 @@ import { ContactsComponent } from './body-part/warmehaus/contacts/contacts.compo
 const routes: Routes = [
   { path: 'home', component: StartPageComponent },
   { path: 'contacts', component: ContactsComponent },
+
   { path: 'warmehaus/mat-160Watt', component: WarmingMat160WComponent },
   { path: 'warmehaus/mat-200Watt', component: WarmingMat200WComponent },
   { path: 'warmehaus/cable-11Watt', component: Cab11WComponent },
