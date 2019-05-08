@@ -1,4 +1,4 @@
-export interface IAntiIcing {
+export interface IMaterialExpanding {
   id: number;
   name: string;
   nominal: string;

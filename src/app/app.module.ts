@@ -43,6 +43,7 @@ import { Cab20WComponent } from './body-part/warmehaus/cab20-w/cab20-w.component
 import { FilmsComponent } from './body-part/warmehaus/films/films.component';
 import { AnitIcingComponent } from './body-part/warmehaus/anit-icing/anit-icing.component';
 import { SafeHtmlPipe } from './safe-html';
+import { TermostatsComponent } from './body-part/warmehaus/termostats/termostats.component';
 
 
 @NgModule({
@@ -60,7 +61,8 @@ import { SafeHtmlPipe } from './safe-html';
     Cab20WComponent,
     SafeHtmlPipe,
     FilmsComponent,
-    AnitIcingComponent
+    AnitIcingComponent,
+    TermostatsComponent
   ],
   imports: [
     AppRoutingModule,

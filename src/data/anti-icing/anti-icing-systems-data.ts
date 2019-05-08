@@ -1,7 +1,7 @@
-import { IAntiIcing } from 'src/models/IAnti-Icing.interface';
+import { IMaterialExpanding } from '../../models/IMaterialExpanding.interface';
 
 // An array of termostats with markup (Safe HTML used).
-export let ELEMENT_ANTI_ICING_SYSTEMS_DATA: IAntiIcing[] = [
+export let ELEMENT_ANTI_ICING_SYSTEMS_DATA: IMaterialExpanding[] = [
   // Подогрев желобов WÄRMEHAUS SELFREG 30W
   {
     id: 138,

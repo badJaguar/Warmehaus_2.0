@@ -18,6 +18,7 @@ export class BreadcrumbRoutesService {
           { name: 'Двужильный кабель 14Вт', path: './cable-14Watt' },
           { name: 'Двужильный кабель 20ВТ UV', path: './cable-20Watt' },
           { name: 'Инфракрасная плёнка', path: './films' },
+          { name: 'Антиобледенение', path: './anti-icing' },
         ]
       },
       // { name: 'Главная / Контакты', path: './contacts'},

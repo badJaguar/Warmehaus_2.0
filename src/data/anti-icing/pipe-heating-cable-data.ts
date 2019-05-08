@@ -1,4 +1,4 @@
-import { IMaterial } from 'src/models/IMaterial.interface';
+import { IMaterial } from '../../models/IMaterial.interface';
 
 export let ELEMENT_DATA_PIPE_HEATING_CABLE: IMaterial[] = [
     {
