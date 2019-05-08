@@ -39,7 +39,7 @@ export class StartPageComponent implements OnInit {
     },
 
     {
-      route: '/warmehaus/cab-14W-thin',
+      route: '/warmehaus/cable-14Watt',
       picUrl: 'assets/images/gridPics/Heating_Cable_To_Layer_14W.png',
       cols: 2,
       rows: 1,
