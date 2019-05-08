@@ -16,11 +16,11 @@ export class BreadcrumbRoutesService {
           { name: ' Маты 200Вт', path: './mat-200Watt' },
           { name: 'Двужильный кабель 11Вт', path: './cable-11Watt' },
           { name: 'Двужильный кабель 14Вт', path: './cable-14Watt' },
+          { name: 'Двужильный кабель 20ВТ UV', path: './cable-20Watt' },
         ]
       },
       // { name: 'Главная / Контакты', path: './contacts'},
 
-      //     { name: 'Двужильный CAB 20W UV', path: './cab-20W-uv-protection' },
       //     { name: 'Терморегуляторы', path: './termostats' },
       //     { name: 'Инфракрасная плёнка', path: './films' },
       //     { name: 'Антиобледенение', path: './anti-icing' },
