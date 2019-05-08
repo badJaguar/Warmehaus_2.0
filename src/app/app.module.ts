@@ -44,6 +44,7 @@ import { FilmsComponent } from './body-part/warmehaus/films/films.component';
 import { AnitIcingComponent } from './body-part/warmehaus/anit-icing/anit-icing.component';
 import { SafeHtmlPipe } from './safe-html';
 import { TermostatsComponent } from './body-part/warmehaus/termostats/termostats.component';
+import { ChipsComponent } from './header-part/chips/chips.component';
 
 
 @NgModule({
@@ -62,7 +63,8 @@ import { TermostatsComponent } from './body-part/warmehaus/termostats/termostats
     SafeHtmlPipe,
     FilmsComponent,
     AnitIcingComponent,
-    TermostatsComponent
+    TermostatsComponent,
+    ChipsComponent
   ],
   imports: [
     AppRoutingModule,
