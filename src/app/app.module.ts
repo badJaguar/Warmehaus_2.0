@@ -38,6 +38,15 @@ import { BreadcrumbsComponent } from './header-part/breadcrumbs/breadcrumbs.comp
 import { WarmingMat160WComponent } from './body-part/warmehaus/warming-mat160-w/warming-mat160-w.component';
 import { WarmingMat200WComponent } from './body-part/warmehaus/warming-mat200-w/warming-mat200-w.component';
 import { Cab11WComponent } from './body-part/warmehaus/cab11-w/cab11-w.component';
+import { Cab14WComponent } from './body-part/warmehaus/cab14-w/cab14-w.component';
+import { Cab20WComponent } from './body-part/warmehaus/cab20-w/cab20-w.component';
+import { FilmsComponent } from './body-part/warmehaus/films/films.component';
+import { AnitIcingComponent } from './body-part/warmehaus/anit-icing/anit-icing.component';
+import { SafeHtmlPipe } from './safe-html';
+import { TermostatsComponent } from './body-part/warmehaus/termostats/termostats.component';
+import { ChipsComponent } from './header-part/chips/chips.component';
+import { FooterComponent } from './footer-part/footer/footer.component';
+import { ContactsComponent } from './body-part/warmehaus/contacts/contacts.component';
 
 
 @NgModule({
@@ -50,7 +59,16 @@ import { Cab11WComponent } from './body-part/warmehaus/cab11-w/cab11-w.component
     BreadcrumbsComponent,
     WarmingMat160WComponent,
     WarmingMat200WComponent,
-    Cab11WComponent
+    Cab11WComponent,
+    Cab14WComponent,
+    Cab20WComponent,
+    SafeHtmlPipe,
+    FilmsComponent,
+    AnitIcingComponent,
+    TermostatsComponent,
+    ChipsComponent,
+    FooterComponent,
+    ContactsComponent
   ],
   imports: [
     AppRoutingModule,
@@ -118,6 +136,6 @@ import { Cab11WComponent } from './body-part/warmehaus/cab11-w/cab11-w.component
   bootstrap: [AppComponent],
   entryComponents: [PhonesSheetComponent],
   exports: [],
-  providers: []
+  providers: [SafeHtmlPipe],
 })
 export class AppModule { }
