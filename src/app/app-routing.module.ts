@@ -5,6 +5,7 @@ import { WarmingMat160WComponent } from './body-part/warmehaus/warming-mat160-w/
 import { WarmingMat200WComponent } from './body-part/warmehaus/warming-mat200-w/warming-mat200-w.component';
 import { Cab11WComponent } from './body-part/warmehaus/cab11-w/cab11-w.component';
 import { Cab14WComponent } from './body-part/warmehaus/cab14-w/cab14-w.component';
+import { Cab20WComponent } from './body-part/warmehaus/cab20-w/cab20-w.component';
 
 const routes: Routes = [
    { path: 'home', component: StartPageComponent},
@@ -13,7 +14,7 @@ const routes: Routes = [
       { path: 'warmehaus/mat-200Watt', component: WarmingMat200WComponent },
       { path: 'warmehaus/cable-11Watt', component: Cab11WComponent },
       { path: 'warmehaus/cable-14Watt', component: Cab14WComponent },
-      // { path: 'cab-20W-uv-protection', component: Cab20WUvComponent },
+      { path: 'warmehaus/cable-20Watt', component: Cab20WComponent },
       // { path: 'termostats', component: TermostatComponent },
       // { path: 'films', component: FilmsComponent },
       // { path: 'anti-icing', component: AnitIcingComponent },
