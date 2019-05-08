@@ -1,0 +1,226 @@
+<mat-card class="mat-elevation-z8">
+  <mat-card-title>Обогрев труб WÄRMEHAUS AntiFreeze Guard 20W, 30W, 40W</mat-card-title>
+  <mat-divider [vertical]="true"></mat-divider>
+  <div class="uponTable">
+    <img class="upper-image" src="assets/images/anti-icing/pipes-warming.jpg"
+      alt="Кабель для прогрева труб в зимнее время" align="left" hspace="25" />
+    <div class="container upon">
+      <ul>
+        <li>
+          Готовые к использованию комплекты<strong>
+            WÄRMEHAUS<sup>®</sup> AntiFreeze Guard, </strong>применяются для поддержания в незамерзающем состоянии
+          трубопроводов,
+          предупреждения образования сосулек и наледи в желобах на кровлях,
+          образования ледяных пробок в канализационных системах- на дачах, в
+          банях и в загородных домах.
+        </li>
+        <li>
+          Принцип саморегуляции
+          <strong>WÄRMEHAUS<sup>®</sup> AntiFreeze Guard </strong>достигается
+          благодаря специальной высоко технологичной матрице - выделение тепла
+          происходит только там, где это необходимо.
+        </li>
+        <li>
+          Саморегулируемый греющий кабель автоматически меняет мощность и
+          выделение тепла на разных участках в зависимости от температуры.
+        </li>
+        <li>
+          При падении температуры окружающей среды происходит увеличение
+          мощности обогрева, а в случае повышения температуры, эффект
+          противоположный - мощность уменьшается.
+        </li>
+      </ul>
+    </div>
+  </div>
+  <br />
+
+  <h4><u>Список систем обогрева труб</u></h4>
+
+  <div class="filter">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Фильтр" />
+    </mat-form-field>
+  </div>
+
+  <div class="mat-elevation-z8 table">
+    <table mat-table [dataSource]="pipeHeatingDataSource" matSort>
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
+        <td mat-cell *matCellDef="let row">{{ row.id }}</td>
+      </ng-container>
+
+      <!-- Progress Column -->
+
+      <ng-container matColumnDef="nominal">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>
+          м<sup><small>2</small></sup>/Вт
+        </th>
+        <td mat-cell *matCellDef="let row">{{ row.nominal }}</td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Тип</th>
+        <td mat-cell *matCellDef="let row">{{ row.id }}. {{ row.name }}</td>
+      </ng-container>
+
+      <!-- Color Column -->
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>
+          Цена (бел.руб.)
+        </th>
+        <td mat-cell *matCellDef="let row" [style.color]="row.color">
+          {{ row.price }},00
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 15, 24]"></mat-paginator>
+    <p class="price-info"><b>Цены носят информационный характер.</b></p>
+  </div>
+
+  <!-- <mat-divider [vertical]="true"></mat-divider> -->
+  <h4 mat-line><u>Список систем антиобледенения</u></h4>
+
+  <div class="filter">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Фильтр" />
+    </mat-form-field>
+  </div>
+  <!-- https://github.com/nicky-lenaers/ngx-scroll-to -->
+  <div #destinationRef></div>
+  <div class="mat-elevation-z8 table">
+    <table mat-table [dataSource]="dataSource" multiTemplateDataRows matSort>
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
+        <td mat-cell *matCellDef="let row">{{ row.id }}</td>
+      </ng-container>
+
+      <!-- Progress Column -->
+
+      <ng-container matColumnDef="nominal">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>
+          Свойство, м<sup><small>2</small></sup>/Вт
+        </th>
+        <td mat-cell *matCellDef="let row">{{ row.nominal }}</td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Тип</th>
+        <td mat-cell *matCellDef="let row">{{ row.id }}. {{ row.name }}</td>
+      </ng-container>
+
+      <!-- Color Column -->
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>
+          Цена (бел.руб.)
+        </th>
+        <td mat-cell *matCellDef="let row" [style.color]="row.color">
+          {{ row.price }},00
+        </td>
+      </ng-container>
+
+      <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->
+      <div class="expander">
+        <ng-container class="expanded-elem" matColumnDef="expandedDetail">
+          <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplay.length">
+            <div class="example-element-detail" [@detailExpand]="
+                element == expandedElement ? 'expanded' : 'collapsed'
+              ">
+              <div class="example-element-diagram">
+                <!-- https://www.npmjs.com/package/@hallysonh/ngx-imageviewer -->
+                <ngx-imageviewer [src]="element.picPath"></ngx-imageviewer>
+                <div class="example-element-description" [innerHTML]="element.description | safeHtml"></div>
+              </div>
+            </div>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+        <tr mat-row *matRowDef="let element; columns: columnsToDisplay" class="example-element-row"
+          [class.example-expanded-row]="expandedElement === element" (click)="
+            expandedElement = expandedElement === element ? null : element
+          " [ngx-scroll-to]="destinationRef"></tr>
+        <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+      </div>
+    </table>
+
+    <p class="price-info"><b>Цены носят информационный характер.</b></p>
+  </div>
+
+  <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z8">
+    <mat-tab class="tab" label="Описание AntiFreeze Guard 20W">
+      <div class="content">
+        <div class="vertTab">
+          <ul>
+            <p>
+              Саморегулируемый греющий кабель<strong>&nbsp;WÄRMEHAUS<sup>®</sup> AntiFreeze Guard 20W</strong>
+              (тип WÄRMEHAUS<sup>®</sup> SELFREG ELSR-N-20-2-AO) - это ленточный
+              электрический нагреватель с параллельными проводниками.
+            </p>
+            <p>
+              Материал греющей матрицы расположен вокруг двух медных проводников
+              сечением 2х1,23мм2 с покрытием из олова.
+            </p>
+            <p>
+              Проводящий материал сердцевины увеличивает или уменьшает выработку
+              тепла при изменении температуры.
+              <strong>Линейная мощность 20Вт/м при 10С.</strong>
+            </p>
+          </ul>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Описание AntiFreeze Guard 30W">
+      <div class="content">
+        <ul>
+          <p>
+            Саморегулируемый греющий кабель<strong>&nbsp;WÄRMEHAUS<sup>®</sup> AntiFreeze Guard 30W</strong>
+            (тип WÄRMEHAUS<sup>®</sup> SELFREG ELSR-N-30-2-AO) - это ленточный
+            электрический нагреватель с параллельными проводниками.
+          </p>
+          <p>
+            Материал греющей матрицы расположен вокруг двух медных проводников
+            сечением 2х1,23мм2 с покрытием из олова.
+          </p>
+          <p>
+            Проводящий материал сердцевины увеличивает или уменьшает выработку
+            тепла при изменении температуры.
+            <strong>Линейная мощность 30Вт/м при 10С.</strong>
+          </p>
+        </ul>
+      </div>
+    </mat-tab>
+    <mat-tab label="Описание AntiFreeze Guard 40W">
+      <div class="content">
+        <ul>
+          <p>
+            Саморегулируемый греющий кабель<strong>&nbsp;WÄRMEHAUS<sup>®</sup> AntiFreeze Guard 40W</strong>
+            (тип WÄRMEHAUS<sup>®</sup> SELFREG ELSR-N-40-2-AO) - это ленточный
+            электрический нагреватель с параллельными проводниками.
+          </p>
+          <p>
+            Материал греющей матрицы расположен вокруг двух медных проводников
+            сечением 2х1,23мм2 с покрытием из олова.
+          </p>
+          <p>
+            Проводящий материал сердцевины увеличивает или уменьшает выработку
+            тепла при изменении температуры.
+            <strong>Линейная мощность 40Вт/м при 10С.</strong>
+          </p>
+        </ul>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+
+  <!-- <div class="container video">
+    <p>Инструкция по пользованию таблицей терморегуляторов Wärmehaus</p>
+    <img src="assets/videos/termostat/Instruction.webp"
+      alt="Инструкция по пользованию таблицей терморегуляторов Warmehaus" /> -->
+</mat-card>

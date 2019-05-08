@@ -41,6 +41,9 @@ import { Cab11WComponent } from './body-part/warmehaus/cab11-w/cab11-w.component
 import { Cab14WComponent } from './body-part/warmehaus/cab14-w/cab14-w.component';
 import { Cab20WComponent } from './body-part/warmehaus/cab20-w/cab20-w.component';
 import { FilmsComponent } from './body-part/warmehaus/films/films.component';
+import { AnitIcingComponent } from './body-part/warmehaus/anit-icing/anit-icing.component';
+import { SafeHtmlPipe } from './safe-html';
+import { TermostatsComponent } from './body-part/warmehaus/termostats/termostats.component';
 
 
 @NgModule({
@@ -56,7 +59,10 @@ import { FilmsComponent } from './body-part/warmehaus/films/films.component';
     Cab11WComponent,
     Cab14WComponent,
     Cab20WComponent,
-    FilmsComponent
+    SafeHtmlPipe,
+    FilmsComponent,
+    AnitIcingComponent,
+    TermostatsComponent
   ],
   imports: [
     AppRoutingModule,
@@ -124,6 +130,6 @@ import { FilmsComponent } from './body-part/warmehaus/films/films.component';
   bootstrap: [AppComponent],
   entryComponents: [PhonesSheetComponent],
   exports: [],
-  providers: []
+  providers: [SafeHtmlPipe],
 })
 export class AppModule { }
