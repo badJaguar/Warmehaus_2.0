@@ -46,6 +46,7 @@ import { SafeHtmlPipe } from './safe-html';
 import { TermostatsComponent } from './body-part/warmehaus/termostats/termostats.component';
 import { ChipsComponent } from './header-part/chips/chips.component';
 import { FooterComponent } from './footer-part/footer/footer.component';
+import { ContactsComponent } from './body-part/warmehaus/contacts/contacts.component';
 
 
 @NgModule({
@@ -66,7 +67,8 @@ import { FooterComponent } from './footer-part/footer/footer.component';
     AnitIcingComponent,
     TermostatsComponent,
     ChipsComponent,
-    FooterComponent
+    FooterComponent,
+    ContactsComponent
   ],
   imports: [
     AppRoutingModule,
