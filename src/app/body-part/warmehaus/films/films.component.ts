@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
+import { ELEMENT_DATA_FILMS } from '../../../../data/films.data';
 
 @Component({
   selector: 'app-films',
