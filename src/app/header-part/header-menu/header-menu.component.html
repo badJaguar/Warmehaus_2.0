@@ -1,0 +1,75 @@
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="">
+      <img src="{{ brand }}" style="max-height: 38px" />
+    </a>
+  </div>
+
+  <div class="burger">
+    <a
+      (click)="toggleNavbar()"
+      role="button"
+      #navBurger
+      class="navbar-burger"
+      aria-label="menu"
+      aria-expanded="false"
+      data-target="navbarBasic"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasic" class="navbar-menu" #navMenu>
+    <a class="navbar-item" href="#" routerLink="" routerLinkActive="active">
+      Главная
+    </a>
+    <a class="navbar-item"
+       href="#"
+       routerLink="./contacts"
+       routerLinkActive="active">
+      Контакты
+    </a>
+    <!-- <div class="navbar-item is-hoverable">
+      <a class="navbar-link">
+        <strong>Продукция</strong>
+      </a>
+
+      <div class="navbar-dropdown">
+
+        <a class="navbar-item" href="#" routerLink="/warmehaus" routerLinkActive="active">
+          WARMEHAUS
+        </a>
+        <a class="navbar-item">
+          Electrolux
+        </a>
+        <a class="navbar-item">
+          Devi
+        </a>
+        <hr class="navbar-divider">
+        <a class="navbar-item">
+          Report an issue
+        </a>
+      </div>
+    </div> -->
+    <hr />
+    <div class="navbar-end">
+      <div class="btn-item">
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=3523204@gmail.com"
+          target="_blank"
+        >
+          <button mat-fab color="warn">
+            <mat-icon>email</mat-icon>
+          </button></a
+        >
+      </div>
+      <div class="btn-item">
+        <button mat-fab color="warn" (click)="openBottomSheet()">
+          <mat-icon>phone</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>

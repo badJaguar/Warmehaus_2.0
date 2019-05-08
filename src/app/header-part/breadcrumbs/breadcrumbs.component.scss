@@ -1,0 +1,28 @@
+
+.breadcrumb, a{
+    background: none;
+    font-weight: bold;
+    text-align: start;
+    font-size: 13px;
+    align-items: inline-start;
+    margin-block-start: 8px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
+}
+.item, a {
+    margin-top: -1px;
+    color: rgb(255, 217, 0);
+    /* pointer-events: none; */
+    margin-left: -14px;
+    margin-right: -5px;
+}
+a:hover {
+    color: rgb(180, 153, 2);
+    /* text-decoration: none; */
+}
+a:link{
+    color: rgb(255, 255, 255)
+}
+span{
+    color: white
+}

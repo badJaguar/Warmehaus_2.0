@@ -1,0 +1,63 @@
+@media (max-width : 1086px),
+(orientation: portrait) {
+    .navbar-item {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar-menu {
+        margin-left: 40%;
+        width: 100%;
+        background-color: #dddddd46;
+    }
+
+    .outer-navbar {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .btn-item {
+        display: inline-flex;
+        justify-content: space-around;
+    }
+
+    .navbar-end {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar {
+        display: flex;
+
+    }
+}
+
+.navbar {
+    background-color: #ffcb03;
+    max-width: 100%;
+}
+
+.navbar-menu {
+    width: 60%;
+}
+
+.navbar-item {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+button {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+button:focus {
+    outline: none;
+    border: 0;
+}
+
+a:hover {
+    color: black;
+    text-decoration: none
+}
