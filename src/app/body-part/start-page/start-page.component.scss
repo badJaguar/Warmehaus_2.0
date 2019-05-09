@@ -1,8 +1,22 @@
-h1, h2{
+h1,
+h2 {
     text-align: center;
-    }
-    .text{
-        max-width: 1400px;
-        margin-left: auto;
-        margin-right: auto
-    }
+    font-size: calc(2vw + 2vh);
+
+}
+
+.text {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.clearfix {
+    margin-left: auto;
+    margin-right: auto;
+    position: sticky;
+    max-width: 850px;
+    align-content: center;
+    text-align: justify;
+    font-size: 2vi
+}

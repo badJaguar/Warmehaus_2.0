@@ -37,6 +37,7 @@ import { ContactsComponent } from './body-part/warmehaus/contacts/contacts.compo
 import { NgxJsonLdModule } from 'ngx-json-ld';
 import { SchemaMarkupComponent } from './seo/schema-markup/schema-markup.component';
 import { MaterialShareModule } from './modules/material-share/material-share.module';
+import { NgxGtagModule } from 'ngx-gtag';
 
 
 @NgModule({
@@ -77,6 +78,7 @@ import { MaterialShareModule } from './modules/material-share/material-share.mod
     MaterialShareModule,
     NgtUniversalModule,
     NguCarouselModule,
+    NgxGtagModule.forRoot({trackingId: 'UA-139924647-1'}),
     OverlayModule,
     ReactiveFormsModule,
     RouterModule,
