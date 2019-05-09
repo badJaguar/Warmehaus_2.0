@@ -9,7 +9,11 @@ export class BreadcrumbRoutesService {
   constructor() { }
   getMenu(): Array<any> {
     const routes = [
-      { name: 'Главная', path: './home' },
+      {
+        name: 'Главная', path: './home', children: [
+          { name: 'Контакты', path: './contacts' },
+        ]
+      },
       {
         name: 'Wärmehaus', path: './warmehaus', children: [
           { name: ' Маты 160Вт', path: './mat-160Watt' },
@@ -22,7 +26,7 @@ export class BreadcrumbRoutesService {
           { name: 'Терморегуляторы', path: './termostats' },
         ]
       },
-      // { name: 'Главная / Контакты', path: './contacts'},
+
       //   ]
       // },
     ];
