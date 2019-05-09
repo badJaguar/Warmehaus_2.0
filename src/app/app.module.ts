@@ -1,16 +1,3 @@
-import {
-  MatAutocompleteModule, MatBadgeModule, MatBottomSheetModule,
-  MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule,
-  MatChipsModule, MatDatepickerModule, MatDialogModule, MatDividerModule,
-  MatExpansionModule, MatFormFieldModule, MatGridListModule, MatIconModule,
-  MatInputModule, MatListModule, MatMenuModule, MatNativeDateModule,
-  MatOptionModule, MatPaginatorModule, MatProgressBarModule,
-  MatProgressSpinnerModule, MatRadioModule, MatRippleModule, MatSelectModule,
-  MatSidenavModule, MatSliderModule, MatSlideToggleModule, MatSnackBarModule,
-  MatSortModule, MatStepperModule, MatTableModule, MatTabsModule, MatToolbarModule,
-  MatTooltipModule, MatTreeModule
-} from '@angular/material';
-
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -47,6 +34,9 @@ import { TermostatsComponent } from './body-part/warmehaus/termostats/termostats
 import { ChipsComponent } from './header-part/chips/chips.component';
 import { FooterComponent } from './footer-part/footer/footer.component';
 import { ContactsComponent } from './body-part/warmehaus/contacts/contacts.component';
+import { NgxJsonLdModule } from 'ngx-json-ld';
+import { SchemaMarkupComponent } from './seo/schema-markup/schema-markup.component';
+import { MaterialShareModule } from './modules/material-share/material-share.module';
 
 
 @NgModule({
@@ -68,7 +58,8 @@ import { ContactsComponent } from './body-part/warmehaus/contacts/contacts.compo
     TermostatsComponent,
     ChipsComponent,
     FooterComponent,
-    ContactsComponent
+    ContactsComponent,
+    SchemaMarkupComponent
   ],
   imports: [
     AppRoutingModule,
@@ -83,47 +74,7 @@ import { ContactsComponent } from './body-part/warmehaus/contacts/contacts.compo
     FormsModule,
     HttpClientModule,
     ImageViewerModule,
-
-    MatAutocompleteModule,
-    MatBadgeModule,
-    MatBottomSheetModule,
-    MatButtonModule,
-    MatButtonToggleModule,
-    MatCardModule,
-    MatCheckboxModule,
-    MatChipsModule,
-    MatDatepickerModule,
-    MatDialogModule,
-    MatDividerModule,
-    MatExpansionModule,
-    MatFormFieldModule,
-    MatGridListModule,
-    MatIconModule,
-    MatInputModule,
-    MatListModule,
-    MatMenuModule,
-    MatNativeDateModule,
-    MatOptionModule,
-    MatPaginatorModule,
-    MatProgressBarModule,
-    MatProgressSpinnerModule,
-    MatRadioModule,
-    MatRippleModule,
-    MatSelectModule,
-    MatSidenavModule,
-    MatSliderModule,
-    MatSlideToggleModule,
-    MatSnackBarModule,
-    MatSortModule,
-    MatStepperModule,
-    MatTableModule,
-    MatTableModule,
-    MatTabsModule,
-    MatToolbarModule,
-    MatToolbarModule,
-    MatTooltipModule,
-    MatTreeModule,
-
+    MaterialShareModule,
     NgtUniversalModule,
     NguCarouselModule,
     OverlayModule,
@@ -132,6 +83,7 @@ import { ContactsComponent } from './body-part/warmehaus/contacts/contacts.compo
     ScrollingModule,
     ScrollToModule.forRoot(),
     TransferHttpCacheModule,
+    NgxJsonLdModule
   ],
   bootstrap: [AppComponent],
   entryComponents: [PhonesSheetComponent],

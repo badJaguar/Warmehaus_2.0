@@ -10,10 +10,11 @@ import { FilmsComponent } from './body-part/warmehaus/films/films.component';
 import { AnitIcingComponent } from './body-part/warmehaus/anit-icing/anit-icing.component';
 import { TermostatsComponent } from './body-part/warmehaus/termostats/termostats.component';
 import { ContactsComponent } from './body-part/warmehaus/contacts/contacts.component';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 const routes: Routes = [
   { path: 'home', component: StartPageComponent },
-  { path: 'contacts', component: ContactsComponent },
+  { path: 'home/contacts', component: ContactsComponent },
 
   { path: 'warmehaus/mat-160Watt', component: WarmingMat160WComponent },
   { path: 'warmehaus/mat-200Watt', component: WarmingMat200WComponent },
@@ -29,8 +30,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-
+  imports: [RouterModule.forRoot(routes,  {useHash: false})],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
