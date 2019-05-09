@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
-import { ELEMENT_DATA_MAT_CAB_20W_UV_PROTECTION } from '../../../../data/cab-20W.data';
+import { ELEMENT_DATA_MAT_CAB_20W_UV_PROTECTION } from '../../../../../data/cab-20W.data';
 
 @Component({
   selector: 'app-cab20-w',

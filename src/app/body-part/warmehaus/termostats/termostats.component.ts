@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { IMAGEVIEWER_CONFIG } from '@hallysonh/ngx-imageviewer';
-import { MY_IMAGEVIEWER_CONFIG } from '../../../../app/constants/image-view-styles';
+import { MY_IMAGEVIEWER_CONFIG } from '../../../constants/image-view-styles';
 import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
 import { IMaterialExpanding } from '../../../../models/IMaterialExpanding.interface';
 import { ELEMENT_DATA_TERMOSTATS } from '../../../../data/termostats.data';

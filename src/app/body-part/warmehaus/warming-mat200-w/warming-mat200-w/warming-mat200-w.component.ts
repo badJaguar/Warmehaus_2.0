@@ -1,15 +1,16 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
-import { ELEMENT_DATA_MAT_160W } from '../../../../data/heating-mat160W.data';
+import { ELEMENT_DATA_MAT_200W } from '../../../../../data/heating-mat200-w.data';
 
 @Component({
-  selector: 'app-warming-mat160-w',
-  templateUrl: './warming-mat160-w.component.html',
-  styleUrls: ['./warming-mat160-w.component.scss']
+  selector: 'app-warming-mat200-w',
+  templateUrl: './warming-mat200-w.component.html',
+  styleUrls: ['./warming-mat200-w.component.scss']
 })
-export class WarmingMat160WComponent implements OnInit {
+export class WarmingMat200WComponent implements OnInit {
+
   displayedColumns: string[] = ['name', 'nominal', 'price'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA_MAT_160W);
+  dataSource = new MatTableDataSource(ELEMENT_DATA_MAT_200W);
 
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;

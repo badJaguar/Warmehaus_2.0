@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ITile } from '../../../models/ITile.interface';
+import { ITile } from '../../../../models/ITile.interface';
 
 @Component({
   selector: 'app-start-page',
