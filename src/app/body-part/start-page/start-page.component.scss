@@ -49,5 +49,5 @@ h2 {
   }
   
   .clearfix {
-    @include fluid-type(font-size, 600px, 1200px, 16px, 28px);
+    @include fluid-type(font-size, 600px, 1200px, 16px, 24px);
   }
