@@ -33,11 +33,11 @@ import { SafeHtmlPipe } from './safe-html';
 import { TermostatsComponent } from './body-part/warmehaus/termostats/termostats.component';
 import { ChipsComponent } from './header-part/chips/chips.component';
 import { FooterComponent } from './footer-part/footer/footer.component';
-import { ContactsComponent } from './body-part/warmehaus/contacts/contacts.component';
 import { NgxJsonLdModule } from 'ngx-json-ld';
 import { SchemaMarkupComponent } from './seo/schema-markup/schema-markup.component';
 import { MaterialShareModule } from './modules/material-share/material-share.module';
 import { NgxGtagModule } from 'ngx-gtag';
+import { ContactsComponent } from './body-part/contacts/contacts.component';
 
 
 @NgModule({

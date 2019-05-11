@@ -4,8 +4,8 @@ import { ELEMENT_DATA_PIPE_HEATING_CABLE } from '../../../../data/anti-icing/pip
 import { IMaterialExpanding } from '../../../../models/IMaterialExpanding.interface';
 import { IMAGEVIEWER_CONFIG } from '@hallysonh/ngx-imageviewer';
 import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
-import { MY_IMAGEVIEWER_CONFIG } from '../../../../app/constants/image-view-styles';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { MY_IMAGEVIEWER_CONFIG } from '../../../../constants/image-view-styles';
 
 @Component({
   selector: 'app-anit-icing',
