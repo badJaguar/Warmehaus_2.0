@@ -30,7 +30,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,  {useHash: false})],
+  imports: [RouterModule.forRoot(routes, {
+    useHash: false,
+    scrollPositionRestoration: 'enabled',
+    anchorScrolling: 'enabled',
+  })],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   exports: [RouterModule]
 })
