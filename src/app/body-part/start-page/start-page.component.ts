@@ -75,13 +75,6 @@ export class StartPageComponent implements OnInit {
     },
   ];
   ngOnInit() {
-    if (window.innerWidth >= 416) {
-      this.tiles[0].cols = 4;
-      this.tiles[0].rows = 2;
-    } else {
-      this.tiles[0].cols = 2;
-      this.tiles[0].rows = 1;
-    }
     this.breakpoint = (window.innerWidth <= 416) ? 2 : 4;
   }
 

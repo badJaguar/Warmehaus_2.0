@@ -1,6 +1,6 @@
-import { IMaterial } from '../models/IMaterial.interface';
+import { IItem } from '../models/IItem.interface';
 
-export let ELEMENT_DATA_MAT_CAB_14W_THIN: IMaterial[] = [
+export let ELEMENT_DATA_MAT_CAB_14W_THIN: IItem[] = [
     { id: 46, name: 'Двужильный WÄRMEHAUS CAB 14W Thin', nominal: '10,0м2 - 140W', price: 152.00 },
     { id: 47, name: 'Двужильный WÄRMEHAUS CAB 14W Thin', nominal: '14,3м2 - 200W', price: 171.00 },
     { id: 48, name: 'Двужильный WÄRMEHAUS CAB 14W Thin', nominal: '21,5м2 - 300W', price: 200.00 },

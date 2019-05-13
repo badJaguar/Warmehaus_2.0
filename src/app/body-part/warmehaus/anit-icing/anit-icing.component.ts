@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ELEMENT_ANTI_ICING_SYSTEMS_DATA } from '../../../../data/anti-icing/anti-icing-systems-data';
 import { ELEMENT_DATA_PIPE_HEATING_CABLE } from '../../../../data/anti-icing/pipe-heating-cable-data';
-import { IMaterialExpanding } from '../../../../models/IMaterialExpanding.interface';
+import { IMatTebleItem } from '../../../../models/IMatTebleItem.interface';
 import { IMAGEVIEWER_CONFIG } from '@hallysonh/ngx-imageviewer';
 import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
 import { trigger, state, style, transition, animate } from '@angular/animations';
@@ -31,7 +31,7 @@ export class AnitIcingComponent implements OnInit {
   pipeHeatingDataSource = new MatTableDataSource(ELEMENT_DATA_PIPE_HEATING_CABLE);
 
   //
-  expandedElement: IMaterialExpanding | null;
+  expandedElement: IMatTebleItem | null;
   dataSource = new MatTableDataSource(ELEMENT_ANTI_ICING_SYSTEMS_DATA);
   columnsToDisplay = ['name', 'nominal', 'price'];
   headerNames: string[] = ['Тип', 'м2/Вт', 'Цена'];
