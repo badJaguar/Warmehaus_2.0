@@ -16,7 +16,7 @@ export class ContactsComponent implements OnInit {
 
   ngOnInit() {
     $(document).ready(function () {
-      $('.opening-hours li').eq(new Date().getDay()).addClass('today');
+      $('.opening-hours li').eq(new Date().getDay() - 1).addClass('today');
       });
   }
  processForm() {

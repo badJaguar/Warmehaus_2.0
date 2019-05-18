@@ -19,55 +19,86 @@
       </div>
       <br />
 
-      <section class="section contactsSection">
-        <div class="container">
-          <!-- form goes here -->
-          <form (ngSubmit)="processForm()">
-            <!-- name -->
+      <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+      <!------ Include the above in your HEAD tag ---------->
 
-            <div class="field">
-              <input type="text" name="name" class="input" placeholder="Your Name" [(ngModel)]="name" required
-                minlength="2" #nameInput="ngModel">
-              <div class="help is-error" *ngIf="nameInput.invalid && nameInput.dirty">
-                Необходимо ввести имя.
-              </div>
-            </div>
-            <!-- email -->
-            <div class="field">
-              <input type="email" name="email" class="input" placeholder="Your Email" [(ngModel)]="email" required email
-                #emailInput="ngModel">
-              <div class="help is-error" *ngIf="emailInput.invalid && emailInput.dirty">
-                Пожалуйста, пмроверьте правильность ввода почтового адреса.
-              </div>
-            </div>
-            <!-- message -->
-            <div class="field">
-              <textarea class="textarea" name="message" placeholder="What's on your mind?" [(ngModel)]="message"
-                required #messageInput="ngModel"></textarea>
-              <div class="help is-error" *ngIf="emailInput.invalid && emailInput.dirty">
-                Необходимо ввести сообщение.
-              </div>
-            </div>
-            <button type="submit" class="button is-danger is-large">Submit</button>
-          </form>
-        </div>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href='//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet' />
 
-        <div class="container">
-          <div class="column">
-            <div class="field">
-              <div class="address">
-              <h4> Юридический Адрес:</h4> 
-              <p>ЧТУП "ММК Альянс"</p>
-              <p>690697424 Р/С 3012000017906</p>
-              <br>
-              <h4>адрес:</h4>
-              <p>Минск Логойский тракт д 22 кор 2 оф 415</p> 
-            </div>
+      <div class="container demo-bg">
+        <div class="row">
+          <div class="col-sm-4">
+            <section class="section contactsSection">
+              <div class="container blockContainer">
+                <div class="column">
+                  <div class="field">
+                    <div class="address">
+                      <h4> Юридический Адрес:</h4>
+                      <p>ЧТУП "ММК Альянс"</p>
+                      <p>690697424 Р/С 3012000017906</p>
+                      <br>
+                      <h4>Адрес:</h4>
+                      <p>Минск, ул. Уручская 19, павильон №24</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="col-sm-4">
+            <section class="section contactsSection">
+              <div class="container blockContainer">
+                <!-- form goes here -->
+                <form (ngSubmit)="processForm()">
+                  <!-- name -->
+
+                  <div class="field">
+                    <input type="text" name="name" class="input" placeholder="Введите имя" [(ngModel)]="name" required
+                      minlength="2" #nameInput="ngModel">
+                    <div class="help is-error" *ngIf="nameInput.invalid && nameInput.dirty">
+                      Необходимо ввести имя.
+                    </div>
+                  </div>
+                  <!-- email -->
+                  <div class="field">
+                    <input type="email" name="email" class="input" placeholder="Введите e-mail" [(ngModel)]="email"
+                      required email #emailInput="ngModel">
+                    <div class="help is-error" *ngIf="emailInput.invalid && emailInput.dirty">
+                      Пожалуйста, пмроверьте правильность ввода почтового адреса.
+                    </div>
+                  </div>
+                  <!-- message -->
+                  <div class="field">
+                    <textarea class="textarea" name="message" placeholder="Ваши предложения или вопросы"
+                      [(ngModel)]="message" required #messageInput="ngModel"></textarea>
+                    <div class="help is-error" *ngIf="emailInput.invalid && emailInput.dirty">
+                      Необходимо ввести сообщение.
+                    </div>
+                  </div>
+                  <button type="submit" class="button is-danger is-large">Отправить</button>
+                </form>
+              </div>
+            </section>
+          </div>
+          <div class="col-sm-4">
+            <div class="business-hours">
+              <h2 class="title">Часы работы</h2>
+              <ul class="list-unstyled opening-hours">
+                <li>Понедельник <span class="pull-right">Выходной</span></li>
+                <li>Вторник <span class="pull-right">9:00-17:00</span></li>
+                <li>Среда <span class="pull-right">9:00-17:00</span></li>
+                <li>Четверг <span class="pull-right">9:00-17:00</span></li>
+                <li>Пятница <span class="pull-right">9:00-17:00</span></li>
+                <li>Суббота <span class="pull-right">9:00-17:00</span></li>
+                <li>Воскресенье <span class="pull-right">9:00-17:00</span></li>
+                <h6>Звонить и писать: <br> <hr> в любой день недели <br>c 9:00 по 21:00</h6>
+              </ul>
             </div>
           </div>
         </div>
-      </section>
-
+      </div>
     </div>
   </div>
 </section>
