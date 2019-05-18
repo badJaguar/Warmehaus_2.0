@@ -19,9 +19,5 @@ export class ContactsComponent implements OnInit {
       $('.opening-hours li').eq(new Date().getDay() - 1).addClass('today');
       });
   }
- processForm() {
-    const allInfo = `My name is ${this.name}. My email is ${this.email}. My message is ${this.message}`;
-    alert(allInfo);
-  }
 }
 

@@ -47,30 +47,35 @@
               </div>
             </section>
           </div>
-          <div class="col-sm-4">
+          <div class="col-sm-4 address">
             <section class="section contactsSection">
               <div class="container blockContainer">
-                <!-- form goes here -->
-                <form (ngSubmit)="processForm()">
-                  <!-- name -->
+                <h4>Вопросы и пожелания по e-mail:</h4>
+                <div class="example-ripple-container mat-elevation-z8" matRipple [matRippleRadius]="radius">
+                  <button onclick="location.href='mailto:3523204@gmail.com';"> <img src="../../../assets/images/Email-Logo.gif" /></button>
+                </div>
 
-                  <div class="field">
+                <!-- form goes here -->
+                <!-- <form (ngSubmit)="processForm()"> -->
+                <!-- name -->
+
+                <!-- <div class="field">
                     <input type="text" name="name" class="input" placeholder="Введите имя" [(ngModel)]="name" required
                       minlength="2" #nameInput="ngModel">
                     <div class="help is-error" *ngIf="nameInput.invalid && nameInput.dirty">
                       Необходимо ввести имя.
                     </div>
-                  </div>
-                  <!-- email -->
-                  <div class="field">
+                  </div> -->
+                <!-- email -->
+                <!-- <div class="field">
                     <input type="email" name="email" class="input" placeholder="Введите e-mail" [(ngModel)]="email"
                       required email #emailInput="ngModel">
                     <div class="help is-error" *ngIf="emailInput.invalid && emailInput.dirty">
                       Пожалуйста, пмроверьте правильность ввода почтового адреса.
                     </div>
-                  </div>
-                  <!-- message -->
-                  <div class="field">
+                  </div> -->
+                <!-- message -->
+                <!-- <div class="field">
                     <textarea class="textarea" name="message" placeholder="Ваши предложения или вопросы"
                       [(ngModel)]="message" required #messageInput="ngModel"></textarea>
                     <div class="help is-error" *ngIf="emailInput.invalid && emailInput.dirty">
@@ -78,7 +83,8 @@
                     </div>
                   </div>
                   <button type="submit" class="button is-danger is-large">Отправить</button>
-                </form>
+                </form> -->
+
               </div>
             </section>
           </div>
@@ -93,7 +99,8 @@
                 <li>Пятница <span class="pull-right">9:00-17:00</span></li>
                 <li>Суббота <span class="pull-right">9:00-17:00</span></li>
                 <li>Воскресенье <span class="pull-right">9:00-17:00</span></li>
-                <h6>Звонить и писать: <br> <hr> в любой день недели <br>c 9:00 по 21:00</h6>
+                <h6>Звонить и писать: <br>
+                  <hr> в любой день недели <br>c 9:00 по 21:00</h6>
               </ul>
             </div>
           </div>

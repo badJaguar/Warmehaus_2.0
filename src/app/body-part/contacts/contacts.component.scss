@@ -133,3 +133,19 @@
      color: aliceblue;
      text-align: center;
  }
+
+ button:focus {
+    outline: none;
+    border: 0;
+    background:none
+}
+
+a:hover {
+    color: black;
+    text-decoration: none;
+    background:none
+}
+button{
+    background:none;
+    border: none
+}
