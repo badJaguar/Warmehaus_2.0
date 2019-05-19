@@ -1,0 +1,26 @@
+@import '../styles/fluid-font';
+
+td.mat-cell:last-of-type {
+    padding-right: 15px
+}
+
+td.mat-cell,
+td.mat-footer-cell,
+th.mat-header-cell {
+    border: 1px solid #dbdbdb;
+    border-width: 0 0 1px;
+    padding: 0.5em 0.5em;
+    vertical-align: top;
+}
+
+td.mat-cell:last-of-type,
+td.mat-footer-cell:last-of-type,
+th.mat-header-cell:last-of-type,
+td.mat-cell.cdk-column-expandedDetail.mat-column-expandedDetail.ng-tns-c9-0.ng-star-inserted {
+    padding: 0
+}
+
+ 
+.inrow-picture{
+    max-width: 240px;
+  }

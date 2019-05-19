@@ -6,6 +6,7 @@ import { IMAGEVIEWER_CONFIG } from '@hallysonh/ngx-imageviewer';
 import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { MY_IMAGEVIEWER_CONFIG } from '../../../../constants/image-view-styles';
+import { MetaService } from 'src/services/meta.service';
 
 @Component({
   selector: 'app-anit-icing',
@@ -27,6 +28,7 @@ import { MY_IMAGEVIEWER_CONFIG } from '../../../../constants/image-view-styles';
   ]
 })
 export class AnitIcingComponent implements OnInit {
+  constructor(private metaService: MetaService) {}
   displayedColumns: string[] = ['name', 'nominal', 'price'];
   pipeHeatingDataSource = new MatTableDataSource(ELEMENT_DATA_PIPE_HEATING_CABLE);
 
@@ -41,6 +43,7 @@ export class AnitIcingComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   ngOnInit() {
+    this.metaService.createCanonicalURL();
     this.pipeHeatingDataSource.sort = this.sort;
     this.pipeHeatingDataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;

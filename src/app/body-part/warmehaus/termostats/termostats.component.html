@@ -37,7 +37,7 @@
       <!-- Name Column -->
       <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Тип </th>
-        <td mat-cell *matCellDef="let row"> {{row.id}}. {{row.name}} </td>
+        <td mat-cell *matCellDef="let row">{{row.name}} </td>
       </ng-container>
 
       <!-- Color Column -->
@@ -54,7 +54,8 @@
               <div class="example-element-diagram">
 
                 <!-- https://www.npmjs.com/package/@hallysonh/ngx-imageviewer -->
-                <ngx-imageviewer [src]=element.picPath ></ngx-imageviewer>
+                <!-- <img [src]=element.picPath ></img> -->
+                <img class="inrow-picture" [src]="element.picPath" [alt]="element.alt">
                 <div class="example-element-description" [innerHTML]="element.description | safeHtml"></div>
               </div>
             </div>
