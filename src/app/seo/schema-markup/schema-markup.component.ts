@@ -9,12 +9,12 @@ export class SchemaMarkupComponent {
   schema = {
     '@context': 'http://schema.org',
     '@type': 'Organization',
-    'url': 'https://warmehaus.com.by/',
-    'name': 'Warmehaus Minsk Gmbh.',
-    'contactPoint': {
+    url: 'https://warmehaus.com.by/',
+    name: 'Warmehaus Minsk Gmbh.',
+    contactPoint: {
       '@type': 'ContactPoint',
-      'telephone': '+375 (29) 352-32-04',
-      'contactType': 'Консультация и рассчет стоимости'
+      telephone: '+375 (29) 352-32-04',
+      contactType: 'Консультация и рассчет стоимости'
     }
-  }
+  };
 }

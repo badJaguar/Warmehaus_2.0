@@ -1,6 +1,6 @@
-import { IMaterial } from '../models/IMaterial.interface';
+import { IItem } from '../models/IItem.interface';
 
-export let ELEMENT_DATA_MAT_CAB_20W_UV_PROTECTION: IMaterial[] = [
+export let ELEMENT_DATA_MAT_CAB_20W_UV_PROTECTION: IItem[] = [
     { id: 61, name: 'Двужильный WÄRMEHAUS CAB 20W UV PROTECTION', nominal: '10,0м2 - 200W', price: 152.00 },
     { id: 62, name: 'Двужильный WÄRMEHAUS CAB 20W UV PROTECTION', nominal: '13,7м2 - 274W', price: 181.00 },
     { id: 63, name: 'Двужильный WÄRMEHAUS CAB 20W UV PROTECTION', nominal: '17,2м2 - 344W', price: 209.00 },

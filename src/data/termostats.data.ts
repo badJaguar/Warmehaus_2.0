@@ -1,7 +1,7 @@
-import { IMaterialExpanding } from '../models/IMaterialExpanding.interface';
+import { IMatTebleItem } from '../models/IMatTebleItem.interface';
 
 // An array of termostats with markup (Safe HTML used).
-export let ELEMENT_DATA_TERMOSTATS: IMaterialExpanding[] = [
+export let ELEMENT_DATA_TERMOSTATS: IMatTebleItem[] = [
   // Терморегулятор WÄRMEHAUS TouchScreen
   {
     id: 75,

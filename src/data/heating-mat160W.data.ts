@@ -1,6 +1,6 @@
-import { IMaterial } from '../models/IMaterial.interface';
+import { IItem } from '../models/IItem.interface';
 
-export let ELEMENT_DATA_MAT_160W: IMaterial[] = [
+export let ELEMENT_DATA_MAT_160W: IItem[] = [
     { id: 1, name: 'Двужильный WÄRMEHAUS MAT 160W', nominal: '0,7м2 - 112W', price: 152.00 },
     { id: 2, name: 'Двужильный WÄRMEHAUS MAT 160W', nominal: '1,0м2 - 160W', price: 171.00 },
     { id: 3, name: 'Двужильный WÄRMEHAUS MAT 160W', nominal: '1,5м2 - 240W', price: 200.00 },

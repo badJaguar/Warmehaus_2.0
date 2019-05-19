@@ -9,8 +9,8 @@ import { Cab20WComponent } from './body-part/warmehaus/cab20-w/cab20-w.component
 import { FilmsComponent } from './body-part/warmehaus/films/films.component';
 import { AnitIcingComponent } from './body-part/warmehaus/anit-icing/anit-icing.component';
 import { TermostatsComponent } from './body-part/warmehaus/termostats/termostats.component';
-import { ContactsComponent } from './body-part/warmehaus/contacts/contacts.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { ContactsComponent } from './body-part/contacts/contacts.component';
 
 const routes: Routes = [
   { path: 'home', component: StartPageComponent },
@@ -30,7 +30,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,  {useHash: false})],
+  imports: [RouterModule.forRoot(routes, {
+    useHash: false,
+    scrollPositionRestoration: 'enabled',
+    anchorScrolling: 'enabled',
+  })],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   exports: [RouterModule]
 })

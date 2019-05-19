@@ -1,8 +1,53 @@
-h1, h2{
+@media screen and (min-width: 930px) {
+    h1,h2 {
+      font-size: 14px;
+    }
+  }
+
+h1,
+h2 {
     text-align: center;
+    font-size: calc(1.7vw + 1.7vh);
+
+}
+
+.text {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.clearfix {
+    margin-left: auto;
+    margin-right: auto;
+    position: sticky;
+    max-width: 850px;
+    align-content: center;
+    text-align: justify;
+}
+
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+  }
+  
+  @mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
+    @each $property in $properties {
+      #{$property}: $min-value;
     }
-    .text{
-        max-width: 1400px;
-        margin-left: auto;
-        margin-right: auto
+  
+    @media screen and (min-width: $min-vw) {
+      @each $property in $properties {
+        #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
+      }
     }
+  
+    @media screen and (min-width: $max-vw) {
+      @each $property in $properties {
+        #{$property}: $max-value;
+      }
+    }
+  }
+  
+  .clearfix {
+    @include fluid-type(font-size, 600px, 1200px, 16px, 24px);
+  }
