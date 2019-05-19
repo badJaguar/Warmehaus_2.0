@@ -1,6 +1,6 @@
-import { IMaterial } from '../models/IMaterial.interface';
+import { IItem } from '../models/IItem.interface';
 
-export let ELEMENT_DATA_FILMS: IMaterial[] = [
+export let ELEMENT_DATA_FILMS: IItem[] = [
     {
         id: 86,
         name: 'Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film',

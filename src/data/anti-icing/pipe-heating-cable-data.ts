@@ -1,6 +1,6 @@
-import { IMaterial } from '../../models/IMaterial.interface';
+import { IItem } from '../../models/IItem.interface';
 
-export let ELEMENT_DATA_PIPE_HEATING_CABLE: IMaterial[] = [
+export let ELEMENT_DATA_PIPE_HEATING_CABLE: IItem[] = [
     {
         id: 114,
         name: 'Комплект WÄRMEHAUS AFG 20W',
