@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { SwUpdate } from '@angular/service-worker';
-import { MetaService } from 'src/services/meta.service';
+import { MetaService } from '../services/meta.service';
 
 @Component({
     selector: 'app-root',

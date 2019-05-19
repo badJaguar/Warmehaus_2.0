@@ -6,7 +6,7 @@ import { IMAGEVIEWER_CONFIG } from '@hallysonh/ngx-imageviewer';
 import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { MY_IMAGEVIEWER_CONFIG } from '../../../../constants/image-view-styles';
-import { MetaService } from 'src/services/meta.service';
+import { MetaService } from '../../../../services/meta.service';
 
 @Component({
   selector: 'app-anit-icing',

@@ -5,7 +5,7 @@ import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
 import { IMatTebleItem } from '../../../../models/IMatTebleItem.interface';
 import { ELEMENT_DATA_TERMOSTATS } from '../../../../data/termostats.data';
 import { MY_IMAGEVIEWER_CONFIG } from '../../../../constants/image-view-styles';
-import { MetaService } from 'src/services/meta.service';
+import { MetaService } from '../../../../services/meta.service';
 
 @Component({
   selector: 'app-termostats',

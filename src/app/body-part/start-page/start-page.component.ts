@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ITile } from '../../../models/ITile.interface';
-import { MetaService } from 'src/services/meta.service';
+import { MetaService } from '../../../services/meta.service';
 
 @Component({
   selector: 'app-start-page',

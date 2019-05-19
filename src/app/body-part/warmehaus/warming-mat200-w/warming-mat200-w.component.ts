@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
 import { ELEMENT_DATA_MAT_200W } from '../../../../data/heating-mat200-w.data';
-import { MetaService } from 'src/services/meta.service';
+import { MetaService } from '../../../../services/meta.service';
 
 @Component({
   selector: 'app-warming-mat200-w',

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
-import { MetaService } from 'src/services/meta.service';
+import { MetaService } from '../../../services/meta.service';
 
 @Component({
   selector: 'app-contacts',
