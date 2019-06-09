@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { SwUpdate } from '@angular/service-worker';
+import { MetaService } from '../services/meta.service';
 
 @Component({
     selector: 'app-root',
@@ -8,10 +9,14 @@ import { SwUpdate } from '@angular/service-worker';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-    constructor(private swUpdate: SwUpdate, private router: Router) { }
+    constructor(
+        private swUpdate: SwUpdate,
+        private router: Router,
+        private metaService: MetaService) { }
     title = 'Warmehaus';
 
     ngOnInit() {
+        // this.metaService.createCanonicalURL();
 
         this.router.events.subscribe((evt) => {
             if (!(evt instanceof NavigationEnd)) {

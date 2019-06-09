@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ITile } from '../../../models/ITile.interface';
+import { MetaService } from '../../../services/meta.service';
 
 @Component({
   selector: 'app-start-page',
@@ -7,6 +8,9 @@ import { ITile } from '../../../models/ITile.interface';
   styleUrls: ['./start-page.component.scss']
 })
 export class StartPageComponent implements OnInit {
+
+  constructor(private metaService: MetaService) { }
+
   breakpoint: number;
   tiles: ITile[] = [
     {
@@ -14,7 +18,8 @@ export class StartPageComponent implements OnInit {
       picUrl: 'assets/images/gridPics/grid-1-web.jpg',
       cols: 4,
       rows: 2,
-      alt: 'Теплые полы в Минске'
+      alt: 'Теплые полы в Минске',
+      disableStyles: true
     },
     {
       route: '/warmehaus/mat-160Watt',
@@ -75,6 +80,8 @@ export class StartPageComponent implements OnInit {
     },
   ];
   ngOnInit() {
+    this.metaService.createCanonicalURL();
+
     if (window.innerWidth >= 416) {
       this.tiles[0].cols = 4;
       this.tiles[0].rows = 2;

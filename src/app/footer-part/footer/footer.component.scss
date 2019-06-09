@@ -1,5 +1,5 @@
 .footer{
-    background-color: rgb(27, 23, 6);
+    background: linear-gradient(black, #500f0f, #535203);
     color : white;
     height: 100%;
 }
@@ -93,4 +93,9 @@ border-width: 1px
 }
 .avatar{
     height: 60px;
+}
+
+.made-by{
+    padding-left: 1em;
+    padding-right: 2em
 }

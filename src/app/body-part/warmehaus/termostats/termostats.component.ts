@@ -5,6 +5,7 @@ import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
 import { IMatTebleItem } from '../../../../models/IMatTebleItem.interface';
 import { ELEMENT_DATA_TERMOSTATS } from '../../../../data/termostats.data';
 import { MY_IMAGEVIEWER_CONFIG } from '../../../../constants/image-view-styles';
+import { MetaService } from '../../../../services/meta.service';
 
 @Component({
   selector: 'app-termostats',
@@ -26,6 +27,8 @@ import { MY_IMAGEVIEWER_CONFIG } from '../../../../constants/image-view-styles';
 })
 export class TermostatsComponent implements OnInit {
 
+constructor(private metaService: MetaService) {}
+
   columnsToDisplay = ['name', 'nominal', 'price'];
   headerNames: string[] = ['Тип', 'м2/Вт', 'Цена'];
   expandedElement: IMatTebleItem | null;
@@ -36,6 +39,7 @@ export class TermostatsComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   ngOnInit() {
+    this.metaService.createCanonicalURL();
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
   }

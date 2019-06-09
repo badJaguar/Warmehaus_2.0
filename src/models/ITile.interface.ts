@@ -4,4 +4,5 @@ export interface ITile {
     cols: number;
     rows: number;
     picUrl: string;
+    disableStyles?: boolean;
   }
