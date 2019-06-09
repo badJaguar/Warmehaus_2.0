@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { StartPageComponent } from './body-part/start-page/start-page.component';
 import { WarmingMat160WComponent } from './body-part/warmehaus/warming-mat160-w/warming-mat160-w.component';
 import { WarmingMat200WComponent } from './body-part/warmehaus/warming-mat200-w/warming-mat200-w.component';
@@ -9,11 +9,11 @@ import { Cab20WComponent } from './body-part/warmehaus/cab20-w/cab20-w.component
 import { FilmsComponent } from './body-part/warmehaus/films/films.component';
 import { AnitIcingComponent } from './body-part/warmehaus/anit-icing/anit-icing.component';
 import { TermostatsComponent } from './body-part/warmehaus/termostats/termostats.component';
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { ContactsComponent } from './body-part/contacts/contacts.component';
 
 const routes: Routes = [
-  { path: 'home', component: StartPageComponent },
+  { path: '', component: StartPageComponent },
   { path: 'home/contacts', component: ContactsComponent },
 
   { path: 'warmehaus/mat-160Watt', component: WarmingMat160WComponent },
@@ -25,17 +25,19 @@ const routes: Routes = [
   { path: 'warmehaus/anti-icing', component: AnitIcingComponent },
   { path: 'warmehaus/termostats', component: TermostatsComponent },
 
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'warmehaus', redirectTo: 'home', pathMatch: 'full' },
+   { path: 'home', redirectTo: '', pathMatch: 'full' },
+   { path: 'contacts', redirectTo: 'home/contacts', pathMatch: 'full' },
+  { path: 'warmehaus', redirectTo: '', pathMatch: 'full' },
+  { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
-    useHash: false,
+    preloadingStrategy: PreloadAllModules,
     scrollPositionRestoration: 'enabled',
     anchorScrolling: 'enabled',
   })],
-  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
+  providers: [{ provide: LocationStrategy, useClass: PathLocationStrategy }],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

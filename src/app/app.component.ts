@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
     title = 'Warmehaus';
 
     ngOnInit() {
-        this.metaService.createCanonicalURL();
+        // this.metaService.createCanonicalURL();
 
         this.router.events.subscribe((evt) => {
             if (!(evt instanceof NavigationEnd)) {

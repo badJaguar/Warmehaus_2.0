@@ -36,7 +36,7 @@ import { FooterComponent } from './footer-part/footer/footer.component';
 import { NgxJsonLdModule } from 'ngx-json-ld';
 import { SchemaMarkupComponent } from './seo/schema-markup/schema-markup.component';
 import { MaterialShareModule } from './modules/material-share/material-share.module';
-import { NgxGtagModule } from 'ngx-gtag';
+import { GtagModule } from 'angular-gtag';
 import { ContactsComponent } from './body-part/contacts/contacts.component';
 
 
@@ -60,7 +60,7 @@ import { ContactsComponent } from './body-part/contacts/contacts.component';
     ChipsComponent,
     FooterComponent,
     ContactsComponent,
-    SchemaMarkupComponent
+    SchemaMarkupComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -78,7 +78,7 @@ import { ContactsComponent } from './body-part/contacts/contacts.component';
     MaterialShareModule,
     NgtUniversalModule,
     NguCarouselModule,
-    NgxGtagModule.forRoot({trackingId: 'UA-139924647-1'}),
+    GtagModule.forRoot({ trackingId: 'UA-139924647-1', trackPageviews: true }),
     OverlayModule,
     ReactiveFormsModule,
     RouterModule,
