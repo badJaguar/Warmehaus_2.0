@@ -49,7 +49,7 @@ export class BreadcrumbsComponent implements OnInit {
           }
         });
 
-        console.log(this.breadcrumbList);
+        // console.log(this.breadcrumbList);
       }
     });
   }

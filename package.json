@@ -44,6 +44,7 @@
     "@nguniversal/module-map-ngfactory-loader": "0.0.0",
     "@nicky-lenaers/ngx-scroll-to": "^2.0.0",
     "@types/jquery": "^3.3.29",
+    "angular-gtag": "^1.0.3",
     "bootstrap": "^4.3.1",
     "bulma": "^0.7.4",
     "core-js": "^2.5.4",

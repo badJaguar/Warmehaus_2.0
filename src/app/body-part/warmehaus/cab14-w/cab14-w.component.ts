@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
 import { ELEMENT_DATA_MAT_CAB_14W_THIN } from '../../../../data/cab-14W.data';
+import { MetaService } from '../../../../services/meta.service';
 
 @Component({
   selector: 'app-cab14-w',
@@ -8,6 +9,7 @@ import { ELEMENT_DATA_MAT_CAB_14W_THIN } from '../../../../data/cab-14W.data';
   styleUrls: ['./cab14-w.component.scss']
 })
 export class Cab14WComponent implements OnInit {
+  constructor(private metaService: MetaService) {}
   displayedColumns: string[] = ['name', 'nominal', 'price'];
   dataSource1 = new MatTableDataSource(ELEMENT_DATA_MAT_CAB_14W_THIN);
 
@@ -15,6 +17,7 @@ export class Cab14WComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   ngOnInit() {
+    this.metaService.createCanonicalURL();
     this.dataSource1.sort = this.sort;
     this.dataSource1.paginator = this.paginator;
   }

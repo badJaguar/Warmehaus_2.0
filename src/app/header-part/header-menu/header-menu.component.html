@@ -1,7 +1,7 @@
 <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="">
-      <img src="{{ brand }}" style="max-height: 38px" />
+      <img src="{{ brand }}" alt="logo" style="max-height: 38px" />
     </a>
   </div>
 
@@ -58,15 +58,14 @@
       <div class="btn-item">
         <a
         onclick="location.href='mailto:3523204@gmail.com';"
-          target="_blank"
         >
-          <button mat-fab color="warn">
+          <button mat-fab color="warn" aria-label="Написать на электронную почту компании Warmehaus">
             <mat-icon>email</mat-icon>
           </button></a
         >
       </div>
       <div class="btn-item">
-        <button mat-fab color="warn" (click)="openBottomSheet()">
+        <button mat-fab color="warn" aria-label="Позвонить в компанию Warmehaus" (click)="openBottomSheet()">
           <mat-icon>phone</mat-icon>
         </button>
       </div>
