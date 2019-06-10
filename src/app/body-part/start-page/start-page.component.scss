@@ -12,7 +12,9 @@ h2 {
     font-size: calc(1.7vw + 1.7vh);
 
 }
-
+.first img:hover{
+    cursor: default;
+}
 mat-grid-tile:hover {
     opacity: 0.5;
 }
