@@ -1,7 +1,7 @@
 <mat-card class="card">
   <mat-grid-list [cols]="breakpoint" rowHeight="2:2" (window:resize)="onResize($event)" gutterSize="10">
     <mat-grid-tile *ngFor="let tile of tiles; let i=index; first as isFirst" [class.first]="isFirst"
-      [ngStyle]="{'opacity': tile.disableStyles === true && 1}" [colspan]="tile.cols" [rowspan]="tile.rows" matRipple>
+      [colspan]="tile.cols" [rowspan]="tile.rows" matRipple>
       <a href="#" routerLink={{tile.route}} routerLinkActive="active">
         <img src={{tile.picUrl}} alt={{tile.alt}}></a>
     </mat-grid-tile>

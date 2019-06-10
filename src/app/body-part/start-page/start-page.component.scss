@@ -12,11 +12,19 @@ h2 {
     font-size: calc(1.7vw + 1.7vh);
 
 }
-.first img:hover{
+
+.first img:hover {
     cursor: default;
+    opacity: 1;
 }
+
 mat-grid-tile:hover {
-    opacity: 0.5;
+    background-color: #000;
+}
+
+img:hover {
+    background-color: #000;
+    opacity: 0.8;
 }
 
 .text {
