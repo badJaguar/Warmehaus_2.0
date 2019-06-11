@@ -1,118 +1,114 @@
-@import '../../../styles/fluid-font';
+@import "../../../styles/fluid-font";
 
 table {
-    width: 100%;
+  width: 100%;
+}
+.mat-form-field {
+  font-size: 17px;
+  width: 100%;
+}
+
+td,
+th {
+  width: 40%;
+}
+.mat-header-cell {
+  font-display: inline;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  b {
+    font-size: 20px;
   }
-  .mat-form-field {
-    font-size: 17px;
-    width: 100%;
+}
+
+@media only screen and (max-width: 320px) {
+  b {
+    font-size: 10px;
   }
-  
-  td, th {
-    width: 40%;
-  }
-  .mat-header-cell{
-      font-display: inline;
-      font-weight: bold;
-      font-size: 14px;
-      text-align: center;
-      cursor: pointer
-  }
-  @media only screen and (max-width: 768px) {
-    b {
-      font-size: 20px;
-    }
-  }
-  
-  @media only screen and (max-width: 320px) {
-    b {
-      font-size: 10px;
-    }
-  }
-  /* td:nth-of-type(2){
-    font-weight: bold;
-  } */
-  mat-paginator{
-      font-weight: bold;
-      color: black
-  }
-  mat-card-title{
-      text-align: center
-  }
-  .table, .filter{
-    max-width:1280px;
-    margin-left: auto;
-    margin-right: auto
-  }
-  .cards{
-    width: 100%;
-    margin-top: 20px;
-  }
-  .recomind{
-    text-decoration: underline;
-  }
-  h2{
-    text-align: center;
-  }
-  mat-divider{
-    height: 1px;
-    background-color: black
-  }
-  .description{
-    
+}
+mat-paginator {
+  font-weight: bold;
+  color: black;
+}
+mat-card-title {
+  text-align: center;
+}
+.table,
+.filter {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cards {
+  width: 100%;
+  margin-top: 20px;
+}
+.recomind {
+  text-decoration: underline;
+}
+h2 {
+  text-align: center;
+}
+mat-divider {
+  height: 1px;
+  background-color: black;
+}
+.description {
   min-width: 80%;
   margin-block-start: 2%;
-  /* margin-left: 10%; */
-  }
-  .h2small{
+}
+.h2small {
   font-weight: bold;
-  
-  }
-  .mat-header-row{
+}
+.mat-header-row {
   background-color: rgb(233, 232, 232);
-  }
-  mat-tab-group{
+}
+mat-tab-group {
   max-width: 1200px;
   margin-block-start: 2%;
   margin-left: auto;
-    margin-right: auto;
-  }
-  .content{
-  margin: 30px
-  }
-  ::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
-  color:black;
-  background-color:rgb(233, 232, 232);
-  font-weight: bold
-  }
-  
-  ::ng-deep .mat-ink-bar {
-  background-color: var(--primary-color,red) !important;
-  }
-  
-  ul{
+  margin-right: auto;
+}
+.content {
+  margin: 30px;
+}
+::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
+  color: black;
+  background-color: rgb(233, 232, 232);
+  font-weight: bold;
+}
+
+::ng-deep .mat-ink-bar {
+  background-color: var(--primary-color, red) !important;
+}
+
+ul {
   max-width: 640px;
-  }
-  .vertTab{
-  padding-block-start: 15px
-  }
-  .upon ul{
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .uponTable{
+}
+.vertTab {
+  padding-block-start: 15px;
+}
+.upon ul {
+  margin-left: auto;
+  margin-right: auto;
+}
+.uponTable {
   max-width: 1500px;
   margin-left: auto;
-  margin-left: auto
-  }
-  .upper-image{
-    max-width: 320px;
-    max-height: 320px;
-    margin-left: auto;
-    margin-right: auto;
-  padding-right: 20px
-    }
-    .price-info{
-      padding-left: 20px;
-      padding-bottom: 15px
-    }
+  margin-left: auto;
+}
+.upper-image {
+  max-width: 320px;
+  max-height: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 20px;
+}
+.price-info {
+  padding-left: 20px;
+  padding-bottom: 15px;
+}
