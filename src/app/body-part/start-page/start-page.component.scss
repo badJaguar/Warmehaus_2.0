@@ -1,3 +1,5 @@
+@import "../../styles/img-buttons";
+
 @media screen and (min-width: 930px) {
   h1,
   h2 {
@@ -26,20 +28,6 @@ h2 {
 .card {
   max-width: 1488px;
   margin: auto;
-}
-
-.first img:hover {
-  cursor: default;
-  opacity: 1;
-}
-
-mat-grid-tile:hover {
-  background-color: #000;
-}
-
-img:hover {
-  background-color: #000;
-  opacity: 0.8;
 }
 
 article {

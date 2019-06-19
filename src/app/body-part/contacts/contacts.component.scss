@@ -1,12 +1,16 @@
+@import "../../styles/img-buttons";
+
 @media screen and (max-width: 930px) {
     .business-hours {
         margin-top: 15px;
     }
+
     .demo-bg {
         background: #ffac0c;
         margin-top: 10px;
     }
-    button{
+
+    button {
         width: 220px;
     }
 }
@@ -51,7 +55,9 @@
 
 h1,
 h2 {
-    text-align: center
+    text-align: center;
+    mix-blend-mode: difference;
+    filter: invert(1) grayscale(1) contrast(9)
 }
 
 .button,
@@ -81,6 +87,7 @@ h2 {
     padding-top: calc(0.375em - 1px);
     position: relative;
     vertical-align: top;
+    filter: invert(1) grayscale(1) contrast(9)
 }
 
 .input,
@@ -126,16 +133,19 @@ h2 {
 
 .business-hours .title {
     font-size: 20px;
-    color: #BBB;
+    color: rgb(233, 233, 233);
     text-transform: uppercase;
     padding-left: 5px;
     border-left: 4px solid #ffac0c;
+    mix-blend-mode: difference;
+
 }
 
-.business-hours li {
-    color: #888;
+.business-hours li, span {
+    color: rgb(219, 217, 217);
     line-height: 30px;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid rgb(95, 95, 95);
+    filter: grayscale(1) contrast(1)
 }
 
 .business-hours li:last-child {
@@ -144,6 +154,7 @@ h2 {
 
 .business-hours .opening-hours li.today {
     color: #ffac0c;
+    filter: contrast(1)
 }
 
 h6 {
@@ -158,12 +169,20 @@ button:focus {
 }
 
 a:hover {
-    color: black;
-    text-decoration: none;
-    background: none
+    background: none;
+    mix-blend-mode: difference;
+    filter: invert(1) grayscale(1) contrast(9)
 }
 
 button {
     background: none;
     border: none
+}
+
+a, b {
+    color: darkblue;
+    height: inherit;
+    background: inherit;
+    -webkit-background-clip: text;
+    background-clip: text;
 }

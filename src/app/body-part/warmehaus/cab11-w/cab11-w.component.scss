@@ -1,6 +1,5 @@
 @import '../../../styles/fluid-font';
-
-
+  
 table {
     width: 100%;
   }
@@ -30,9 +29,6 @@ table {
       font-size: 10px;
     }
   }
-  /* td:nth-of-type(2){
-    font-weight: bold;
-  } */
   mat-paginator{
       font-weight: bold;
       color: black
@@ -60,7 +56,6 @@ table {
     background-color: black
   }
   .description{
-    
   min-width: 80%;
   margin-block-start: 2%;
   /* margin-left: 10%; */
@@ -104,14 +99,17 @@ table {
   .uponTable{
   max-width: 1500px;
   margin-left: auto;
-  margin-left: auto
+  margin-left: auto;
   }
   .upper-image{
-    max-width: 320px;
-    max-height: 320px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-right: 20px
+    max-width: 280px;
+    max-height: 280px;
+    margin: auto;
+    padding-right: 20px;
+    }
+    .uponTable img{
+      margin-left: 5%;
+      margin-right: auto
     }
     .price-info{
       padding-left: 20px;

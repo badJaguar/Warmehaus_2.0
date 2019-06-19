@@ -1,163 +1,183 @@
 @import '../../../../app/styles/expanded-table';
 
+@media screen and (max-width: 930px) {
+    .inrow-picture {
+        max-width: 320px;
+        margin: auto;
+    }
+}
+@media screen and (max-width: 380px) {
+td.mat-cell, td.mat-footer-cell, th.mat-header-cell {
+  border: 1px solid #dbdbdb;
+  border-width: 0 0 1px;
+  padding: 0.8em 0.1em;
+  vertical-align: top;
+}
+}
+
 tr.example-detail-row {
     height: 0;
-  }
-  
-  tr.example-element-row:not(.example-expanded-row):hover {
+}
+
+tr.example-element-row:not(.example-expanded-row):hover {
     background: #f5f5f5;
-  }
-  
-  tr.example-element-row:not(.example-expanded-row):active {
+}
+
+tr.example-element-row:not(.example-expanded-row):active {
     background: #f7f6e3;
-  }
-  
-  .example-element-row td {
-    border-bottom-width: 0;
-    height: 3%;
-    cursor: pointer
-  }
-  
-  .example-element-detail {
+}
+
+.example-element-row td {
+  border-bottom-width: 0;
+  cursor: pointer;
+}
+
+.inrow-picture {
+    min-width: 30%;
+    margin-left: 10%;
+    margin-top: 3%;
+    margin-bottom: 3%
+}
+
+.example-element-detail {
     overflow: hidden;
     display: flex;
-  
-  }
-  
-  .examle-element-display {
+
+}
+
+.examle-element-display {
     height: 0;
-  }
-  
-  .example-element-symbol {
+}
+
+.example-element-symbol {
     font-weight: bold;
     font-size: 40px;
     line-height: normal;
-  }
-  
-  .example-element-description-attribution {
+}
+
+.example-element-description-attribution {
     opacity: 0.5;
-  }
-  
-  .mat-form-field {
+}
+
+.mat-form-field {
     font-size: 17px;
     width: 100%;
-  }
-  
-  td,
-  th {
+}
+
+td,
+th {
     width: 40%;
-  }
-  
-  .mat-header-cell {
+}
+
+.mat-header-cell {
     font-display: inline;
     font-weight: bold;
     font-size: 14px;
     text-align: center;
     cursor: pointer
-  }
-  
-  // @media only screen and (max-width: 768px) {
-  //   b {
-  //     font-size: 20px;
-  //   }
-  // }
-  
-  // @media only screen and (max-width: 300px) {
-  //   b {
-  //     font-size: 10px;
-  //   }
-  // }
+}
 
-  mat-paginator {
+// @media only screen and (max-width: 768px) {
+//   b {
+//     font-size: 20px;
+//   }
+// }
+
+// @media only screen and (max-width: 300px) {
+//   b {
+//     font-size: 10px;
+//   }
+// }
+
+mat-paginator {
     font-weight: bold;
     color: black
-  }
-  
-  mat-card-title {
+}
+
+mat-card-title {
     text-align: center
-  }
-  
-  .table,
-  .filter {
+}
+
+.table,
+.filter {
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
-  }
-  
-  .recomind {
+}
+
+.recomind {
     text-decoration: underline;
-  }
-  
-  h2 {
+}
+
+h2 {
     text-align: center;
-  }
-  
-  mat-divider {
+}
+
+mat-divider {
     height: 1px;
     background-color: black;
-  }
-  
-  .h2small {
+}
+
+.h2small {
     font-weight: bold;
-  
-  }
-  
-  .mat-header-row {
+
+}
+
+.mat-header-row {
     background-color: rgb(233, 232, 232);
-  }
-  
-  mat-tab-group {
+}
+
+mat-tab-group {
     max-width: 1200px;
     margin-block-start: 2%;
     margin-left: auto;
     margin-right: auto;
-  }
-  
-  .content {
+}
+
+.content {
     margin: 30px;
-  }
-  
-  ::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
+}
+
+::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
     color: black;
     background-color: rgb(233, 232, 232);
     font-weight: bold
-  }
-  
-  ::ng-deep .mat-ink-bar {
+}
+
+::ng-deep .mat-ink-bar {
     background-color: var(--primary-color, red) !important;
-  }
-  
-  ul {
+}
+
+ul {
     max-width: 640px;
-  }
-  
-  .vertTab {
+}
+
+.vertTab {
     padding-block-start: 10px
-  }
-  
-  .upon ul {
+}
+
+.upon ul {
     margin-left: 5%;
-  }
-  
-  ngx-imageviewer {
+}
+
+ngx-imageviewer {
     margin-right: 73%;
     max-width: 240px;
-  }
-  
-  /* .expander{
+}
+
+/* .expander{
       min-width: 800px
     } */
-  .price-info {
+.price-info {
     padding-left: 20px;
     padding-bottom: 15px
-  }
-  
-  .video {
+}
+
+.video {
     margin-left: auto;
     margin-right: auto;
     border-style: solid;
     border-width: 1px;
     border-color: black;
     text-align: center
-  }
- 
+}
