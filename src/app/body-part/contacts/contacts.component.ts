@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { MetaService } from '../../../services/meta.service';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-contacts',
@@ -13,7 +14,11 @@ export class ContactsComponent implements OnInit {
   email: string;
   message: string;
 
-  constructor(private metaService: MetaService) { }
+  constructor(private metaService: MetaService, private meta: Meta) {
+    this.meta.addTag({
+      name: 'keywords',
+      content: 'магазин, как проехать, где находится, адрес, позвонить, написать, вармхаус адрес, вармхаус бай'});
+  }
 
   ngOnInit() {
     this.metaService.createCanonicalURL();
