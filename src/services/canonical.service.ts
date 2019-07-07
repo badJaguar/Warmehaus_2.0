@@ -5,7 +5,7 @@ import { DOCUMENT } from '@angular/common';
   providedIn: 'root'
 })
 
-export class MetaService {
+export class CanonicalService {
   constructor(@Inject(DOCUMENT) private dom) { }
 
   createCanonicalURL(url?: string) {

@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
 import { ELEMENT_DATA_MAT_CAB_14W_THIN } from '../../../../data/cab-14W.data';
-import { MetaService } from '../../../../services/meta.service';
+import { CanonicalService } from '../../../../services/canonical.service';
 
 @Component({
   selector: 'app-cab14-w',
@@ -9,7 +9,7 @@ import { MetaService } from '../../../../services/meta.service';
   styleUrls: ['./cab14-w.component.scss']
 })
 export class Cab14WComponent implements OnInit {
-  constructor(private metaService: MetaService) {}
+  constructor(private metaService: CanonicalService) {}
   displayedColumns: string[] = ['name', 'nominal', 'price'];
   dataSource1 = new MatTableDataSource(ELEMENT_DATA_MAT_CAB_14W_THIN);
 

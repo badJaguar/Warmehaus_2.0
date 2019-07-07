@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
 import { ELEMENT_DATA_FILMS } from '../../../../data/films.data';
-import { MetaService } from '../../../../services/meta.service';
+import { CanonicalService } from '../../../../services/canonical.service';
 
 @Component({
   selector: 'app-films',
@@ -9,7 +9,7 @@ import { MetaService } from '../../../../services/meta.service';
   styleUrls: ['./films.component.scss']
 })
 export class FilmsComponent implements OnInit {
-  constructor(private metaService: MetaService) {}
+  constructor(private metaService: CanonicalService) {}
   displayedColumns: string[] = ['name', 'nominal', 'price'];
   dataSource1 = new MatTableDataSource(ELEMENT_DATA_FILMS);
 

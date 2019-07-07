@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
-import { MetaService } from '../../../services/meta.service';
+import { CanonicalService } from '../../../services/canonical.service';
 import { Meta } from '@angular/platform-browser';
 
 @Component({
@@ -14,7 +14,7 @@ export class ContactsComponent implements OnInit {
   email: string;
   message: string;
 
-  constructor(private metaService: MetaService, private meta: Meta) {
+  constructor(private canonicalService: CanonicalService, private meta: Meta) {
     this.meta.addTags([
       {
         name: 'keywords',
@@ -28,7 +28,7 @@ export class ContactsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.metaService.createCanonicalURL();
+    this.canonicalService.createCanonicalURL();
     $(document).ready(function () {
       $('.opening-hours li').eq(new Date().getDay() - 1).addClass('today');
     });

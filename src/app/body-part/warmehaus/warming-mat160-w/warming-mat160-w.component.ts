@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
 import { ELEMENT_DATA_MAT_160W } from '../../../../data/heating-mat160W.data';
-import { MetaService } from '../../../../services/meta.service';
+import { CanonicalService } from '../../../../services/canonical.service';
 
 @Component({
   selector: 'app-warming-mat160-w',
@@ -10,7 +10,7 @@ import { MetaService } from '../../../../services/meta.service';
 })
 export class WarmingMat160WComponent implements OnInit {
 
-  constructor(private metaService: MetaService) {}
+  constructor(private metaService: CanonicalService) {}
 
   displayedColumns: string[] = ['name', 'nominal', 'price'];
   dataSource = new MatTableDataSource(ELEMENT_DATA_MAT_160W);

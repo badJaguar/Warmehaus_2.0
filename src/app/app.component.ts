@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { SwUpdate } from '@angular/service-worker';
-import { MetaService } from '../services/meta.service';
+import { CanonicalService } from '../services/canonical.service';
 
 @Component({
     selector: 'app-root',
@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
     constructor(
         private swUpdate: SwUpdate,
         private router: Router,
-        private metaService: MetaService) { }
+        private metaService: CanonicalService) { }
     title = 'Warmehaus';
 
     ngOnInit() {

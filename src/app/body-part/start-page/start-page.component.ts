@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ITile } from '../../../models/ITile.interface';
-import { MetaService } from '../../../services/meta.service';
+import { CanonicalService } from '../../../services/canonical.service';
 import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
@@ -10,7 +10,7 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class StartPageComponent implements OnInit {
 
-  constructor(private metaService: MetaService, private meta: Meta, private titleService: Title) {
+  constructor(private metaService: CanonicalService, private meta: Meta, private titleService: Title) {
     this.meta.addTags([{
       name: 'description',
       // tslint:disable-next-line:max-line-length
