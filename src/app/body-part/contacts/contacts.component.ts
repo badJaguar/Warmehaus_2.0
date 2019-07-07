@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { CanonicalService } from '../../../services/canonical.service';
 import { Meta } from '@angular/platform-browser';
+import { TokenType } from '@angular/compiler/src/ml_parser/lexer';
 
 @Component({
   selector: 'app-contacts',
@@ -23,6 +24,9 @@ export class ContactsComponent implements OnInit {
       {
         name: 'description',
         content: 'Магазин Warmehaus находится на стройрынке "Уручье" в Минске.'
+      },{
+        property: 'og:image',
+        content: `http://localhost:4200/assets/images/Email-Logo.gif`
       }]);
     this.meta.removeTag('description');
   }
@@ -34,4 +38,3 @@ export class ContactsComponent implements OnInit {
     });
   }
 }
-
