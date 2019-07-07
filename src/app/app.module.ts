@@ -1,7 +1,7 @@
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule } from '@angular/cdk/tree';
 import { CommonModule } from '@angular/common';
@@ -38,7 +38,6 @@ import { SchemaMarkupComponent } from './seo/schema-markup/schema-markup.compone
 import { MaterialShareModule } from './modules/material-share/material-share.module';
 import { GtagModule } from 'angular-gtag';
 import { ContactsComponent } from './body-part/contacts/contacts.component';
-
 
 @NgModule({
   declarations: [
@@ -90,6 +89,6 @@ import { ContactsComponent } from './body-part/contacts/contacts.component';
   bootstrap: [AppComponent],
   entryComponents: [PhonesSheetComponent],
   exports: [],
-  providers: [SafeHtmlPipe],
+  providers: [SafeHtmlPipe, Title],
 })
 export class AppModule { }

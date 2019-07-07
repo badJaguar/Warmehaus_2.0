@@ -1,7 +1,7 @@
 <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="">
-      <img src="{{ brand }}" alt="logo" style="max-height: 38px" />
+    <a class="navbar-item" href="#">
+      <img src="{{ brand }}" alt="logo" style="max-height: 38px" (click)="setTitle( 'Теплые полы Warmehaus' )" />
     </a>
   </div>
 
@@ -22,11 +22,18 @@
   </div>
 
   <div id="navbarBasic" class="navbar-menu" #navMenu>
-    <a class="navbar-item" href="#" routerLink="" routerLinkActive="active">
+    <a class="navbar-item" 
+    href=""
+    (click)="setTitle( 'Теплые полы Warmehaus' )"
+    routerLink="./home" 
+    routerLinkActive="active" 
+    >
       Главная
     </a>
+
     <a class="navbar-item"
        href="#"
+       (click)="setTitle( 'Контакты' )"
        routerLink="./home/contacts"
        routerLinkActive="active">
       Контакты

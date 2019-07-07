@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { BreadcrumbRoutesService } from '../../../services/breadcrumb-routes.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-breadcrumbs',
@@ -13,11 +14,15 @@ export class BreadcrumbsComponent implements OnInit {
   breadcrumbs: Array<any> = [];
   breadcrumbList: Array<any> = [];
 
-  constructor(private router: Router, private breadcrSrc: BreadcrumbRoutesService) { }
+  constructor(private router: Router, private breadcrSrc: BreadcrumbRoutesService, private titleService: Title) { }
 
   ngOnInit() {
     this.breadcrumbs = this.breadcrSrc.getMenu();
     this.listenRouting();
+  }
+
+  public setTitle( newTitle: string) {
+    this.titleService.setTitle( newTitle );
   }
 
   listenRouting() {

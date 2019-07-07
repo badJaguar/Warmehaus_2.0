@@ -2,6 +2,7 @@ import { PhonesSheetComponent } from '../../footer-part/phones-sheet/phones-shee
 
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { MatBottomSheet } from '@angular/material';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-header-menu',
@@ -16,7 +17,11 @@ export class HeaderMenuComponent implements OnInit {
 
   brand = 'assets/images/logo2.png';
 
-  constructor(private bottomSheet: MatBottomSheet) { }
+  constructor(private bottomSheet: MatBottomSheet, private titleService: Title) { }
+
+  public setTitle( newTitle: string) {
+    this.titleService.setTitle( newTitle );
+  }
 
   openBottomSheet(): void {
     this.bottomSheet.open(PhonesSheetComponent);

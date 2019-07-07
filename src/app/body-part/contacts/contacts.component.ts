@@ -15,9 +15,16 @@ export class ContactsComponent implements OnInit {
   message: string;
 
   constructor(private metaService: MetaService, private meta: Meta) {
-    this.meta.addTag({
-      name: 'keywords',
-      content: 'магазин, как проехать, где находится, адрес, позвонить, написать, вармхаус адрес, вармхаус бай'});
+    this.meta.addTags([
+      {
+        name: 'keywords',
+        content: 'магазин, как проехать, где находится, адрес, позвонить, написать, вармхаус адрес, вармхаус бай'
+      },
+      {
+        name: 'description',
+        content: 'Магазин Warmehaus находится на стройрынке "Уручье" в Минске.'
+      }]);
+    this.meta.removeTag('description');
   }
 
   ngOnInit() {

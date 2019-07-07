@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ITile } from '../../../models/ITile.interface';
 import { MetaService } from '../../../services/meta.service';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-start-page',
@@ -9,7 +10,17 @@ import { MetaService } from '../../../services/meta.service';
 })
 export class StartPageComponent implements OnInit {
 
-  constructor(private metaService: MetaService) { }
+  constructor(private metaService: MetaService, private meta: Meta, private titleService: Title) {
+    this.meta.addTags([{
+      name: 'description',
+      // tslint:disable-next-line:max-line-length
+      content: 'Качественные теплые полы по приемлимым ценам, терморегуляторы для теплых полов: аналоговые, wi-fi, сенсорные, системы антиоблединения крыш (кровельных покрытий) высокого качества. Всё это представляет компания WÄRMEHAUS в Беларуси.'
+    },{
+      name: 'keywords',
+      // tslint:disable-next-line:max-line-length
+      content: 'теплый пол, теплые полы, пол с подогревом, подогрев пола, теплый пол электриеский, отопление дома, теплый пол в баню, теплый пол на кухню, теплый пол на балконе, купить теплый пол в Минске, как сделать теплый пол, теплые полы сколько стоят, теплые полы цена в Минске, отопление дома теплым полом,сколько стоит теплый пол в Минске, теплый пол электриеский купить в Минске, вармехаус, warmehaus, мощность теплого пола, теплый пол в частном доме, греющий кабель купить в Минске, номер 1 в Минске, хороший, надежность теплого пола, теплый пол с доставкой'
+    }]);
+  }
 
   breakpoint: number;
   tiles: ITile[] = [
@@ -101,5 +112,9 @@ export class StartPageComponent implements OnInit {
       this.tiles[0].cols = 4;
       this.tiles[0].rows = 2;
     }
+  }
+
+  public setTitle(newTitle: string) {
+    this.titleService.setTitle(newTitle);
   }
 }
