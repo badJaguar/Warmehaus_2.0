@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { CanonicalService } from '../../../services/canonical.service';
 import { Meta } from '@angular/platform-browser';
+import { OgContacts } from 'src/open-graph/og-data-contacts';
 
 @Component({
   selector: 'app-contacts',
   templateUrl: './contacts.component.html',
-  styleUrls: ['./contacts.component.scss']
+  styleUrls: ['./contacts.component.scss'],
+  providers: [OgContacts]
 })
 export class ContactsComponent implements OnInit {
 
@@ -14,41 +16,22 @@ export class ContactsComponent implements OnInit {
   email: string;
   message: string;
 
-  constructor(private canonicalService: CanonicalService, private meta: Meta) {
+  constructor(private canonicalService: CanonicalService, private meta: Meta, private tag: OgContacts) {
     this.meta.addTags([
-      {
-        name: 'keywords',
-        content: 'магазин, как проехать, где находится, адрес, позвонить, написать, вармхаус адрес, вармхаус бай'
-      },
-      {
-        name: 'description',
-        content: 'Магазин Warmehaus находится на строительном рынке "Уручье" города Минск.'
-      },
-      {
-        property: 'og:title',
-        content: 'Контакты'
-      },
-      {
-        property: 'og:description',
-        content: 'Телефоны, адрес, консульнация по телефону, проложить маршрут к магазину'
-      },
-      {
-        property: 'og:type',
-        content: 'website'
-      },
-      {
-        property: 'og:image',
-        content: '../../../assets/images/og-contacts.jpg'
-      },
-      {
-        property: 'og:url',
-        content: 'https://warmehaus.com.by/home/contacts'
-      }]);
+      { name: this.tag.keywords, content: this.tag.keywordsContent },
+      { name: this.tag.description, content: this.tag.descriptionContent },
+      { property: this.tag.ogTitle, content: this.tag.ogTitleContent },
+      { property: this.tag.ogDescription, content: this.tag.ogDescriptionContent },
+      { property: this.tag.ogType, content: this.tag.ogTypeContent },
+      { property: this.tag.ogImage, content: this.tag.ogImageContent },
+      { property: this.tag.ogUrl, content: this.tag.ogUrlContent }
+    ]);
   }
 
   ngOnInit() {
     this.canonicalService.createCanonicalURL();
-    $(document).ready(function () {
+// tslint:disable-next-line: deprecation
+    $(document).ready(() => {
       $('.opening-hours li').eq(new Date().getDay() - 1).addClass('today');
     });
   }
