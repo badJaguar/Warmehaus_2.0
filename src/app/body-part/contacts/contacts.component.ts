@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { CanonicalService } from '../../../services/canonical.service';
 import { Meta } from '@angular/platform-browser';
-import { TokenType } from '@angular/compiler/src/ml_parser/lexer';
 
 @Component({
   selector: 'app-contacts',
@@ -23,10 +22,27 @@ export class ContactsComponent implements OnInit {
       },
       {
         name: 'description',
-        content: 'Магазин Warmehaus находится на стройрынке "Уручье" в Минске.'
-      },{
+        content: 'Магазин Warmehaus находится на строительном рынке "Уручье" города Минск.'
+      },
+      {
+        property: 'og:title',
+        content: 'Контакты'
+      },
+      {
+        property: 'og:description',
+        content: 'Телефоны, адрес, консульнация по телефону, проложить маршрут к магазину'
+      },
+      {
+        property: 'og:type',
+        content: 'website'
+      },
+      {
         property: 'og:image',
-        content: `http://localhost:4200/assets/images/Email-Logo.gif`
+        content: '../../../assets/images/og-contacts.jpg'
+      },
+      {
+        property: 'og:url',
+        content: 'https://warmehaus.com.by/home/contacts'
       }]);
     this.meta.removeTag('description');
   }
