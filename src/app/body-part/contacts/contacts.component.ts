@@ -44,7 +44,6 @@ export class ContactsComponent implements OnInit {
         property: 'og:url',
         content: 'https://warmehaus.com.by/home/contacts'
       }]);
-    this.meta.removeTag('description');
   }
 
   ngOnInit() {
