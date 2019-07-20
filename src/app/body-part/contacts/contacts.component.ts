@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { CanonicalService } from '../../../services/canonical.service';
-import { Meta } from '@angular/platform-browser';
-import { OgContacts } from 'src/open-graph/og-data-contacts';
+import { Meta, Title } from '@angular/platform-browser';
+import { MetaContacts } from '../../seo/open-graph/meta-data-contacts';
 
 @Component({
   selector: 'app-contacts',
   templateUrl: './contacts.component.html',
   styleUrls: ['./contacts.component.scss'],
-  providers: [OgContacts]
+  providers: [MetaContacts]
 })
 export class ContactsComponent implements OnInit {
 
@@ -16,7 +16,7 @@ export class ContactsComponent implements OnInit {
   email: string;
   message: string;
 
-  constructor(private canonicalService: CanonicalService, private meta: Meta, private tag: OgContacts) {
+  constructor(private canonicalService: CanonicalService, private meta: Meta, private tag: MetaContacts) {
     this.meta.addTags([
       { name: this.tag.keywords, content: this.tag.keywordsContent },
       { name: this.tag.description, content: this.tag.descriptionContent },

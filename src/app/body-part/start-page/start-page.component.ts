@@ -2,24 +2,26 @@ import { Component, OnInit } from '@angular/core';
 import { ITile } from '../../../models/ITile.interface';
 import { CanonicalService } from '../../../services/canonical.service';
 import { Meta, Title } from '@angular/platform-browser';
+import { MetaSrartPage } from '../../seo/open-graph/meta-data-startPage';
 
 @Component({
   selector: 'app-start-page',
   templateUrl: './start-page.component.html',
-  styleUrls: ['./start-page.component.scss']
+  styleUrls: ['./start-page.component.scss'],
+  providers: [MetaSrartPage]
 })
 export class StartPageComponent implements OnInit {
 
-  constructor(private metaService: CanonicalService, private meta: Meta, private titleService: Title) {
-    this.meta.addTags([{
-      name: 'description',
-      // tslint:disable-next-line:max-line-length
-      content: 'Качественные теплые полы по приемлимым ценам, терморегуляторы для теплых полов: аналоговые, wi-fi, сенсорные, системы антиоблединения крыш (кровельных покрытий) высокого качества. Всё это представляет компания WÄRMEHAUS в Беларуси.'
-    },{
-      name: 'keywords',
-      // tslint:disable-next-line:max-line-length
-      content: 'теплый пол, теплые полы, пол с подогревом, подогрев пола, теплый пол электриеский, отопление дома, теплый пол в баню, теплый пол на кухню, теплый пол на балконе, купить теплый пол в Минске, как сделать теплый пол, теплые полы сколько стоят, теплые полы цена в Минске, отопление дома теплым полом,сколько стоит теплый пол в Минске, теплый пол электриеский купить в Минске, вармехаус, warmehaus, мощность теплого пола, теплый пол в частном доме, греющий кабель купить в Минске, номер 1 в Минске, хороший, надежность теплого пола, теплый пол с доставкой'
-    }]);
+  constructor(private metaService: CanonicalService, private meta: Meta, private titleService: Title, private tag: MetaSrartPage) {
+    this.meta.addTags([
+      { name: this.tag.keywords, content: this.tag.keywordsContent },
+      { name: this.tag.description, content: this.tag.descriptionContent },
+      { property: this.tag.ogTitle, content: this.tag.ogTitleContent },
+      { property: this.tag.ogDescription, content: this.tag.ogDescriptionContent },
+      { property: this.tag.ogType, content: this.tag.ogTypeContent },
+      { property: this.tag.ogImage, content: this.tag.ogImageContent },
+      { property: this.tag.ogUrl, content: this.tag.ogUrlContent }
+    ]);
   }
 
   breakpoint: number;

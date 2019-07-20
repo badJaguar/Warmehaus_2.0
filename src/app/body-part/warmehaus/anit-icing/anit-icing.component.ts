@@ -7,6 +7,8 @@ import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { MY_IMAGEVIEWER_CONFIG } from '../../../../constants/image-view-styles';
 import { CanonicalService } from '../../../../services/canonical.service';
+import { Meta, Title } from '@angular/platform-browser';
+import { MetaAntiIcing } from '../../../seo/open-graph/meta-data-antiIcing';
 
 @Component({
   selector: 'app-anit-icing',
@@ -21,6 +23,7 @@ import { CanonicalService } from '../../../../services/canonical.service';
     ]),
   ],
   providers: [
+    MetaAntiIcing,
     {
       provide: IMAGEVIEWER_CONFIG,
       useValue: MY_IMAGEVIEWER_CONFIG
@@ -28,7 +31,18 @@ import { CanonicalService } from '../../../../services/canonical.service';
   ]
 })
 export class AnitIcingComponent implements OnInit {
-  constructor(private metaService: CanonicalService) {}
+  constructor(private canonicalService: CanonicalService, private meta: Meta, private tag: MetaAntiIcing) {
+    this.meta.addTags([
+      { name: this.tag.keywords, content: this.tag.keywordsContent },
+      { name: this.tag.description, content: this.tag.descriptionContent },
+      { property: this.tag.ogTitle, content: this.tag.ogTitleContent },
+      { property: this.tag.ogDescription, content: this.tag.ogDescriptionContent },
+      { property: this.tag.ogType, content: this.tag.ogTypeContent },
+      { property: this.tag.ogImage, content: this.tag.ogImageContent },
+      { property: this.tag.ogUrl, content: this.tag.ogUrlContent }
+    ]);
+  }
+
   displayedColumns: string[] = ['name', 'nominal', 'price'];
   pipeHeatingDataSource = new MatTableDataSource(ELEMENT_DATA_PIPE_HEATING_CABLE);
 
@@ -43,7 +57,7 @@ export class AnitIcingComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   ngOnInit() {
-    this.metaService.createCanonicalURL();
+    this.canonicalService.createCanonicalURL();
     this.pipeHeatingDataSource.sort = this.sort;
     this.pipeHeatingDataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;

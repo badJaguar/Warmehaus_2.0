@@ -1,6 +1,6 @@
-import { IMetaData } from 'src/models/IMetaData.interface';
+import { IMetaData } from '../../../../src/models/IMetaData.interface';
 
-export class OgContacts implements IMetaData {
+export class MetaContacts implements IMetaData {
 keywords = 'keywords';
 keywordsContent = 'магазин, как проехать, где находится, адрес, позвонить, написать, вармхаус адрес, вармхаус бай';
 description = 'description';
@@ -12,7 +12,7 @@ ogDescriptionContent = 'Телефоны, адрес, консультация �
 ogType = 'og:type';
 ogTypeContent = 'website';
 ogImage = 'og:image';
-ogImageContent = '../assets/images/og-contacts.jpg';
+ogImageContent = '../../../assets/images/og-contacts.jpg';
 ogUrl = 'og:url';
 ogUrlContent = 'https://warmehaus.com.by/home/contacts';
 }
