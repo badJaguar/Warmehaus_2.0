@@ -38,6 +38,7 @@ import { SchemaMarkupComponent } from './seo/schema-markup/schema-markup.compone
 import { MaterialShareModule } from './modules/material-share/material-share.module';
 import { GtagModule } from 'angular-gtag';
 import { ContactsComponent } from './body-part/contacts/contacts.component';
+import { InfoComponent } from './body-part/info/info.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { ContactsComponent } from './body-part/contacts/contacts.component';
     FooterComponent,
     ContactsComponent,
     SchemaMarkupComponent,
+    InfoComponent,
   ],
   imports: [
     AppRoutingModule,

@@ -13,6 +13,7 @@ export class BreadcrumbRoutesService {
       {
         name: 'Главная', path: './home', children: [
           { name: 'Контакты', path: './contacts' },
+          { name: 'Информация', path: './info' },
         ]
       },
       {

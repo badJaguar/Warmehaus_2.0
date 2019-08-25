@@ -11,10 +11,12 @@ import { AnitIcingComponent } from './body-part/warmehaus/anit-icing/anit-icing.
 import { TermostatsComponent } from './body-part/warmehaus/termostats/termostats.component';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { ContactsComponent } from './body-part/contacts/contacts.component';
+import { InfoComponent } from './body-part/info/info.component';
 
 const routes: Routes = [
   { path: '', component: StartPageComponent },
   { path: 'home/contacts', component: ContactsComponent },
+  { path: 'home/instructions', component: InfoComponent },
 
   { path: 'warmehaus/mat-160Watt', component: WarmingMat160WComponent },
   { path: 'warmehaus/mat-200Watt', component: WarmingMat200WComponent },
@@ -27,6 +29,7 @@ const routes: Routes = [
 
    { path: 'home', redirectTo: '', pathMatch: 'full' },
    { path: 'contacts', redirectTo: 'home/contacts', pathMatch: 'full' },
+   { path: 'info', redirectTo: 'home/instructions', pathMatch: 'full' },
   { path: 'warmehaus', redirectTo: '', pathMatch: 'full' },
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
