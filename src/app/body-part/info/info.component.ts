@@ -1,23 +1,19 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MetaInstructionsPage } from '../../seo/open-graph/meta-data-instructions';
 import { CanonicalService } from '../../../services/canonical.service';
-import { Meta, Title } from '@angular/platform-browser';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-info',
   templateUrl: './info.component.html',
   styleUrls: ['./info.component.scss'],
-  providers: [
-    { provide: Window, useValue: window },
-    MetaInstructionsPage
-  ]
+  providers: [ MetaInstructionsPage ]
 })
 export class InfoComponent implements OnInit {
 
   constructor(
-    @Inject(Window) private window: Window,
     private metaService: CanonicalService,
-    private meta: Meta, private titleService: Title,
+    private meta: Meta,
     private tag: MetaInstructionsPage) {
       this.meta.addTags([
         { name: this.tag.keywords, content: this.tag.keywordsContent },
@@ -34,9 +30,6 @@ export class InfoComponent implements OnInit {
     this.metaService.createCanonicalURL();
   }
   onTabMenu() {
-    this.window.document.getElementById('tabMenu').scrollIntoView();
-  }
-  public setTitle(newTitle: string) {
-    this.titleService.setTitle(newTitle);
+    document.getElementById('tabMenu').scrollIntoView();
   }
 }
