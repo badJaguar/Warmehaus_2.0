@@ -39,6 +39,7 @@ import { MaterialShareModule } from './modules/material-share/material-share.mod
 import { GtagModule } from 'angular-gtag';
 import { ContactsComponent } from './body-part/contacts/contacts.component';
 import { InfoComponent } from './body-part/info/info.component';
+import { PinchZoomModule } from 'ngx-pinch-zoom';
 
 @NgModule({
   declarations: [
@@ -86,7 +87,8 @@ import { InfoComponent } from './body-part/info/info.component';
     ScrollingModule,
     ScrollToModule.forRoot(),
     TransferHttpCacheModule,
-    NgxJsonLdModule
+    NgxJsonLdModule,
+    PinchZoomModule
   ],
   bootstrap: [AppComponent],
   entryComponents: [PhonesSheetComponent],
