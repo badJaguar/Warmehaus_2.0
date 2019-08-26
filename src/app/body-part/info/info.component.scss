@@ -25,11 +25,22 @@
   }
 }
 
+::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
+  color: black;
+  background-color: #ffcb03;
+  font-weight: bold
+}
+
+.large-img {
+  width: 500px;
+  align-content: left
+}
+
 h1,
 h2,
 h5 {
   text-align: center;
-  font-size: calc(1.7vw + 1.7vh);
+  font-size: calc(1.5vw + 1.5vh);
 }
 
 .card {
@@ -74,5 +85,5 @@ article {
 }
 
 .clearfix {
-  @include fluid-type(font-size, 600px, 1200px, 16px, 24px);
+  @include fluid-type(font-size, 600px, 1200px, 16px, 20px);
 }
