@@ -5,7 +5,7 @@ export let ELEMENT_DATA_TERMOSTATS: IMatTebleItem[] = [
   // Терморегулятор WÄRMEHAUS TouchScreen
   {
     id: 75,
-    name: 'Терморегулятор WÄRMEHAUS TouchScreen',
+    name: 'TouchScreen',
     nominal: 'Сенсорный',
     price: 247.00,
     description: `
@@ -181,7 +181,7 @@ export let ELEMENT_DATA_TERMOSTATS: IMatTebleItem[] = [
   // Терморегулятор WÄRMEHAUS WH100
   {
     id: 76,
-    name: 'Терморегулятор WÄRMEHAUS WH100',
+    name: 'WH100',
     nominal: 'Аналоговый',
     price: 114.00,
     description: `
@@ -314,7 +314,7 @@ export let ELEMENT_DATA_TERMOSTATS: IMatTebleItem[] = [
   // Терморегулятор WÄRMEHAUS WH200
   {
     id: 77,
-    name: 'Терморегулятор WÄRMEHAUS WH200',
+    name: 'WH200',
     nominal: 'Аналоговый',
     price: 114.00,
     description: `
@@ -450,7 +450,7 @@ export let ELEMENT_DATA_TERMOSTATS: IMatTebleItem[] = [
   // Терморегулятор WÄRMEHAUS WH400 PRO
   {
     id: 78,
-    name: 'Терморегулятор WÄRMEHAUS WH400 PRO',
+    name: 'WH400 PRO',
     nominal: 'Сенсорный', price: 247.00,
     description: `
       <div>
@@ -605,7 +605,7 @@ export let ELEMENT_DATA_TERMOSTATS: IMatTebleItem[] = [
   // Терморегулятор WÄRMEHAUS WH500 PRO
   {
     id: 79,
-    name: 'Терморегулятор WÄRMEHAUS WH500 PRO',
+    name: 'WH500 PRO',
     nominal: 'Сенсорный',
     price: 247.00,
     description: `
@@ -786,7 +786,7 @@ export let ELEMENT_DATA_TERMOSTATS: IMatTebleItem[] = [
   // Терморегулятор WÄRMEHAUS WH600 PRO
   {
     id: 80,
-    name: 'Терморегулятор WÄRMEHAUS WH600 PRO',
+    name: 'WH600 PRO',
     nominal: 'Сенсорный',
     price: 228.00,
     description: `
@@ -942,7 +942,7 @@ export let ELEMENT_DATA_TERMOSTATS: IMatTebleItem[] = [
   // Терморегулятор WÄRMEHAUS WH1000 PRO
   {
     id: 81,
-    name: 'Терморегулятор WÄRMEHAUS WH1000 PRO',
+    name: 'WH1000 PRO',
     nominal: 'Аналоговый',
     price: 228.00,
     description: `
@@ -1113,7 +1113,7 @@ export let ELEMENT_DATA_TERMOSTATS: IMatTebleItem[] = [
   // Терморегулятор WÄRMEHAUS WH900 DIGITAL
   {
     id: 82,
-    name: 'Терморегулятор WÄRMEHAUS WH900 DIGITAL',
+    name: 'WH900 DIGITAL',
     nominal: 'Сенсорный',
     price: 133.00,
     description: `
@@ -1278,7 +1278,7 @@ export let ELEMENT_DATA_TERMOSTATS: IMatTebleItem[] = [
   // Терморегулятор WÄRMEHAUS WH300 WI-FI
   {
     id: 83,
-    name: 'Терморегулятор WÄRMEHAUS WH300 WI-FI',
+    name: 'WH300 WI-FI',
     nominal: 'WI-FI',
     price: 266.00, description: `
     <div>
@@ -1393,7 +1393,7 @@ export let ELEMENT_DATA_TERMOSTATS: IMatTebleItem[] = [
   // Терморегулятор WÄRMEHAUS WH800 BASIC
   {
     id: 84,
-    name: 'Терморегулятор WÄRMEHAUS WH800 BASIC',
+    name: 'WH800 BASIC',
     nominal: 'Аналоговый',
     price: 105.00,
     description: `
@@ -1544,7 +1544,7 @@ export let ELEMENT_DATA_TERMOSTATS: IMatTebleItem[] = [
   // Терморегулятор WÄRMEHAUS WH700 CLASSIC
   {
     id: 85,
-    name: 'Терморегулятор WÄRMEHAUS WH700 CLASSIC',
+    name: 'WH700 CLASSIC',
     nominal: 'Аналоговый',
     price: 105.00,
     description: `

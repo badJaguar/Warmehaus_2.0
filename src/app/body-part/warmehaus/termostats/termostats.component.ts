@@ -45,6 +45,7 @@ export class TermostatsComponent implements OnInit {
   columnsToDisplay = ['name', 'nominal', 'price'];
   headerNames: string[] = ['Тип', 'м2/Вт', 'Цена'];
   expandedElement: IMatTebleItem | null;
+  data = ELEMENT_DATA_TERMOSTATS;
 
   dataSource = new MatTableDataSource(ELEMENT_DATA_TERMOSTATS);
 
