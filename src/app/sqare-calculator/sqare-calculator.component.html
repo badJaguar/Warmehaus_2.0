@@ -1,0 +1,12 @@
+<p>
+  sqare-calculator works! {{sqare}}
+  <input type="text" value={{a}} (change)="changeA($event)">
+  <input type="text" value={{b}} (change)="changeB($event)">
+  <button (click)="setSqare(a,b)">Calculate</button>
+
+</p>
+<canvas id="c1" width={{a}} height={{b}} class="outerCanvas">
+
+</canvas>
+<canvas id="c2" width="300" height="400" style="border:1px solid #c363d6;">
+</canvas>

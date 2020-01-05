@@ -41,6 +41,7 @@ import { ContactsComponent } from './body-part/contacts/contacts.component';
 import { InfoComponent } from './body-part/info/info.component';
 import { PinchZoomModule } from 'ngx-pinch-zoom';
 import { TermostatsItemComponent } from './body-part/warmehaus/termostats-item/termostats-item.component';
+import { SqareCalculatorComponent } from './sqare-calculator/sqare-calculator.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { TermostatsItemComponent } from './body-part/warmehaus/termostats-item/t
     SchemaMarkupComponent,
     InfoComponent,
     TermostatsItemComponent,
+    SqareCalculatorComponent,
   ],
   imports: [
     AppRoutingModule,

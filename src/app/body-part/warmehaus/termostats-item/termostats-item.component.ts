@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ELEMENT_DATA_TERMOSTATS } from '../../../../data/termostats.data';
 import { ActivatedRoute } from '@angular/router';
+import { ITermostat } from '../../../../models/IMatTebleItem.interface';
 
 @Component({
   selector: 'app-termostats-item',
@@ -9,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class TermostatsItemComponent implements OnInit {
   public itemId = +this.route.snapshot.paramMap.get('id');
-  public currentItem = {};
+  public currentItem: ITermostat;
 
   constructor(private route: ActivatedRoute) {
   }
