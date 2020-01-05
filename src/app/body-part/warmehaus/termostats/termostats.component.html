@@ -8,8 +8,9 @@
     <mat-card-header>
       <mat-card-title class="clearfix"> {{item.name}} </mat-card-title>
     </mat-card-header>
-    <img mat-card-image src="{{item.picPath}}" alt="{{item.picAlt}}">
-    <div class="price">Цена: {{item.price}} бел.руб.</div>
+    <img routerLink="{{item.id}}" routerLinkActive="active" mat-card-image src="{{item.picPath}}" alt="{{item.picAlt}}">
+    <div class="price">Цена: {{item.price}},00 руб.</div>
   </mat-card>
 </div>
+
 <p class="price-info"><b>Цены носят информационный характер.</b></p>

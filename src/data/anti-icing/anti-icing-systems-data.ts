@@ -1,7 +1,7 @@
-import { IMatTebleItem } from '../../models/IMatTebleItem.interface';
+import { ITermostat } from '../../models/IMatTebleItem.interface';
 
 // An array of termostats with markup (Safe HTML used).
-export let ELEMENT_ANTI_ICING_SYSTEMS_DATA: IMatTebleItem[] = [
+export let ELEMENT_ANTI_ICING_SYSTEMS_DATA: ITermostat[] = [
   // Подогрев желобов WÄRMEHAUS SELFREG 30W
   {
     id: 138,

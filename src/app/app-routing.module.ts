@@ -12,6 +12,7 @@ import { TermostatsComponent } from './body-part/warmehaus/termostats/termostats
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { ContactsComponent } from './body-part/contacts/contacts.component';
 import { InfoComponent } from './body-part/info/info.component';
+import { TermostatsItemComponent } from './body-part/warmehaus/termostats-item/termostats-item.component';
 
 const routes: Routes = [
   { path: '', component: StartPageComponent },
@@ -26,10 +27,12 @@ const routes: Routes = [
   { path: 'warmehaus/films', component: FilmsComponent },
   { path: 'warmehaus/anti-icing', component: AnitIcingComponent },
   { path: 'warmehaus/termostats', component: TermostatsComponent },
+  { path: 'warmehaus/termostats/:id', component: TermostatsItemComponent },
 
-   { path: 'home', redirectTo: '', pathMatch: 'full' },
-   { path: 'contacts', redirectTo: 'home/contacts', pathMatch: 'full' },
-   { path: 'info', redirectTo: 'home/instructions', pathMatch: 'full' },
+
+  { path: 'home', redirectTo: '', pathMatch: 'full' },
+  { path: 'contacts', redirectTo: 'home/contacts', pathMatch: 'full' },
+  { path: 'info', redirectTo: 'home/instructions', pathMatch: 'full' },
   { path: 'warmehaus', redirectTo: '', pathMatch: 'full' },
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];

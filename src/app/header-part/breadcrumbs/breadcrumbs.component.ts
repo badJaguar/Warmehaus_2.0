@@ -21,8 +21,8 @@ export class BreadcrumbsComponent implements OnInit {
     this.listenRouting();
   }
 
-  public setTitle( newTitle: string) {
-    this.titleService.setTitle( newTitle );
+  public setTitle(newTitle: string) {
+    this.titleService.setTitle(newTitle);
   }
 
   listenRouting() {

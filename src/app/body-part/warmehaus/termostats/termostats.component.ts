@@ -1,8 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import { Component, OnInit } from '@angular/core';
 import { IMAGEVIEWER_CONFIG } from '@hallysonh/ngx-imageviewer';
-import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
-import { IMatTebleItem } from '../../../../models/IMatTebleItem.interface';
+import { MatTableDataSource } from '@angular/material';
 import { ELEMENT_DATA_TERMOSTATS } from '../../../../data/termostats.data';
 import { MY_IMAGEVIEWER_CONFIG } from '../../../../constants/image-view-styles';
 import { CanonicalService } from '../../../../services/canonical.service';
@@ -13,13 +11,6 @@ import { MetaTermostats } from '../../../seo/open-graph/meta-data-cab-metaTernos
   selector: 'app-termostats',
   templateUrl: './termostats.component.html',
   styleUrls: ['./termostats.component.scss'],
-  animations: [
-    trigger('detailExpand', [
-      state('collapsed', style({ height: '0', minHeight: '0', display: 'none' })),
-      state('expanded', style({ height: '*' })),
-      transition('expanded <=> collapsed', animate('0ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
-    ]),
-  ],
   providers: [
     MetaTermostats,
     {
@@ -30,7 +21,8 @@ import { MetaTermostats } from '../../../seo/open-graph/meta-data-cab-metaTernos
 })
 export class TermostatsComponent implements OnInit {
 
-  constructor(private metaService: CanonicalService, private meta: Meta, private tag: MetaTermostats) {
+  constructor(
+    private metaService: CanonicalService, private meta: Meta, private tag: MetaTermostats) {
     this.meta.addTags([
       { name: this.tag.keywords, content: this.tag.keywordsContent },
       { name: this.tag.description, content: this.tag.descriptionContent },
@@ -41,23 +33,11 @@ export class TermostatsComponent implements OnInit {
       { property: this.tag.ogUrl, content: this.tag.ogUrlContent }
     ]);
   }
-
-  columnsToDisplay = ['name', 'nominal', 'price'];
-  headerNames: string[] = ['Тип', 'м2/Вт', 'Цена'];
-  expandedElement: IMatTebleItem | null;
   data = ELEMENT_DATA_TERMOSTATS;
 
   dataSource = new MatTableDataSource(ELEMENT_DATA_TERMOSTATS);
 
-  @ViewChild(MatSort) sort: MatSort;
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-
   ngOnInit() {
     this.metaService.createCanonicalURL();
-    this.dataSource.sort = this.sort;
-    this.dataSource.paginator = this.paginator;
-  }
-  applyFilter(filterValue: string) {
-    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 }

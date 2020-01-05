@@ -40,6 +40,7 @@ import { GtagModule } from 'angular-gtag';
 import { ContactsComponent } from './body-part/contacts/contacts.component';
 import { InfoComponent } from './body-part/info/info.component';
 import { PinchZoomModule } from 'ngx-pinch-zoom';
+import { TermostatsItemComponent } from './body-part/warmehaus/termostats-item/termostats-item.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { PinchZoomModule } from 'ngx-pinch-zoom';
     ContactsComponent,
     SchemaMarkupComponent,
     InfoComponent,
+    TermostatsItemComponent,
   ],
   imports: [
     AppRoutingModule,
