@@ -8,14 +8,14 @@ import { ELEMENT_DATA_TERMOSTATS } from 'src/data/termostats.data';
 
 export class BreadcrumbRoutesService {
 
-  private data = ELEMENT_DATA_TERMOSTATS;
-  public termostats: ITermostat[];
-  constructor() {
-    this.termostats = this.getTermostats();
+  public termostats: ITermostat[] = this.getTermostats;
+
+  constructor() { }
+
+  private get getTermostats() {
+    return ELEMENT_DATA_TERMOSTATS;
   }
-  getTermostats = () => {
-    return this.data;
-  }
+
   getMenu(): Array<any> {
     const routes = [
       { name: 'Главная', path: '' },
@@ -35,13 +35,12 @@ export class BreadcrumbRoutesService {
           { name: 'Инфракрасная плёнка', path: './films' },
           { name: 'Антиобледенение', path: './anti-icing' },
           {
-            name: 'Терморегуляторы', path: './termostats', children:
-              this.termostats.map(x => {
-                return {
-                  name: x.name,
-                  path: `./${x.id.toString()}`
-                };
-              })
+            name: 'Терморегуляторы', path: './termostats', children: this.termostats.map(x => {
+              return {
+                name: x.name,
+                path: `./${x.id.toString()}`
+              };
+            })
           },
         ]
       },
