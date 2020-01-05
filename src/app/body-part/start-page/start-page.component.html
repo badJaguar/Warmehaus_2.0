@@ -1,9 +1,9 @@
 <mat-card class="card">
   <mat-grid-list [cols]="breakpoint" rowHeight="2:2" (window:resize)="onResize($event)" gutterSize="10">
-    <mat-grid-tile *ngFor="let tile of tiles; let i=index; first as isFirst" [class.first]="isFirst"
+    <mat-grid-tile *ngFor="let tile of warmehausTiles; let i=index; first as isFirst" [class.first]="isFirst"
       [colspan]="tile.cols" [rowspan]="tile.rows" matRipple>
       <a href="#" routerLink={{tile.route}} routerLinkActive="active" (click)="setTitle( tile.alt )">
-        <img src={{tile.picUrl}} alt={{tile.alt}}></a>
+        <img class="image-tile" src={{tile.picUrl}} alt={{tile.alt}}></a>
     </mat-grid-tile>
   </mat-grid-list>
 </mat-card>

@@ -42,6 +42,8 @@ import { InfoComponent } from './body-part/info/info.component';
 import { PinchZoomModule } from 'ngx-pinch-zoom';
 import { TermostatsItemComponent } from './body-part/warmehaus/termostats-item/termostats-item.component';
 import { SqareCalculatorComponent } from './sqare-calculator/sqare-calculator.component';
+import { WarmehausMainPageComponent } from './body-part/warmehaus/main-page/main-page.component';
+import { NexansMainPageComponent } from './body-part/nexans/main-page/main-page.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +69,8 @@ import { SqareCalculatorComponent } from './sqare-calculator/sqare-calculator.co
     InfoComponent,
     TermostatsItemComponent,
     SqareCalculatorComponent,
+    WarmehausMainPageComponent,
+    NexansMainPageComponent,
   ],
   imports: [
     AppRoutingModule,

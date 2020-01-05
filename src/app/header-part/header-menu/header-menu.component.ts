@@ -19,8 +19,8 @@ export class HeaderMenuComponent implements OnInit {
 
   constructor(private bottomSheet: MatBottomSheet, private titleService: Title) { }
 
-  public setTitle( newTitle: string) {
-    this.titleService.setTitle( newTitle );
+  public setTitle(newTitle: string) {
+    this.titleService.setTitle(newTitle);
   }
 
   openBottomSheet(): void {
@@ -31,6 +31,7 @@ export class HeaderMenuComponent implements OnInit {
     this.navBurger.nativeElement.classList.toggle('is-active');
     this.navMenu.nativeElement.classList.toggle('is-active');
   }
+
   ngOnInit(): void {
   }
 }

@@ -13,12 +13,15 @@ import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { ContactsComponent } from './body-part/contacts/contacts.component';
 import { InfoComponent } from './body-part/info/info.component';
 import { TermostatsItemComponent } from './body-part/warmehaus/termostats-item/termostats-item.component';
+import { WarmehausMainPageComponent } from './body-part/warmehaus/main-page/main-page.component';
+import { NexansMainPageComponent } from './body-part/nexans/main-page/main-page.component';
 
 const routes: Routes = [
   { path: '', component: StartPageComponent },
   { path: 'home/contacts', component: ContactsComponent },
   { path: 'home/instructions', component: InfoComponent },
 
+  { path: 'warmehaus', component: WarmehausMainPageComponent },
   { path: 'warmehaus/mat-160Watt', component: WarmingMat160WComponent },
   { path: 'warmehaus/mat-200Watt', component: WarmingMat200WComponent },
   { path: 'warmehaus/cable-11Watt', component: Cab11WComponent },
@@ -29,11 +32,12 @@ const routes: Routes = [
   { path: 'warmehaus/termostats', component: TermostatsComponent },
   { path: 'warmehaus/termostats/:id', component: TermostatsItemComponent },
 
+  { path: 'nexans', component: NexansMainPageComponent },
+
 
   { path: 'home', redirectTo: '', pathMatch: 'full' },
   { path: 'contacts', redirectTo: 'home/contacts', pathMatch: 'full' },
   { path: 'info', redirectTo: 'home/instructions', pathMatch: 'full' },
-  { path: 'warmehaus', redirectTo: '', pathMatch: 'full' },
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 

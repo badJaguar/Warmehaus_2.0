@@ -6,15 +6,8 @@
   </div>
 
   <div class="burger">
-    <a
-      (click)="toggleNavbar()"
-      role="button"
-      #navBurger
-      class="navbar-burger"
-      aria-label="menu"
-      aria-expanded="false"
-      data-target="navbarBasic"
-    >
+    <a (click)="toggleNavbar()" role="button" #navBurger class="navbar-burger" aria-label="menu" aria-expanded="false"
+      data-target="navbarBasic">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -22,42 +15,31 @@
   </div>
 
   <div id="navbarBasic" class="navbar-menu" #navMenu>
-    <a class="navbar-item" 
-    href=""
-    (click)="setTitle( 'Теплые полы Warmehaus' )"
-    routerLink="./home" 
-    routerLinkActive="active" 
-    >
+    <a class="navbar-item" href="" (click)="setTitle( 'Теплые полы Warmehaus' ); toggleNavbar()" routerLink="./home"
+      routerLinkActive="active">
       Главная
     </a>
 
-    <a class="navbar-item"
-       href="#"
-       (click)="setTitle( 'Контакты' )"
-       routerLink="./home/contacts"
-       routerLinkActive="active">
+    <a class="navbar-item" href="#" (click)="setTitle( 'Контакты' ); toggleNavbar()" routerLink="./home/contacts"
+      routerLinkActive="active">
       Контакты
     </a>
-    <a class="navbar-item"
-       href="#"
-       (click)="setTitle( 'Инструкции' )"
-       routerLink="./home/instructions"
-       routerLinkActive="active">
-       Инcтрукции
-  </a>
+    <a class="navbar-item" href="#" (click)="setTitle( 'Инструкции' ); toggleNavbar()" routerLink="./home/instructions"
+      routerLinkActive="active">
+      Инcтрукции
+    </a>
     <hr />
     <div class="navbar-end">
       <div class="btn-item">
-        <a
-        onclick="location.href='mailto:3523204@gmail.com';"
-        >
-          <button mat-fab color="warn" aria-label="Написать на электронную почту компании Warmehaus">
+        <a onclick="location.href='mailto:3523204@gmail.com';">
+          <button mat-fab color="warn" (click)="toggleNavbar()"
+            aria-label="Написать на электронную почту компании Warmehaus">
             <mat-icon>email</mat-icon>
-          </button></a
-        >
+          </button></a>
       </div>
       <div class="btn-item">
-        <button mat-fab color="warn" aria-label="Позвонить в компанию Warmehaus" (click)="openBottomSheet()">
+        <button mat-fab color="warn" aria-label="Позвонить в компанию Warmehaus"
+          (click)="openBottomSheet(); toggleNavbar()">
           <mat-icon>phone</mat-icon>
         </button>
       </div>

@@ -44,6 +44,9 @@ export class BreadcrumbRoutesService {
           },
         ]
       },
+      {
+        name: 'Nexans', path: './nexans'
+      },
     ];
     return routes;
   }
