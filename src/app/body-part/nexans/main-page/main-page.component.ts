@@ -14,5 +14,7 @@ export class NexansMainPageComponent implements OnInit {
   ngOnInit() {
     this.metaService.createCanonicalURL();
   }
-
+  public setTitle(newTitle: string) {
+    this.titleService.setTitle(newTitle);
+  }
 }

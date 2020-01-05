@@ -30,7 +30,7 @@ h5 {
 .outerContainer {
   position: sticky;
   display: table;
-  justify-content: left;
+  justify-content: space-around;
   flex-direction: row;
   max-width: 400px;
   align-self: center;
@@ -113,6 +113,7 @@ button {
   padding-left: 1em;
   padding-right: 2em
 }
-.right{
+
+.right {
   width: auto;
 }
