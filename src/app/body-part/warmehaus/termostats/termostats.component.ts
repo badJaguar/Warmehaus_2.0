@@ -4,7 +4,7 @@ import { MatTableDataSource } from '@angular/material';
 import { ELEMENT_DATA_TERMOSTATS } from '../../../../data/termostats.data';
 import { MY_IMAGEVIEWER_CONFIG } from '../../../../constants/image-view-styles';
 import { CanonicalService } from '../../../../services/canonical.service';
-import { Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 import { MetaTermostats } from '../../../seo/open-graph/meta-data-cab-metaTernostats';
 
 @Component({
@@ -22,7 +22,7 @@ import { MetaTermostats } from '../../../seo/open-graph/meta-data-cab-metaTernos
 export class TermostatsComponent implements OnInit {
 
   constructor(
-    private metaService: CanonicalService, private meta: Meta, private tag: MetaTermostats) {
+    private metaService: CanonicalService, private meta: Meta, private tag: MetaTermostats, private titleService: Title) {
     this.meta.addTags([
       { name: this.tag.keywords, content: this.tag.keywordsContent },
       { name: this.tag.description, content: this.tag.descriptionContent },
@@ -39,5 +39,10 @@ export class TermostatsComponent implements OnInit {
 
   ngOnInit() {
     this.metaService.createCanonicalURL();
+  }
+
+  public setTitle(newTitle: string, itemName: string) {
+    newTitle = `${newTitle} ${itemName}`;
+    this.titleService.setTitle(newTitle);
   }
 }
