@@ -6,7 +6,7 @@
 <div class="card-container">
   <mat-card class="mt-2" *ngFor="let item of data" style="width: 360px;">
     <mat-card-header>
-      <mat-card-title (click)="setTitle('Термостат item.name')" routerLink="{{item.id}}" routerLinkActive="active">
+      <mat-card-title (click)="setTitle('Термостат', item.name)" routerLink="{{item.id}}" routerLinkActive="active">
         {{item.name}}
       </mat-card-title>
     </mat-card-header>

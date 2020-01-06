@@ -3,7 +3,7 @@ import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
 import { ELEMENT_DATA_MAT_CAB_14W_THIN } from '../../../../data/warmehaus/cab-14W.data';
 import { CanonicalService } from '../../../../services/canonical.service';
 import { Meta } from '@angular/platform-browser';
-import { MetaCab14Watt } from '../../../seo/open-graph/meta-data-cab-14Watt';
+import { MetaCab14Watt } from '../../../seo/open-graph/warmehaus/meta-data-cab-14Watt';
 
 @Component({
   selector: 'app-cab14-w',

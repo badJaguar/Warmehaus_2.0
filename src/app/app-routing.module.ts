@@ -15,6 +15,8 @@ import { InfoComponent } from './body-part/info/info.component';
 import { TermostatsItemComponent } from './body-part/warmehaus/termostats-item/termostats-item.component';
 import { WarmehausMainPageComponent } from './body-part/warmehaus/main-page/main-page.component';
 import { NexansMainPageComponent } from './body-part/nexans/main-page/main-page.component';
+import { MillimatComponent } from './body-part/nexans/millimat/millimat.component';
+import { Txlp1Component } from './body-part/nexans/txlp1/txlp1.component';
 
 const routes: Routes = [
   { path: '', component: StartPageComponent },
@@ -33,6 +35,8 @@ const routes: Routes = [
   { path: 'warmehaus/termostats/:id', component: TermostatsItemComponent },
 
   { path: 'nexans', component: NexansMainPageComponent },
+  { path: 'nexans/millimat', component: MillimatComponent },
+  { path: 'nexans/txlp1', component: Txlp1Component },
 
 
   { path: 'home', redirectTo: '', pathMatch: 'full' },

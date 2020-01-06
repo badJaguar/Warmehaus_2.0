@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ITile } from '../../../models/ITile.interface';
 import { CanonicalService } from '../../../services/canonical.service';
 import { Meta, Title } from '@angular/platform-browser';
-import { MetaSrartPage } from '../../seo/open-graph/meta-data-startPage';
+import { MetaSrartPage } from '../../seo/open-graph/warmehaus/meta-data-startPage';
 
 @Component({
   selector: 'app-start-page',

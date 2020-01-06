@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { CanonicalService } from '../../../services/canonical.service';
 import { Meta, Title } from '@angular/platform-browser';
-import { MetaContacts } from '../../seo/open-graph/meta-data-contacts';
+import { MetaContacts } from '../../seo/open-graph/warmehaus/meta-data-contacts';
 
 @Component({
   selector: 'app-contacts',
@@ -30,7 +30,7 @@ export class ContactsComponent implements OnInit {
 
   ngOnInit() {
     this.canonicalService.createCanonicalURL();
-// tslint:disable-next-line: deprecation
+    // tslint:disable-next-line: deprecation
     $(document).ready(() => {
       $('.opening-hours li').eq(new Date().getDay() - 1).addClass('today');
     });

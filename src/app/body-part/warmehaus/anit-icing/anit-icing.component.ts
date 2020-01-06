@@ -7,7 +7,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 import { MY_IMAGEVIEWER_CONFIG } from '../../../../constants/image-view-styles';
 import { CanonicalService } from '../../../../services/canonical.service';
 import { Meta } from '@angular/platform-browser';
-import { MetaAntiIcing } from '../../../seo/open-graph/meta-data-antiIcing';
+import { MetaAntiIcing } from '../../../seo/open-graph/warmehaus/meta-data-antiIcing';
 import { ITermostat } from '../../../../models/IMatTebleItem.interface';
 
 @Component({

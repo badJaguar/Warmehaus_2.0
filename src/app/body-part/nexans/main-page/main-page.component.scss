@@ -65,6 +65,13 @@ h2 {
 
 .image {
   height: auto;
+
+  &:hover {
+    filter: contrast(0.8);
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+  }
 }
 
 .item {
@@ -72,10 +79,17 @@ h2 {
   border-style: solid;
   border-width: 1px;
   border-color: rgb(226, 226, 226);
+}
+
+.mat-card-title {
+  font-size: 1rem;
+  padding: 1vmin 0 2vmin 0;
+  line-height: 1;
+  margin-bottom: 0 !important;
 
   &:hover {
-    filter: contrast(0.8);
     cursor: pointer;
+    color: #6084fc;
     transition: all 0.2s ease-out;
     -webkit-transition: all 0.2s ease-out;
   }

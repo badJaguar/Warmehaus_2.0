@@ -2,12 +2,40 @@
 <mat-divider class="divider"></mat-divider>
 <div class="container">
   <mat-card class="mt-2 item" style="width: 315px;">
-    <img (click)="setTitle('Теплые полы NEXANS N-HEAT MILLIMAT')" class="image"
-      src="../../../../assets/images/nexans/milmatt.jpg" alt="NEXANS N-HEAT MILLIMAT">
+
+    <mat-card-header>
+      <mat-card-title routerLink="./millimat" routerLinkActive="active"
+        (click)="setTitle('Теплые полы NEXANS N-HEAT MILLIMAT')">
+        NEXANS N-HEAT® MILLIMAT™
+      </mat-card-title>
+    </mat-card-header>
+
+    <img routerLink="./millimat" routerLinkActive="active" (click)="setTitle('Теплые полы NEXANS N-HEAT MILLIMAT')"
+      class="image" src="../../../../assets/images/nexans/milmatt.jpg" alt="NEXANS N-HEAT MILLIMAT">
+
+    <mat-card-content>
+      <p>
+        Нагревательный мат на основе тонкого двужильного кабеля.
+      </p>
+    </mat-card-content>
   </mat-card>
+
   <mat-card class="mt-2 item" style="width: 315px;">
-    <img (click)="setTitle('Теплые полы NEXANS TXLP/1')" class="image"
+
+    <mat-card-title routerLink="./txlp1" routerLinkActive="active"
+      (click)="setTitle('Теплые полы NEXANS NEXANS N-HEAT TXLP/1')">
+      NEXANS N-HEAT® TXLP/1
+    </mat-card-title>
+
+    <img routerLink="./txlp1" routerLinkActive="active" (click)="setTitle('Теплые полы NEXANS TXLP/1')" class="image"
       src="../../../../assets/images/nexans/NEXANS-TXLP-1.jpg" alt="NEXANS TXLP/1">
+
+    <mat-card-content>
+      <p>
+        Комплект одножильного нагревательного кабеля для обогрева пола.
+      </p>
+    </mat-card-content>
+
   </mat-card>
   <mat-card class="mt-2 item" style="width: 315px;">
     <img (click)="setTitle('Теплые полы NEXANS TXLP2R')" class="image"

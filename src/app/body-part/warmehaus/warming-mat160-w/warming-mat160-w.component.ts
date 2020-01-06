@@ -3,7 +3,7 @@ import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
 import { ELEMENT_DATA_MAT_160W } from '../../../../data/warmehaus/heating-mat160W.data';
 import { CanonicalService } from '../../../../services/canonical.service';
 import { Meta } from '@angular/platform-browser';
-import { MetaMat160 } from '../../../seo/open-graph/meta-data-cab-metaMat160';
+import { MetaMat160 } from '../../../seo/open-graph/warmehaus/meta-data-cab-metaMat160';
 
 @Component({
   selector: 'app-warming-mat160-w',

@@ -1,18 +1,20 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
-import { ELEMENT_DATA_MAT_CAB_20W_UV_PROTECTION } from '../../../../data/warmehaus/cab-20W.data';
 import { CanonicalService } from '../../../../services/canonical.service';
 import { Meta } from '@angular/platform-browser';
-import { MetaCab20Watt } from '../../../seo/open-graph/warmehaus/meta-data-cab-20Watt';
+import { ELEMENT_DATA_NEXANS_MILLIMAT } from '../../../../data/nexans/millimat';
+import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
+import { MetaMillimat } from '../../../../app/seo/open-graph/nexans/meta-data-millimat';
 
 @Component({
-  selector: 'app-cab20-w',
-  templateUrl: './cab20-w.component.html',
-  styleUrls: ['./cab20-w.component.scss'],
-  providers: [MetaCab20Watt]
+  selector: 'app-millimat',
+  templateUrl: './millimat.component.html',
+  styleUrls: ['./millimat.component.scss'],
+  providers: [MetaMillimat]
 })
-export class Cab20WComponent implements OnInit {
-  constructor(private metaService: CanonicalService, private meta: Meta, private tag: MetaCab20Watt) {
+export class MillimatComponent implements OnInit {
+
+  constructor(private metaService: CanonicalService, private meta: Meta, private tag: MetaMillimat) {
+
     this.meta.addTags([
       { name: this.tag.keywords, content: this.tag.keywordsContent },
       { name: this.tag.description, content: this.tag.descriptionContent },
@@ -25,7 +27,7 @@ export class Cab20WComponent implements OnInit {
   }
 
   displayedColumns: string[] = ['name', 'nominal', 'price'];
-  dataSource1 = new MatTableDataSource(ELEMENT_DATA_MAT_CAB_20W_UV_PROTECTION);
+  dataSource1 = new MatTableDataSource(ELEMENT_DATA_NEXANS_MILLIMAT);
 
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;

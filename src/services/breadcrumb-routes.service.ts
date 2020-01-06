@@ -27,8 +27,8 @@ export class BreadcrumbRoutesService {
       },
       {
         name: 'Wärmehaus', path: './warmehaus', children: [
-          { name: ' Маты 160Вт', path: './mat-160Watt' },
-          { name: ' Маты 200Вт', path: './mat-200Watt' },
+          { name: 'Маты 160Вт', path: './mat-160Watt' },
+          { name: 'Маты 200Вт', path: './mat-200Watt' },
           { name: 'Двужильный кабель 11Вт', path: './cable-11Watt' },
           { name: 'Двужильный кабель 14Вт', path: './cable-14Watt' },
           { name: 'Двужильный кабель 20ВТ UV', path: './cable-20Watt' },
@@ -45,7 +45,10 @@ export class BreadcrumbRoutesService {
         ]
       },
       {
-        name: 'Nexans', path: './nexans'
+        name: 'Nexans', path: './nexans', children: [
+          { name: 'Millimat', path: './millimat' },
+          { name: 'TXLP/1', path: './txlp1' },
+        ]
       },
     ];
     return routes;

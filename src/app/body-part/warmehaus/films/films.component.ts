@@ -3,7 +3,7 @@ import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
 import { ELEMENT_DATA_FILMS } from '../../../../data/warmehaus/films.data';
 import { CanonicalService } from '../../../../services/canonical.service';
 import { Meta } from '@angular/platform-browser';
-import { MetaFilms } from '../../../seo/open-graph/meta-data-cab-metaFilms';
+import { MetaFilms } from '../../../seo/open-graph/warmehaus/meta-data-cab-metaFilms';
 
 @Component({
   selector: 'app-films',

@@ -44,6 +44,8 @@ import { TermostatsItemComponent } from './body-part/warmehaus/termostats-item/t
 import { SqareCalculatorComponent } from './sqare-calculator/sqare-calculator.component';
 import { WarmehausMainPageComponent } from './body-part/warmehaus/main-page/main-page.component';
 import { NexansMainPageComponent } from './body-part/nexans/main-page/main-page.component';
+import { MillimatComponent } from './body-part/nexans/millimat/millimat.component';
+import { Txlp1Component } from './body-part/nexans/txlp1/txlp1.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +73,8 @@ import { NexansMainPageComponent } from './body-part/nexans/main-page/main-page.
     SqareCalculatorComponent,
     WarmehausMainPageComponent,
     NexansMainPageComponent,
+    MillimatComponent,
+    Txlp1Component,
   ],
   imports: [
     AppRoutingModule,

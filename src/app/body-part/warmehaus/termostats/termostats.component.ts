@@ -5,7 +5,7 @@ import { ELEMENT_DATA_TERMOSTATS } from '../../../../data/warmehaus/termostats.d
 import { MY_IMAGEVIEWER_CONFIG } from '../../../../constants/image-view-styles';
 import { CanonicalService } from '../../../../services/canonical.service';
 import { Meta, Title } from '@angular/platform-browser';
-import { MetaTermostats } from '../../../seo/open-graph/meta-data-cab-metaTernostats';
+import { MetaTermostats } from '../../../seo/open-graph/warmehaus/meta-data-cab-metaTernostats';
 
 @Component({
   selector: 'app-termostats',
