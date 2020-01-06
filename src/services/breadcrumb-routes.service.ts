@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ITermostat } from '../models/IMatTebleItem.interface';
-import { ELEMENT_DATA_TERMOSTATS } from '../data/termostats.data';
+import { ELEMENT_DATA_TERMOSTATS } from '../data/warmehaus/termostats.data';
 
 @Injectable({
   providedIn: 'root',

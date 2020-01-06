@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IMAGEVIEWER_CONFIG } from '@hallysonh/ngx-imageviewer';
 import { MatTableDataSource } from '@angular/material';
-import { ELEMENT_DATA_TERMOSTATS } from '../../../../data/termostats.data';
+import { ELEMENT_DATA_TERMOSTATS } from '../../../../data/warmehaus/termostats.data';
 import { MY_IMAGEVIEWER_CONFIG } from '../../../../constants/image-view-styles';
 import { CanonicalService } from '../../../../services/canonical.service';
 import { Meta, Title } from '@angular/platform-browser';

@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ELEMENT_ANTI_ICING_SYSTEMS_DATA } from '../../../../data/anti-icing/anti-icing-systems-data';
-import { ELEMENT_DATA_PIPE_HEATING_CABLE } from '../../../../data/anti-icing/pipe-heating-cable-data';
+import { ELEMENT_ANTI_ICING_SYSTEMS_DATA } from '../../../../data/warmehaus/anti-icing/anti-icing-systems-data';
+import { ELEMENT_DATA_PIPE_HEATING_CABLE } from '../../../../data/warmehaus/anti-icing/pipe-heating-cable-data';
 import { IMAGEVIEWER_CONFIG } from '@hallysonh/ngx-imageviewer';
 import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
 import { trigger, state, style, transition, animate } from '@angular/animations';

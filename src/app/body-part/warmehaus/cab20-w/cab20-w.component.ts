@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
-import { ELEMENT_DATA_MAT_CAB_20W_UV_PROTECTION } from '../../../../data/cab-20W.data';
+import { ELEMENT_DATA_MAT_CAB_20W_UV_PROTECTION } from '../../../../data/warmehaus/cab-20W.data';
 import { CanonicalService } from '../../../../services/canonical.service';
 import { Meta } from '@angular/platform-browser';
 import { MetaCab20Watt } from '../../../seo/open-graph/meta-data-cab-20Watt';
