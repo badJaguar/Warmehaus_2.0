@@ -46,6 +46,7 @@ import { WarmehausMainPageComponent } from './body-part/warmehaus/main-page/main
 import { NexansMainPageComponent } from './body-part/nexans/main-page/main-page.component';
 import { MillimatComponent } from './body-part/nexans/millimat/millimat.component';
 import { Txlp1Component } from './body-part/nexans/txlp1/txlp1.component';
+import { Txlp2rComponent } from './body-part/nexans/txlp2r/txlp2r.component';
 
 @NgModule({
   declarations: [
@@ -75,6 +76,7 @@ import { Txlp1Component } from './body-part/nexans/txlp1/txlp1.component';
     NexansMainPageComponent,
     MillimatComponent,
     Txlp1Component,
+    Txlp2rComponent,
   ],
   imports: [
     AppRoutingModule,

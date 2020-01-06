@@ -17,6 +17,7 @@ import { WarmehausMainPageComponent } from './body-part/warmehaus/main-page/main
 import { NexansMainPageComponent } from './body-part/nexans/main-page/main-page.component';
 import { MillimatComponent } from './body-part/nexans/millimat/millimat.component';
 import { Txlp1Component } from './body-part/nexans/txlp1/txlp1.component';
+import { Txlp2rComponent } from './body-part/nexans/txlp2r/txlp2r.component';
 
 const routes: Routes = [
   { path: '', component: StartPageComponent },
@@ -37,6 +38,7 @@ const routes: Routes = [
   { path: 'nexans', component: NexansMainPageComponent },
   { path: 'nexans/millimat', component: MillimatComponent },
   { path: 'nexans/txlp1', component: Txlp1Component },
+  { path: 'nexans/txlp2r', component: Txlp2rComponent },
 
 
   { path: 'home', redirectTo: '', pathMatch: 'full' },

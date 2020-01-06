@@ -48,6 +48,7 @@ export class BreadcrumbRoutesService {
         name: 'Nexans', path: './nexans', children: [
           { name: 'Millimat', path: './millimat' },
           { name: 'TXLP/1', path: './txlp1' },
+          { name: 'TXLP/2R', path: './txlp2r' },
         ]
       },
     ];
