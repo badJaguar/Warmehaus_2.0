@@ -18,6 +18,9 @@ import { NexansMainPageComponent } from './body-part/nexans/main-page/main-page.
 import { MillimatComponent } from './body-part/nexans/millimat/millimat.component';
 import { Txlp1Component } from './body-part/nexans/txlp1/txlp1.component';
 import { Txlp2rComponent } from './body-part/nexans/txlp2r/txlp2r.component';
+import { PipeCoolingComponent } from './body-part/warmehaus/anit-icing/pipe-cooling/pipe-cooling.component';
+import { GutterCoolingComponent } from './body-part/warmehaus/anit-icing/gutter-cooling/gutter-cooling.component';
+import { GutterCoolingItemComponent } from './body-part/warmehaus/anit-icing/gutter-cooling-item/gutter-cooling-item.component';
 
 const routes: Routes = [
   { path: '', component: StartPageComponent },
@@ -31,7 +34,12 @@ const routes: Routes = [
   { path: 'warmehaus/cable-14Watt', component: Cab14WComponent },
   { path: 'warmehaus/cable-20Watt', component: Cab20WComponent },
   { path: 'warmehaus/films', component: FilmsComponent },
+
   { path: 'warmehaus/anti-icing', component: AnitIcingComponent },
+  { path: 'warmehaus/anti-icing/pipe-cooling', component: PipeCoolingComponent },
+  { path: 'warmehaus/anti-icing/systems-and-gutter-cooling', component: GutterCoolingComponent },
+  { path: 'warmehaus/anti-icing/systems-and-gutter-cooling/:id', component: GutterCoolingItemComponent },
+
   { path: 'warmehaus/termostats', component: TermostatsComponent },
   { path: 'warmehaus/termostats/:id', component: TermostatsItemComponent },
 

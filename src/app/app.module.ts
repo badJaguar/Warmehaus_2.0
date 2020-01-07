@@ -47,6 +47,9 @@ import { NexansMainPageComponent } from './body-part/nexans/main-page/main-page.
 import { MillimatComponent } from './body-part/nexans/millimat/millimat.component';
 import { Txlp1Component } from './body-part/nexans/txlp1/txlp1.component';
 import { Txlp2rComponent } from './body-part/nexans/txlp2r/txlp2r.component';
+import { PipeCoolingComponent } from './body-part/warmehaus/anit-icing/pipe-cooling/pipe-cooling.component';
+import { GutterCoolingComponent } from './body-part/warmehaus/anit-icing/gutter-cooling/gutter-cooling.component';
+import { GutterCoolingItemComponent } from './body-part/warmehaus/anit-icing/gutter-cooling-item/gutter-cooling-item.component';
 
 @NgModule({
   declarations: [
@@ -77,6 +80,9 @@ import { Txlp2rComponent } from './body-part/nexans/txlp2r/txlp2r.component';
     MillimatComponent,
     Txlp1Component,
     Txlp2rComponent,
+    PipeCoolingComponent,
+    GutterCoolingComponent,
+    GutterCoolingItemComponent,
   ],
   imports: [
     AppRoutingModule,

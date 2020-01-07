@@ -8,9 +8,21 @@
 }
 
 .third {
-  height: 40px;
+  min-height: 40px;
   background-color: black;
 }
+
 .container {
   position: fixed;
+}
+
+.mat-toolbar-row,
+.mat-toolbar-single-row {
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 0;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
 }

@@ -6,7 +6,7 @@ import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { MY_IMAGEVIEWER_CONFIG } from '../../../../constants/image-view-styles';
 import { CanonicalService } from '../../../../services/canonical.service';
-import { Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 import { MetaAntiIcing } from '../../../seo/open-graph/warmehaus/meta-data-antiIcing';
 import { ITermostat } from '../../../../models/IMatTebleItem.interface';
 
@@ -31,7 +31,7 @@ import { ITermostat } from '../../../../models/IMatTebleItem.interface';
   ]
 })
 export class AnitIcingComponent implements OnInit {
-  constructor(private canonicalService: CanonicalService, private meta: Meta, private tag: MetaAntiIcing) {
+  constructor(private canonicalService: CanonicalService, private meta: Meta, private tag: MetaAntiIcing, private titleService: Title) {
     this.meta.addTags([
       { name: this.tag.keywords, content: this.tag.keywordsContent },
       { name: this.tag.description, content: this.tag.descriptionContent },
@@ -42,9 +42,6 @@ export class AnitIcingComponent implements OnInit {
       { property: this.tag.ogUrl, content: this.tag.ogUrlContent }
     ]);
   }
-
-  displayedColumns: string[] = ['name', 'nominal', 'price'];
-  pipeHeatingDataSource = new MatTableDataSource(ELEMENT_DATA_PIPE_HEATING_CABLE);
 
   //
   expandedElement: ITermostat | null;
@@ -58,12 +55,12 @@ export class AnitIcingComponent implements OnInit {
 
   ngOnInit() {
     this.canonicalService.createCanonicalURL();
-    this.pipeHeatingDataSource.sort = this.sort;
-    this.pipeHeatingDataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
   applyFilter(filterValue: string) {
-    this.pipeHeatingDataSource.filter = filterValue.trim().toLowerCase();
     this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+  public setTitle(newTitle: string) {
+    this.titleService.setTitle(newTitle);
   }
 }

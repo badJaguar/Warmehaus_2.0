@@ -35,8 +35,6 @@ export class TermostatsComponent implements OnInit {
   }
   data = ELEMENT_DATA_TERMOSTATS;
 
-  dataSource = new MatTableDataSource(ELEMENT_DATA_TERMOSTATS);
-
   ngOnInit() {
     this.metaService.createCanonicalURL();
   }

@@ -1,0 +1,11 @@
+<div class="item-container">
+  <div style="padding-top: 10px;">
+    <p style="font-weight: 600;">Терморегулятор {{currentItem.name}}</p>
+    <mat-divider style="padding-bottom: 10px;"></mat-divider>
+    <div>
+      <img class="image" src="{{currentItem.picPath}}" alt="{{currentItem.picAlt}}">
+      <div class="price">Цена: {{currentItem.price}},00 руб.</div>
+    </div>
+  </div>
+  <div [innerHTML]="currentItem.description | safeHtml"></div>
+</div>

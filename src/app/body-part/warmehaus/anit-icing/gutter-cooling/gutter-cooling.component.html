@@ -1,0 +1,19 @@
+<app-chips></app-chips>
+<div>
+  <h2>Терморегуляторы WÄRMEHAUS</h2>
+  <mat-divider class="divider"></mat-divider>
+</div>
+<div class="card-container">
+  <mat-card class="mt-2" *ngFor="let item of data" style="width: 360px;">
+    <mat-card-header>
+      <mat-card-title (click)="setTitle('Термостат', item.name)" routerLink="{{item.id}}" routerLinkActive="active">
+        {{item.name}}
+      </mat-card-title>
+    </mat-card-header>
+    <img (click)="setTitle('Термостат', item.name)" routerLink="{{item.id}}" routerLinkActive="active" mat-card-image
+      src="{{item.picPath}}" alt="{{item.picAlt}}">
+    <div class="price">Цена: {{item.price}},00 руб.</div>
+  </mat-card>
+</div>
+
+<p class="price-info">Цены носят информационный характер.</p>

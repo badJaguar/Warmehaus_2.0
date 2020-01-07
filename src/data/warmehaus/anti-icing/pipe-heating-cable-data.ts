@@ -10,7 +10,7 @@ export let ELEMENT_DATA_PIPE_HEATING_CABLE: IItem[] = [
   {
     id: 115,
     name: 'Комплект WÄRMEHAUS AFG 20W',
-    nominal: ' 2CAB AFG 20W - 2,0м.п - 40Вт',
+    nominal: 'CAB AFG 20W - 2,0м.п - 40Вт',
     price: 93.00
   },
   {

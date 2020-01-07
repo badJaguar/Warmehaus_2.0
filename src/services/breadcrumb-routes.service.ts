@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ITermostat } from '../models/IMatTebleItem.interface';
 import { ELEMENT_DATA_TERMOSTATS } from '../data/warmehaus/termostats.data';
+import { ELEMENT_ANTI_ICING_SYSTEMS_DATA } from '../data/warmehaus/anti-icing/anti-icing-systems-data';
 
 @Injectable({
   providedIn: 'root',
@@ -9,9 +10,13 @@ import { ELEMENT_DATA_TERMOSTATS } from '../data/warmehaus/termostats.data';
 export class BreadcrumbRoutesService {
 
   public termostats: ITermostat[] = this.getTermostats;
+  public guttersAndTheirSystems: ITermostat[] = this.getGuttersAndTheirSystems;
 
   constructor() { }
 
+  private get getGuttersAndTheirSystems() {
+    return ELEMENT_ANTI_ICING_SYSTEMS_DATA;
+  }
   private get getTermostats() {
     return ELEMENT_DATA_TERMOSTATS;
   }
@@ -33,7 +38,20 @@ export class BreadcrumbRoutesService {
           { name: 'Двужильный кабель 14Вт', path: './cable-14Watt' },
           { name: 'Двужильный кабель 20ВТ UV', path: './cable-20Watt' },
           { name: 'Инфракрасная плёнка', path: './films' },
-          { name: 'Антиобледенение', path: './anti-icing' },
+
+          {
+            name: 'Антиобледенение', path: './anti-icing', children: [
+              { name: 'Обогрев труб', path: './pipe-cooling' },
+              {
+                name: 'Обогрев труб', path: './systems-and-gutter-cooling', children: this.guttersAndTheirSystems.map(x => {
+                  return {
+                    name: x.name,
+                    path: `./${x.id.toString()}`
+                  };
+                })
+              },
+            ]
+          },
           {
             name: 'Терморегуляторы', path: './termostats', children: this.termostats.map(x => {
               return {

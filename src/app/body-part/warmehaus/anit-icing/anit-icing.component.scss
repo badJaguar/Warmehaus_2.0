@@ -1,5 +1,98 @@
-table {
-  width: 100%;
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+  article {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  article {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  h1,
+  h2 {
+    font-size: 14px;
+  }
+
+  .mt-2 {
+    max-width: 300px;
+  }
+
+}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  article {
+    max-width: 70%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  article {
+    max-width: 70%;
+    margin: auto;
+  }
+}
+
+h1,
+h2 {
+  text-align: center;
+  font-size: calc(1.7vw + 1.7vh);
+}
+
+h2 {
+  margin-bottom: 5px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.divider {
+  margin-bottom: 10px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: space-around;
+}
+
+.image {
+  height: auto;
+
+  &:hover {
+    filter: contrast(0.8);
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+  }
+}
+
+.item {
+  display: grid;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(226, 226, 226);
+}
+
+.mat-card-title {
+  font-size: 1rem;
+  padding: 1vmin 0 2vmin 0;
+  line-height: 1;
+  margin-bottom: 0 !important;
+
+  &:hover {
+    cursor: pointer;
+    color: #6084fc;
+    transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+  }
 }
 
 .mat-form-field {
@@ -22,7 +115,7 @@ th {
 
 @media only screen and (max-width: 768px) {
   b {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
@@ -41,12 +134,6 @@ mat-card-title {
   text-align: center
 }
 
-.table,
-.filter {
-  max-width: 1280px;
-  margin-left: auto;
-  margin-right: auto
-}
 
 .cards {
   width: 100%;
@@ -80,87 +167,23 @@ mat-divider {
 
 }
 
-.mat-header-row {
-  background-color: rgb(233, 232, 232);
-}
-
-mat-tab-group {
-  max-width: 1200px;
-  margin-block-start: 2%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .content {
   margin: 30px
-}
-
-::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
-  color: black;
-  background-color: rgb(233, 232, 232);
-  font-weight: bold
-}
-
-::ng-deep .mat-ink-bar {
-  background-color: var(--primary-color, red) !important;
 }
 
 ul {
   max-width: 640px;
 }
 
-.vertTab {
-  padding-block-start: 15px
-}
-
-.upon ul {
+.upon {
   margin-left: auto;
   margin-right: auto;
-}
-
-.uponTable {
-  max-width: 1500px;
-  margin-left: auto;
-  margin-left: auto
-}
-
-.upper-image {
-  max-width: 320px;
-  max-height: 320px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-right: 20px
-}
-
-.price-info {
-  padding-left: 20px;
-  padding-bottom: 15px;
-  font-size: 12px;
-}
-
-.mat-header-row {
-  background-color: rgb(233, 232, 232);
-}
-
-mat-tab-group {
-  max-width: 1200px;
-  margin-block-start: 2%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 1rem;
+  max-width: 930px;
 }
 
 .content {
   margin: 30px;
-}
-
-::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
-  color: black;
-  background-color: rgb(233, 232, 232);
-  font-weight: bold
-}
-
-::ng-deep .mat-ink-bar {
-  background-color: var(--primary-color, red) !important;
 }
 
 ul {
@@ -221,6 +244,28 @@ tr.example-element-row:not(.example-expanded-row):active {
   opacity: 0.5;
 }
 
-ngx-imageviewer {
-  margin-right: 73%;
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
+  @each $property in $properties {
+    #{$property}: $min-value;
+  }
+
+  @media screen and (min-width: $min-vw) {
+    @each $property in $properties {
+      #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
+    }
+  }
+
+  @media screen and (min-width: $max-vw) {
+    @each $property in $properties {
+      #{$property}: $max-value;
+    }
+  }
+}
+
+.clearfix {
+  @include fluid-type(font-size, 360px, 1200px, 12px, 24px);
 }
