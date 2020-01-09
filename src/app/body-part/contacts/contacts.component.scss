@@ -15,10 +15,16 @@
   }
 }
 
+.business-hours {
+  min-width: 120px !important;
+}
+
 .iframe-container {
   overflow: hidden;
-  padding-top: 56.25%;
+  height: 100%;
+  padding-top: 100%;
   position: relative;
+  padding-bottom: inherit;
 }
 
 .iframe-container iframe {
@@ -27,7 +33,8 @@
   left: 0;
   position: absolute;
   top: 0;
-  width: 100%;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 /* 4x3 Aspect Ratio */
@@ -207,4 +214,44 @@ b {
   background: inherit;
   -webkit-background-clip: text;
   background-clip: text;
+}
+
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  min-width: 220px;
+  margin-top: 15px;
+}
+
+.clearfix {
+  margin-top: 25px;
+  position: -webkit-sticky;
+  text-align: justify;
+}
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
+  @each $property in $properties {
+    #{$property}: $min-value;
+  }
+
+  @media screen and (min-width: $min-vw) {
+    @each $property in $properties {
+      #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
+    }
+  }
+
+  @media screen and (min-width: $max-vw) {
+    @each $property in $properties {
+      #{$property}: $max-value;
+    }
+  }
+}
+
+.clearfix {
+  @include fluid-type(font-size, 600px, 1200px, 12px, 20px);
 }
