@@ -3,6 +3,7 @@ import { ITile } from '../../../models/ITile.interface';
 import { CanonicalService } from '../../../services/canonical.service';
 import { Meta, Title } from '@angular/platform-browser';
 import { MetaSrartPage } from '../../seo/open-graph/warmehaus/meta-data-startPage';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-start-page',
@@ -11,8 +12,13 @@ import { MetaSrartPage } from '../../seo/open-graph/warmehaus/meta-data-startPag
   providers: [MetaSrartPage]
 })
 export class StartPageComponent implements OnInit {
+  cookieValue = 'SameSite=None';
 
-  constructor(private metaService: CanonicalService, private meta: Meta, private titleService: Title, private tag: MetaSrartPage) {
+  constructor(
+    private metaService: CanonicalService,
+    private meta: Meta, private titleService: Title,
+    private tag: MetaSrartPage,
+    private cookieService: CookieService) {
     this.meta.addTags([
       { name: this.tag.keywords, content: this.tag.keywordsContent },
       { name: this.tag.description, content: this.tag.descriptionContent },
@@ -28,7 +34,7 @@ export class StartPageComponent implements OnInit {
   warmehausTiles: ITile[] = [
     {
       route: '',
-      picUrl: 'assets/images/gridPics/grid-1-web-action.jpg',
+      picUrl: 'assets/images/gridPics/grid-1-web.jpg',
       cols: 4,
       rows: 2,
       alt: 'Теплые полы в Минске',
@@ -52,6 +58,9 @@ export class StartPageComponent implements OnInit {
   ];
   ngOnInit() {
     this.metaService.createCanonicalURL();
+
+    this.cookieService.set('/', '/', 30, 'None', 'None', true, 'None');
+    this.cookieValue = this.cookieService.get('/');
 
     if (window.innerWidth >= 416) {
       this.warmehausTiles[0].cols = 4;

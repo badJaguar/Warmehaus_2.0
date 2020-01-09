@@ -17,9 +17,7 @@
 
 @media screen and (min-width: 1240px) {
 
-  article,
-  h1,
-  h2 {
+  article {
     max-width: 50%;
     margin: auto;
   }
@@ -44,10 +42,7 @@ article {
 
 .clearfix {
   margin-top: 25px;
-  margin-left: auto;
-  margin-right: auto;
-  position: sticky;
-  align-content: center;
+  position: -webkit-sticky;
   text-align: justify;
 }
 

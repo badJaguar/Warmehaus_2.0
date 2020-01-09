@@ -11,17 +11,6 @@
     background-color: #dddddd46;
   }
 
-  .outer-navbar {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-  }
-
-  .btn-item {
-    display: inline-flex;
-    justify-content: space-around;
-  }
-
   .navbar-end {
     display: flex;
     justify-content: center;
@@ -48,10 +37,10 @@
   width: 60%;
 }
 
-.navbar-item {
-  margin-right: 5px;
-  margin-left: 5px;
-}
+// .navbar-item {
+//   margin-right: 5px;
+//   margin-left: 5px;
+// }
 
 button {
   margin-left: 5px;
@@ -114,5 +103,5 @@ a {
 }
 
 .navbar-burger.is-active span:nth-child(1) {
-  transform: translateY(11px) rotate(45deg);
+  transform: translateY(12px) rotate(45deg);
 }

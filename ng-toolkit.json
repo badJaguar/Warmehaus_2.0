@@ -21,6 +21,7 @@
     "clientProject": "WarmehausSecond",
     "skipInstall": false,
     "directory": ".",
-    "project": "WarmehausSecond"
+    "project": "WarmehausSecond",
+    "skipServer": false
   }
 }

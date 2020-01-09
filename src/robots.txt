@@ -4,3 +4,16 @@ Disallow:
 
 # Sitemap files
 Sitemap: https://warmehaus.com.by/sitemap.xml
+
+User-agent: Twitterbot
+Allow: /imgres
+
+User-agent: facebookexternalhit
+Allow: /imgres
+
+# AdsBot
+User-agent: AdsBot-Google
+Allow: /maps/api/js
+Allow: /maps/api/place/js/
+Allow: /maps/api/staticmap
+Allow: /maps/api/streetview

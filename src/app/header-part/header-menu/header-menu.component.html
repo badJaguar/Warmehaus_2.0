@@ -39,19 +39,15 @@
     </a>
     <hr />
     <div class="navbar-end">
-      <div class="btn-item">
-        <a onclick="location.href='mailto:3523204@gmail.com';">
-          <button mat-fab color="warn" (click)="toggleNavbar()"
-            aria-label="Написать на электронную почту компании Warmehaus">
-            <mat-icon>email</mat-icon>
-          </button></a>
-      </div>
-      <div class="btn-item">
-        <button mat-fab color="warn" aria-label="Позвонить в компанию Warmehaus"
-          (click)="openBottomSheet(); toggleNavbar()">
-          <mat-icon>phone</mat-icon>
-        </button>
-      </div>
+      <a onclick="location.href='mailto:3523204@gmail.com';">
+        <button mat-fab color="warn" (click)="toggleNavbar()"
+          aria-label="Написать на электронную почту компании Warmehaus">
+          <mat-icon>email</mat-icon>
+        </button></a>
+      <button mat-fab color="warn" aria-label="Позвонить в компанию Warmehaus"
+        (click)="openBottomSheet(); toggleNavbar()">
+        <mat-icon>phone</mat-icon>
+      </button>
     </div>
   </div>
 </nav>

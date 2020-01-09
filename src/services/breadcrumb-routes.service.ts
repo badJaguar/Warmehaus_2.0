@@ -43,7 +43,8 @@ export class BreadcrumbRoutesService {
             name: 'Антиобледенение', path: './anti-icing', children: [
               { name: 'Обогрев труб', path: './pipe-cooling' },
               {
-                name: 'Обогрев труб', path: './systems-and-gutter-cooling', children: this.guttersAndTheirSystems.map(x => {
+                name: 'Обогрев труб и системы управления',
+                path: './systems-and-gutter-cooling', children: this.guttersAndTheirSystems.map(x => {
                   return {
                     name: x.name,
                     path: `./${x.id.toString()}`

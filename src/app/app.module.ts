@@ -50,6 +50,7 @@ import { Txlp2rComponent } from './body-part/nexans/txlp2r/txlp2r.component';
 import { PipeCoolingComponent } from './body-part/warmehaus/anit-icing/pipe-cooling/pipe-cooling.component';
 import { GutterCoolingComponent } from './body-part/warmehaus/anit-icing/gutter-cooling/gutter-cooling.component';
 import { GutterCoolingItemComponent } from './body-part/warmehaus/anit-icing/gutter-cooling-item/gutter-cooling-item.component';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -113,6 +114,6 @@ import { GutterCoolingItemComponent } from './body-part/warmehaus/anit-icing/gut
   bootstrap: [AppComponent],
   entryComponents: [PhonesSheetComponent],
   exports: [],
-  providers: [SafeHtmlPipe, Title],
+  providers: [SafeHtmlPipe, Title, CookieService],
 })
 export class AppModule { }

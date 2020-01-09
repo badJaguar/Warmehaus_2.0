@@ -17,14 +17,17 @@ a {
 a {
   margin-top: -1px;
   color: rgb(255, 217, 0);
-  /* pointer-events: none; */
   margin-left: -14px;
   margin-right: -5px;
 }
 
+.item:nth-last-child(1) {
+  color: white;
+  cursor: default;
+}
+
 a:hover {
   color: rgb(180, 153, 2);
-  /* text-decoration: none; */
 }
 
 a:link {

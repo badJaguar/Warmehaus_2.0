@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { CanonicalService } from 'src/services/canonical.service';
+import { CanonicalService } from '../../../../../services/canonical.service';
 import { Meta } from '@angular/platform-browser';
 import { MetaAntiIcing } from '../../../../../app/seo/open-graph/warmehaus/meta-data-antiIcing';
 import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
