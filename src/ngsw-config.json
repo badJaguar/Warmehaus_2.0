@@ -13,16 +13,18 @@
         ],
         "urls": [
           "https://fonts.googleapis.com/**",
+          "https://maps.googleapis.com/**",
           "https://cdnjs.cloudflare.com/**"
         ],
         "cacheConfig": {
           "strategy": "freshness",
           "maxSize": 20,
-          "maxAge": "1h",
-          "maxTimeout": "5s"
+          "maxAge": "30d",
+          "maxTimeout": "4s"
         }
       }
-    }, {
+    },
+    {
       "name": "assets",
       "installMode": "lazy",
       "updateMode": "prefetch",

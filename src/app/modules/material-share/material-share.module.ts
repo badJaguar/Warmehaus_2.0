@@ -5,12 +5,8 @@ import {
   MatButtonModule, MatCardModule,
   MatChipsModule, MatDividerModule,
   MatFormFieldModule, MatGridListModule, MatIconModule,
-  MatListModule,
-  MatPaginatorModule,
-  MatRippleModule,
-
-  MatSortModule,
-  MatTableModule, MatTabsModule, MatToolbarModule,
+  MatListModule, MatPaginatorModule, MatRippleModule, MatSortModule,
+  MatTableModule, MatTabsModule, MatToolbarModule, MatInputModule,
 } from '@angular/material';
 
 @NgModule({
@@ -34,6 +30,7 @@ import {
     MatTableModule,
     MatTabsModule,
     MatToolbarModule,
+    MatInputModule,
   ]
 })
 export class MaterialShareModule { }
