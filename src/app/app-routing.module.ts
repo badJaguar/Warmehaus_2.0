@@ -30,7 +30,7 @@ const routes: Routes = [
   { path: 'warmehaus', component: WarmehausMainPageComponent },
   { path: 'warmehaus/mat-160Watt', component: WarmingMat160WComponent },
   { path: 'warmehaus/mat-200Watt', component: WarmingMat200WComponent },
-  { path: 'warmehaus/cable-11Watt', component: Cab11WComponent },
+  // { path: 'warmehaus/cable-11Watt', component: Cab11WComponent },
   { path: 'warmehaus/cable-14Watt', component: Cab14WComponent },
   { path: 'warmehaus/cable-20Watt', component: Cab20WComponent },
   { path: 'warmehaus/films', component: FilmsComponent },

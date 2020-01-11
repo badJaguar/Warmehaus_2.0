@@ -7,18 +7,26 @@
     width: 240px;
   }
 
+  .mat-card-title {
+    font-size: 16px;
+  }
+
   .price {
     font-size: 14px;
   }
 
   h2 {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 
 @media screen and (max-width: 380px) {
   .mt-2 {
     max-width: 160px;
+  }
+
+  .mat-card-title {
+    font-size: 14px;
   }
 
   .mat-card-image {
@@ -30,7 +38,7 @@
   }
 
   h2 {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 

@@ -3,10 +3,6 @@
     max-width: 300px;
   }
 
-  .mat-card-image {
-    width: 240px;
-  }
-
   .price {
     font-size: 14px;
   }
@@ -54,7 +50,6 @@ h2 {
 
 .mat-card-image {
   margin: auto;
-  max-width: 300px;
 
   &:hover {
     filter: opacity(0.8);
@@ -65,7 +60,7 @@ h2 {
 }
 
 .mat-card-title {
-  font-size: 4vmin;
+  font-size: 1rem;
   padding: 1vmin 0 2vmin 0;
   line-height: 1;
   margin-bottom: 0 !important;
