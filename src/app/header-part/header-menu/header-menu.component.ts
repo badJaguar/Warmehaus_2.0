@@ -16,6 +16,7 @@ export class HeaderMenuComponent implements OnInit {
   @ViewChild('navMenu') navMenu: ElementRef;
 
   brand = 'assets/images/logo2.png';
+  mouseOn = true;
 
   constructor(private bottomSheet: MatBottomSheet, private titleService: Title) { }
 
@@ -32,6 +33,12 @@ export class HeaderMenuComponent implements OnInit {
     this.navMenu.nativeElement.classList.toggle('is-active');
   }
 
+  toggledBoxedItemToFalse() {
+    this.mouseOn = !this.mouseOn;
+  }
+  toggledBoxedItemToTrue() {
+    this.mouseOn = true;
+  }
   ngOnInit(): void {
   }
 }

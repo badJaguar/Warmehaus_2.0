@@ -37,8 +37,26 @@
       routerLinkActive="active">
       Инcтрукции
     </a>
+
+    <div (mouseover)="toggledBoxedItemToTrue()" (mouseout)="toggledBoxedItemToFalse()"
+      [ngClass]="mouseOn ? 'navbar-item has-dropdown is-hoverable' : 'navbar-item has-dropdown'">
+      <a class="navbar-link">
+        Продукция
+      </a>
+      <div class=" navbar-dropdown is-boxed">
+        <a class=" navbar-item" href="#" routerLink="./warmehaus" routerLinkActive="active"
+          (click)=" setTitle('Теплые полы Warmehaus'); toggledBoxedItemToFalse(); toggleNavbar()">
+          Warmehaus
+        </a>
+        <a class=" navbar-item" href="#" routerLink="./nexans" routerLinkActive="active"
+          (click)="setTitle('Теплые полы Nexans'); toggledBoxedItemToFalse(); toggleNavbar()">
+          Nexans
+        </a>
+      </div>
+    </div>
+
     <hr />
-    <div class="navbar-end">
+    <div class=" navbar-end">
       <a onclick="location.href='mailto:3523204@gmail.com';">
         <button mat-fab color="warn" (click)="toggleNavbar()"
           aria-label="Написать на электронную почту компании Warmehaus">

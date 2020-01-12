@@ -3,6 +3,7 @@
   .navbar-item {
     display: flex;
     justify-content: center;
+    flex-direction: column;
   }
 
   .navbar-menu {
@@ -37,10 +38,37 @@
   width: 60%;
 }
 
-// .navbar-item {
-//   margin-right: 5px;
-//   margin-left: 5px;
-// }
+.navbar-dropdown {
+  background-color: #ffcb03;
+}
+
+.navbar-item:hover,
+.has-dropdown:hover,
+.navbar-link:hover {
+  background-color: #e2be2b;
+}
+
+.navbar-dropdown a.navbar-item:hover {
+  background-color: #e2be2b;
+  color: #0a0a0a;
+}
+
+.navbar-link:not(.is-arrowless)::after {
+  border-color: black;
+}
+
+a:hover {
+  background-color: #e2be2b !important;
+}
+
+.navbar-item.has-dropdown:hover .navbar-link {
+  background-color: #e2be2b;
+  color: black;
+}
+
+.is-hoverable:hover {
+  background-color: #e2be2b !important;
+}
 
 button {
   margin-left: 5px;
