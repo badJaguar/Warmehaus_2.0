@@ -28,9 +28,28 @@
 .iframe-container {
   overflow: hidden;
   height: 100%;
-  padding-top: 100%;
+  padding-top: 50%;
   position: relative;
   padding-bottom: inherit;
+}
+
+.maps {
+  margin: auto;
+  max-width: 72rem;
+}
+
+.mat-list-item-content {
+  display: flex !important
+}
+
+.op-icon {
+  vertical-align: middle;
+  border-style: none;
+  margin-right: 1rem;
+}
+
+.phones {
+  text-decoration: underline;
 }
 
 .iframe-container iframe {

@@ -10,7 +10,7 @@ import { CanonicalService } from '../../../../services/canonical.service';
 })
 export class WarmehausMainPageComponent implements OnInit {
 
-  constructor(private titleService: Title, private metaService: CanonicalService) { }
+  constructor(private metaService: CanonicalService) { }
 
   breakpoint: number;
   warmehausTiles: ITile[] = [
@@ -81,9 +81,5 @@ export class WarmehausMainPageComponent implements OnInit {
   ];
   ngOnInit() {
     this.metaService.createCanonicalURL();
-  }
-  public setTitle(newTitle: string, itemName: string) {
-    newTitle = `${newTitle} ${itemName}`;
-    this.titleService.setTitle(newTitle);
   }
 }

@@ -21,26 +21,91 @@ import { Txlp2rComponent } from './body-part/nexans/txlp2r/txlp2r.component';
 import { PipeCoolingComponent } from './body-part/warmehaus/anit-icing/pipe-cooling/pipe-cooling.component';
 import { GutterCoolingComponent } from './body-part/warmehaus/anit-icing/gutter-cooling/gutter-cooling.component';
 import { GutterCoolingItemComponent } from './body-part/warmehaus/anit-icing/gutter-cooling-item/gutter-cooling-item.component';
+import { MetaSrartPage } from './seo/open-graph/warmehaus/meta-data-startPage';
+import { MetaContacts } from './seo/open-graph/warmehaus/meta-data-contacts';
+import { MetaInstructionsPage } from './seo/open-graph/warmehaus/meta-data-instructions';
+import { MetaMat160 } from './seo/open-graph/warmehaus/meta-data-cab-metaMat160';
+import { MetaMat200 } from './seo/open-graph/warmehaus/meta-data-cab-metaMat200';
+import { MetaCab14Watt } from './seo/open-graph/warmehaus/meta-data-cab-14Watt';
+import { MetaCab20Watt } from './seo/open-graph/warmehaus/meta-data-cab-20Watt';
+import { MetaFilms } from './seo/open-graph/warmehaus/meta-data-cab-metaFilms';
+import { MetaAntiIcing } from './seo/open-graph/warmehaus/meta-data-antiIcing';
+import { MetaTermostats } from './seo/open-graph/warmehaus/meta-data-cab-metaTernostats';
+
+const metaStartPage: MetaSrartPage = new MetaSrartPage();
+const metaContacts: MetaContacts = new MetaContacts();
+const metaInstructions: MetaInstructionsPage = new MetaInstructionsPage();
+const meta160Watt: MetaMat160 = new MetaMat160();
+const meta200Watt: MetaMat200 = new MetaMat200();
+const metaCab14W: MetaCab14Watt = new MetaCab14Watt();
+const metaCab20W: MetaCab20Watt = new MetaCab20Watt();
+const metaFilms: MetaFilms = new MetaFilms();
+const metaAntiIcing: MetaAntiIcing = new MetaAntiIcing();
+const metaTermostats: MetaTermostats = new MetaTermostats();
 
 const routes: Routes = [
-  { path: '', component: StartPageComponent },
-  { path: 'home/contacts', component: ContactsComponent },
-  { path: 'home/instructions', component: InfoComponent },
+  {
+    path: '', component: StartPageComponent, data: {
+      title: metaStartPage.ogTitleContent, description: metaStartPage.descriptionContent,
+    }
+  },
+  {
+    path: 'home/contacts', component: ContactsComponent, data: {
+      title: metaContacts.ogTitleContent, description: metaContacts.descriptionContent
+    }
+  },
+  {
+    path: 'home/instructions', component: InfoComponent, data: {
+      title: metaInstructions.ogTitleContent, description: metaInstructions.descriptionContent
+    }
+  },
 
-  { path: 'warmehaus', component: WarmehausMainPageComponent },
-  { path: 'warmehaus/mat-160Watt', component: WarmingMat160WComponent },
-  { path: 'warmehaus/mat-200Watt', component: WarmingMat200WComponent },
+  {
+    path: 'warmehaus', component: WarmehausMainPageComponent, data: {
+      title: metaStartPage.ogTitleContent, description: metaStartPage.descriptionContent,
+    }
+  },
+  {
+    path: 'warmehaus/mat-160Watt', component: WarmingMat160WComponent, data: {
+      title: meta160Watt.ogTitleContent, description: meta160Watt.descriptionContent,
+    }
+  },
+  {
+    path: 'warmehaus/mat-200Watt', component: WarmingMat200WComponent, data: {
+      title: meta200Watt.ogTitleContent, description: meta200Watt.descriptionContent,
+    }
+  },
   // { path: 'warmehaus/cable-11Watt', component: Cab11WComponent },
-  { path: 'warmehaus/cable-14Watt', component: Cab14WComponent },
-  { path: 'warmehaus/cable-20Watt', component: Cab20WComponent },
-  { path: 'warmehaus/films', component: FilmsComponent },
+  {
+    path: 'warmehaus/cable-14Watt', component: Cab14WComponent, data: {
+      title: metaCab14W.ogTitleContent, description: metaCab14W.descriptionContent,
+    }
+  },
+  {
+    path: 'warmehaus/cable-20Watt', component: Cab20WComponent, data: {
+      title: metaCab20W.ogTitleContent, description: metaCab20W.descriptionContent,
+    }
+  },
+  {
+    path: 'warmehaus/films', component: FilmsComponent, data: {
+      title: metaFilms.ogTitleContent, description: metaFilms.descriptionContent,
+    }
+  },
 
-  { path: 'warmehaus/anti-icing', component: AnitIcingComponent },
+  {
+    path: 'warmehaus/anti-icing', component: AnitIcingComponent, data: {
+      title: metaAntiIcing.ogTitleContent, description: metaAntiIcing.descriptionContent,
+    }
+  },
   { path: 'warmehaus/anti-icing/pipe-cooling', component: PipeCoolingComponent },
   { path: 'warmehaus/anti-icing/systems-and-gutter-cooling', component: GutterCoolingComponent },
   { path: 'warmehaus/anti-icing/systems-and-gutter-cooling/:id', component: GutterCoolingItemComponent },
 
-  { path: 'warmehaus/termostats', component: TermostatsComponent },
+  {
+    path: 'warmehaus/termostats', component: TermostatsComponent, data: {
+      title: metaTermostats.ogTitleContent, description: metaTermostats.descriptionContent,
+    }
+  },
   { path: 'warmehaus/termostats/:id', component: TermostatsItemComponent },
 
   { path: 'nexans', component: NexansMainPageComponent },
@@ -64,4 +129,6 @@ const routes: Routes = [
   providers: [{ provide: LocationStrategy, useClass: PathLocationStrategy }],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+
+}

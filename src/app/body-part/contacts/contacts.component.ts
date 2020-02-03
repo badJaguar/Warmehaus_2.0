@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { CanonicalService } from '../../../services/canonical.service';
-import { Meta, Title } from '@angular/platform-browser';
 import { MetaContacts } from '../../seo/open-graph/warmehaus/meta-data-contacts';
 
 @Component({
@@ -16,16 +15,7 @@ export class ContactsComponent implements OnInit {
   email: string;
   message: string;
 
-  constructor(private canonicalService: CanonicalService, private meta: Meta, private tag: MetaContacts) {
-    this.meta.addTags([
-      { name: this.tag.keywords, content: this.tag.keywordsContent },
-      { name: this.tag.description, content: this.tag.descriptionContent },
-      { property: this.tag.ogTitle, content: this.tag.ogTitleContent },
-      { property: this.tag.ogDescription, content: this.tag.ogDescriptionContent },
-      { property: this.tag.ogType, content: this.tag.ogTypeContent },
-      { property: this.tag.ogImage, content: this.tag.ogImageContent },
-      { property: this.tag.ogUrl, content: this.tag.ogUrlContent }
-    ]);
+  constructor(private canonicalService: CanonicalService) {
   }
 
   ngOnInit() {

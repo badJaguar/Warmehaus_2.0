@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ITile } from '../../../models/ITile.interface';
 import { CanonicalService } from '../../../services/canonical.service';
-import { Meta, Title } from '@angular/platform-browser';
 import { MetaSrartPage } from '../../seo/open-graph/warmehaus/meta-data-startPage';
 import { CookieService } from 'ngx-cookie-service';
 
@@ -16,18 +15,8 @@ export class StartPageComponent implements OnInit {
 
   constructor(
     private metaService: CanonicalService,
-    private meta: Meta, private titleService: Title,
-    private tag: MetaSrartPage,
     private cookieService: CookieService) {
-    this.meta.addTags([
-      { name: this.tag.keywords, content: this.tag.keywordsContent },
-      { name: this.tag.description, content: this.tag.descriptionContent },
-      { property: this.tag.ogTitle, content: this.tag.ogTitleContent },
-      { property: this.tag.ogDescription, content: this.tag.ogDescriptionContent },
-      { property: this.tag.ogType, content: this.tag.ogTypeContent },
-      { property: this.tag.ogImage, content: this.tag.ogImageContent },
-      { property: this.tag.ogUrl, content: this.tag.ogUrlContent }
-    ]);
+
   }
 
   breakpoint: number;
@@ -81,9 +70,5 @@ export class StartPageComponent implements OnInit {
       this.warmehausTiles[0].cols = 4;
       this.warmehausTiles[0].rows = 2;
     }
-  }
-
-  public setTitle(newTitle: string) {
-    this.titleService.setTitle(newTitle);
   }
 }

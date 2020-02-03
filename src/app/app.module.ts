@@ -109,7 +109,7 @@ import { CookieService } from 'ngx-cookie-service';
     ScrollToModule.forRoot(),
     TransferHttpCacheModule,
     NgxJsonLdModule,
-    PinchZoomModule
+    PinchZoomModule,
   ],
   bootstrap: [AppComponent],
   entryComponents: [PhonesSheetComponent],

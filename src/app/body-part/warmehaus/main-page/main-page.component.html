@@ -9,8 +9,8 @@
         {{item.alt}}
       </mat-card-title>
     </mat-card-header>
-    <img class="image" (click)="setTitle('Вармхаус теплые полы от производителя', item.alt)" routerLink="{{item.route}}"
-      routerLinkActive="active" mat-card-image src="{{item.picUrl}}" alt="{{item.alt}}">
+    <img class="image" routerLink="{{item.route}}" routerLinkActive="active" mat-card-image src="{{item.picUrl}}"
+      alt="{{item.alt}}">
     <mat-card-content>
       <p>
         {{item.description}}
