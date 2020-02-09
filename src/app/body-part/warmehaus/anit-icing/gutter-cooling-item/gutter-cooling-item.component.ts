@@ -13,10 +13,9 @@ export class GutterCoolingItemComponent implements OnInit {
   public itemId = +this.route.snapshot.paramMap.get('id');
   public currentItem: ITermostat;
 
-  constructor(private route: ActivatedRoute, private metaService: CanonicalService) {
+  constructor(private route: ActivatedRoute) {
   }
   ngOnInit() {
-    this.metaService.createCanonicalURL();
     this.currentItem = this.getItem(this.itemId);
   }
 

@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ITile } from '../../../../models/ITile.interface';
-import { Title } from '@angular/platform-browser';
-import { CanonicalService } from '../../../../services/canonical.service';
 
 @Component({
   selector: 'app-main-page',
@@ -10,7 +8,7 @@ import { CanonicalService } from '../../../../services/canonical.service';
 })
 export class WarmehausMainPageComponent implements OnInit {
 
-  constructor(private metaService: CanonicalService) { }
+  constructor() { }
 
   breakpoint: number;
   warmehausTiles: ITile[] = [
@@ -80,6 +78,5 @@ export class WarmehausMainPageComponent implements OnInit {
     },
   ];
   ngOnInit() {
-    this.metaService.createCanonicalURL();
   }
 }

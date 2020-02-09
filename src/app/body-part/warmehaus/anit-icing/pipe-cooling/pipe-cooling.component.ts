@@ -13,7 +13,7 @@ import { ELEMENT_DATA_PIPE_HEATING_CABLE } from '../../../../../data/warmehaus/a
 })
 export class PipeCoolingComponent implements OnInit {
 
-  constructor(private canonicalService: CanonicalService, private meta: Meta, private tag: MetaAntiIcing) {
+  constructor(private meta: Meta, private tag: MetaAntiIcing) {
     this.meta.addTags([
       { name: this.tag.keywords, content: this.tag.keywordsContent },
       { name: this.tag.description, content: this.tag.descriptionContent },
@@ -33,7 +33,6 @@ export class PipeCoolingComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   ngOnInit() {
-    this.canonicalService.createCanonicalURL();
     this.pipeHeatingDataSource.sort = this.sort;
     this.pipeHeatingDataSource.paginator = this.paginator;
   }

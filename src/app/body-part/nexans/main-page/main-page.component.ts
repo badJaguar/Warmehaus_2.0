@@ -9,10 +9,9 @@ import { CanonicalService } from '../../../../services/canonical.service';
 })
 export class NexansMainPageComponent implements OnInit {
 
-  constructor(private titleService: Title, private metaService: CanonicalService) { }
+  constructor(private titleService: Title) { }
 
   ngOnInit() {
-    this.metaService.createCanonicalURL();
   }
   public setTitle(newTitle: string) {
     this.titleService.setTitle(newTitle);

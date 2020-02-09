@@ -13,7 +13,7 @@ import { ELEMENT_ANTI_ICING_SYSTEMS_DATA } from '../../../../../data/warmehaus/a
 export class GutterCoolingComponent implements OnInit {
 
   constructor(
-    private metaService: CanonicalService, private meta: Meta, private tag: MetaAntiIcing, private titleService: Title) {
+    private meta: Meta, private tag: MetaAntiIcing, private titleService: Title) {
     this.meta.addTags([
       { name: this.tag.keywords, content: this.tag.keywordsContent },
       { name: this.tag.description, content: this.tag.descriptionContent },
@@ -27,7 +27,6 @@ export class GutterCoolingComponent implements OnInit {
   data = ELEMENT_ANTI_ICING_SYSTEMS_DATA;
 
   ngOnInit() {
-    this.metaService.createCanonicalURL();
   }
 
   public setTitle(newTitle: string, itemName: string) {

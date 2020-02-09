@@ -12,7 +12,6 @@ import { Meta } from '@angular/platform-browser';
 export class InfoComponent implements OnInit {
 
   constructor(
-    private metaService: CanonicalService,
     private meta: Meta,
     private tag: MetaInstructionsPage) {
     this.meta.addTags([
@@ -27,7 +26,6 @@ export class InfoComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.metaService.createCanonicalURL();
   }
   onTabMenu() {
     document.getElementById('tabMenu').scrollIntoView();

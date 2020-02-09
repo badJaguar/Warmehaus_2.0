@@ -24,7 +24,7 @@ import { ITermostat } from '../../../../models/IMatTebleItem.interface';
   ]
 })
 export class AnitIcingComponent implements OnInit {
-  constructor(private canonicalService: CanonicalService, private meta: Meta, private tag: MetaAntiIcing, private titleService: Title) {
+  constructor(private meta: Meta, private tag: MetaAntiIcing, private titleService: Title) {
     this.meta.addTags([
       { name: this.tag.keywords, content: this.tag.keywordsContent },
       { name: this.tag.description, content: this.tag.descriptionContent },
@@ -47,7 +47,6 @@ export class AnitIcingComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   ngOnInit() {
-    this.canonicalService.createCanonicalURL();
     this.dataSource.sort = this.sort;
   }
   applyFilter(filterValue: string) {

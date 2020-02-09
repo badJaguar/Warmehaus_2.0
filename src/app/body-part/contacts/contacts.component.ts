@@ -15,11 +15,10 @@ export class ContactsComponent implements OnInit {
   email: string;
   message: string;
 
-  constructor(private canonicalService: CanonicalService) {
+  constructor() {
   }
 
   ngOnInit() {
-    this.canonicalService.createCanonicalURL();
     // tslint:disable-next-line: deprecation
     $(document).ready(() => {
       $('.opening-hours li').eq(new Date().getDay() - 1).addClass('today');

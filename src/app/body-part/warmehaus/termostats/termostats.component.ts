@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { IMAGEVIEWER_CONFIG } from '@hallysonh/ngx-imageviewer';
-import { MatTableDataSource } from '@angular/material';
-import { ELEMENT_DATA_TERMOSTATS } from '../../../../data/warmehaus/termostats.data';
-import { MY_IMAGEVIEWER_CONFIG } from '../../../../constants/image-view-styles';
-import { CanonicalService } from '../../../../services/canonical.service';
 import { Meta, Title } from '@angular/platform-browser';
+import { IMAGEVIEWER_CONFIG } from '@hallysonh/ngx-imageviewer';
+import { MY_IMAGEVIEWER_CONFIG } from '../../../../constants/image-view-styles';
+import { ELEMENT_DATA_TERMOSTATS } from '../../../../data/warmehaus/termostats.data';
 import { MetaTermostats } from '../../../seo/open-graph/warmehaus/meta-data-cab-metaTernostats';
 
 @Component({
@@ -22,7 +20,7 @@ import { MetaTermostats } from '../../../seo/open-graph/warmehaus/meta-data-cab-
 export class TermostatsComponent implements OnInit {
 
   constructor(
-    private metaService: CanonicalService, private meta: Meta, private tag: MetaTermostats, private titleService: Title) {
+    private meta: Meta, private tag: MetaTermostats, private titleService: Title) {
     this.meta.addTags([
       { name: this.tag.keywords, content: this.tag.keywordsContent },
       { name: this.tag.description, content: this.tag.descriptionContent },
@@ -36,7 +34,6 @@ export class TermostatsComponent implements OnInit {
   data = ELEMENT_DATA_TERMOSTATS;
 
   ngOnInit() {
-    this.metaService.createCanonicalURL();
   }
 
   public setTitle(newTitle: string, itemName: string) {

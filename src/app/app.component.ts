@@ -1,9 +1,10 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { Router, NavigationEnd, ActivatedRouteSnapshot } from '@angular/router';
+import { Component, Inject, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
+import { ActivatedRouteSnapshot, NavigationEnd, Router } from '@angular/router';
 import { SwUpdate } from '@angular/service-worker';
 import { WINDOW } from '@ng-toolkit/universal';
-import { Meta, Title } from '@angular/platform-browser';
 import { filter } from 'rxjs/operators';
+import { CanonicalService } from '../services/canonical.service';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,7 @@ export class AppComponent implements OnInit {
   private metaDescription: string = this.metaService.getTag('name=description').content;
 
   constructor(@Inject(WINDOW) private window: any,
+    private canonicalService: CanonicalService,
     private swUpdate: SwUpdate,
     private titleService: Title,
     private metaService: Meta,
@@ -30,6 +32,7 @@ export class AppComponent implements OnInit {
 
       const description: string = snapshot.data.description;
       this.metaService.updateTag({ name: 'description', content: this.metaDescription + ' ' + description }, 'name=description');
+      this.canonicalService.createCanonicalURL();
       this.window.scrollTo(0, 0);
     });
 

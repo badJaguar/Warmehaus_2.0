@@ -13,9 +13,7 @@ import { CookieService } from 'ngx-cookie-service';
 export class StartPageComponent implements OnInit {
   cookieValue = 'SameSite=None';
 
-  constructor(
-    private metaService: CanonicalService,
-    private cookieService: CookieService) {
+  constructor(private cookieService: CookieService) {
 
   }
 
@@ -46,7 +44,6 @@ export class StartPageComponent implements OnInit {
     },
   ];
   ngOnInit() {
-    this.metaService.createCanonicalURL();
 
     this.cookieService.set('/', '/', 30, 'None', 'None', true, 'None');
     this.cookieValue = this.cookieService.get('/');

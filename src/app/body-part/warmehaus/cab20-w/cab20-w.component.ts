@@ -12,7 +12,7 @@ import { MetaCab20Watt } from '../../../seo/open-graph/warmehaus/meta-data-cab-2
   providers: [MetaCab20Watt]
 })
 export class Cab20WComponent implements OnInit {
-  constructor(private metaService: CanonicalService, private meta: Meta, private tag: MetaCab20Watt) {
+  constructor(private meta: Meta, private tag: MetaCab20Watt) {
     this.meta.addTags([
       { name: this.tag.keywords, content: this.tag.keywordsContent },
       { name: this.tag.description, content: this.tag.descriptionContent },
@@ -31,7 +31,6 @@ export class Cab20WComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   ngOnInit() {
-    this.metaService.createCanonicalURL();
     this.dataSource1.sort = this.sort;
     this.dataSource1.paginator = this.paginator;
   }

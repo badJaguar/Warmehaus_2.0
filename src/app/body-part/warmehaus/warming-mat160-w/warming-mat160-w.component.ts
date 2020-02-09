@@ -1,8 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
+import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 import { ELEMENT_DATA_MAT_160W } from '../../../../data/warmehaus/heating-mat160W.data';
-import { CanonicalService } from '../../../../services/canonical.service';
-import { Meta } from '@angular/platform-browser';
 import { MetaMat160 } from '../../../seo/open-graph/warmehaus/meta-data-cab-metaMat160';
 
 @Component({
@@ -13,7 +11,7 @@ import { MetaMat160 } from '../../../seo/open-graph/warmehaus/meta-data-cab-meta
 })
 export class WarmingMat160WComponent implements OnInit {
 
-  constructor(private metaService: CanonicalService) {
+  constructor() {
   }
   displayedColumns: string[] = ['name', 'nominal', 'price'];
   dataSource = new MatTableDataSource(ELEMENT_DATA_MAT_160W);
@@ -22,7 +20,6 @@ export class WarmingMat160WComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   ngOnInit() {
-    this.metaService.createCanonicalURL();
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
   }

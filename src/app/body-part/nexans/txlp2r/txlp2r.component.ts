@@ -13,7 +13,7 @@ import { ELEMENT_DATA_TXLP_2R } from '../../../../data/nexans/txlp2r';
 })
 export class Txlp2rComponent implements OnInit {
 
-  constructor(private metaService: CanonicalService, private meta: Meta, private tag: MetaMillimat) {
+  constructor(private meta: Meta, private tag: MetaMillimat) {
 
     this.meta.addTags([
       { name: this.tag.keywords, content: this.tag.keywordsContent },
@@ -33,7 +33,6 @@ export class Txlp2rComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   ngOnInit() {
-    this.metaService.createCanonicalURL();
     this.dataSource2.sort = this.sort;
     this.dataSource2.paginator = this.paginator;
   }
