@@ -1,56 +1,59 @@
-import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BrowserModule, Title } from '@angular/platform-browser';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule } from '@angular/cdk/tree';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HeaderMenuComponent } from './header-part/header-menu/header-menu.component';
-import { HttpClientModule } from '@angular/common/http';
+import { BrowserModule, Title } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
 import { ImageViewerModule } from '@hallysonh/ngx-imageviewer';
-import { NgModule } from '@angular/core';
 import { NgtUniversalModule } from '@ng-toolkit/universal';
 import { NguCarouselModule } from '@ngu/carousel';
-import { OverlayModule } from '@angular/cdk/overlay';
-import { RouterModule } from '@angular/router';
-import { ScrollingModule } from '@angular/cdk/scrolling';
-import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { TransferHttpCacheModule } from '@nguniversal/common';
-import { PhonesSheetComponent } from './footer-part/phones-sheet/phones-sheet.component';
-import { StartPageComponent } from './body-part/start-page/start-page.component';
-import { ToolbarComponent } from './header-part/toolbar/toolbar.component';
-import { BreadcrumbsComponent } from './header-part/breadcrumbs/breadcrumbs.component';
-import { WarmingMat160WComponent } from './body-part/warmehaus/warming-mat160-w/warming-mat160-w.component';
-import { WarmingMat200WComponent } from './body-part/warmehaus/warming-mat200-w/warming-mat200-w.component';
-import { Cab11WComponent } from './body-part/warmehaus/cab11-w/cab11-w.component';
-import { Cab14WComponent } from './body-part/warmehaus/cab14-w/cab14-w.component';
-import { Cab20WComponent } from './body-part/warmehaus/cab20-w/cab20-w.component';
-import { FilmsComponent } from './body-part/warmehaus/films/films.component';
-import { AnitIcingComponent } from './body-part/warmehaus/anit-icing/anit-icing.component';
-import { SafeHtmlPipe } from './safe-html';
-import { TermostatsComponent } from './body-part/warmehaus/termostats/termostats.component';
-import { ChipsComponent } from './header-part/chips/chips.component';
-import { FooterComponent } from './footer-part/footer/footer.component';
-import { NgxJsonLdModule } from 'ngx-json-ld';
-import { SchemaMarkupComponent } from './seo/schema-markup/schema-markup.component';
-import { MaterialShareModule } from './modules/material-share/material-share.module';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { GtagModule } from 'angular-gtag';
+import { Apollo, ApolloModule } from 'apollo-angular';
+import { HttpLink, HttpLinkModule } from 'apollo-angular-link-http';
+import { InMemoryCache } from 'apollo-cache-inmemory';
+import { CookieService } from 'ngx-cookie-service';
+import { NgxJsonLdModule } from 'ngx-json-ld';
+import { PinchZoomModule } from 'ngx-pinch-zoom';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 import { ContactsComponent } from './body-part/contacts/contacts.component';
 import { InfoComponent } from './body-part/info/info.component';
-import { PinchZoomModule } from 'ngx-pinch-zoom';
-import { TermostatsItemComponent } from './body-part/warmehaus/termostats-item/termostats-item.component';
-import { SqareCalculatorComponent } from './sqare-calculator/sqare-calculator.component';
-import { WarmehausMainPageComponent } from './body-part/warmehaus/main-page/main-page.component';
 import { NexansMainPageComponent } from './body-part/nexans/main-page/main-page.component';
 import { MillimatComponent } from './body-part/nexans/millimat/millimat.component';
 import { Txlp1Component } from './body-part/nexans/txlp1/txlp1.component';
 import { Txlp2rComponent } from './body-part/nexans/txlp2r/txlp2r.component';
-import { PipeCoolingComponent } from './body-part/warmehaus/anit-icing/pipe-cooling/pipe-cooling.component';
-import { GutterCoolingComponent } from './body-part/warmehaus/anit-icing/gutter-cooling/gutter-cooling.component';
+import { StartPageComponent } from './body-part/start-page/start-page.component';
+import { AnitIcingComponent } from './body-part/warmehaus/anit-icing/anit-icing.component';
 import { GutterCoolingItemComponent } from './body-part/warmehaus/anit-icing/gutter-cooling-item/gutter-cooling-item.component';
-import { CookieService } from 'ngx-cookie-service';
+import { GutterCoolingComponent } from './body-part/warmehaus/anit-icing/gutter-cooling/gutter-cooling.component';
+import { PipeCoolingComponent } from './body-part/warmehaus/anit-icing/pipe-cooling/pipe-cooling.component';
+import { Cab11WComponent } from './body-part/warmehaus/cab11-w/cab11-w.component';
+import { Cab14WComponent } from './body-part/warmehaus/cab14-w/cab14-w.component';
+import { Cab20WComponent } from './body-part/warmehaus/cab20-w/cab20-w.component';
+import { FilmsComponent } from './body-part/warmehaus/films/films.component';
+import { WarmehausMainPageComponent } from './body-part/warmehaus/main-page/main-page.component';
+import { TermostatsItemComponent } from './body-part/warmehaus/termostats-item/termostats-item.component';
+import { TermostatsComponent } from './body-part/warmehaus/termostats/termostats.component';
+import { WarmingMat160WComponent } from './body-part/warmehaus/warming-mat160-w/warming-mat160-w.component';
+import { WarmingMat200WComponent } from './body-part/warmehaus/warming-mat200-w/warming-mat200-w.component';
+import { FooterComponent } from './footer-part/footer/footer.component';
+import { PhonesSheetComponent } from './footer-part/phones-sheet/phones-sheet.component';
+import { BreadcrumbsComponent } from './header-part/breadcrumbs/breadcrumbs.component';
+import { ChipsComponent } from './header-part/chips/chips.component';
+import { HeaderMenuComponent } from './header-part/header-menu/header-menu.component';
+import { ToolbarComponent } from './header-part/toolbar/toolbar.component';
+import { MaterialShareModule } from './modules/material-share/material-share.module';
+import { SafeHtmlPipe } from './safe-html';
+import { SchemaMarkupComponent } from './seo/schema-markup/schema-markup.component';
+import { SqareCalculatorComponent } from './sqare-calculator/sqare-calculator.component';
 
 @NgModule({
   declarations: [
@@ -86,6 +89,10 @@ import { CookieService } from 'ngx-cookie-service';
     GutterCoolingItemComponent,
   ],
   imports: [
+    HttpClientModule,
+    ApolloModule,
+    HttpLinkModule,
+
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
@@ -116,4 +123,11 @@ import { CookieService } from 'ngx-cookie-service';
   exports: [],
   providers: [SafeHtmlPipe, Title, CookieService],
 })
-export class AppModule { }
+export class AppModule {
+  constructor(apollo: Apollo, httpLink: HttpLink) {
+    apollo.create({
+      link: httpLink.create({ uri: 'http://localhost:3000/graphql' }),
+      cache: new InMemoryCache()
+    });
+  }
+}

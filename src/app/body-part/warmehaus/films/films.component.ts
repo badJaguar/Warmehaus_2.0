@@ -1,9 +1,12 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
-import { ELEMENT_DATA_FILMS } from '../../../../data/warmehaus/films.data';
-import { CanonicalService } from '../../../../services/canonical.service';
+import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 import { Meta } from '@angular/platform-browser';
-import { MetaFilms } from '../../../seo/open-graph/warmehaus/meta-data-cab-metaFilms';
+import { Observable } from 'rxjs';
+import { MetaFilms } from 'src/app/seo/open-graph/warmehaus/meta-data-cab-metaFilms';
+import { IItem } from 'src/models/IItem.interface';
+import { GraphQlService } from 'src/services/graphql/gql.service';
+import { filmsQuery } from 'src/services/graphql/queries/queries';
+
 
 @Component({
   selector: 'app-films',
@@ -12,7 +15,9 @@ import { MetaFilms } from '../../../seo/open-graph/warmehaus/meta-data-cab-metaF
   providers: [MetaFilms]
 })
 export class FilmsComponent implements OnInit {
-  constructor(private meta: Meta, private tag: MetaFilms) {
+  gqlService: Observable<IItem[]>;
+
+  constructor(private meta: Meta, private tag: MetaFilms, gqlService: GraphQlService) {
     this.meta.addTags([
       { name: this.tag.keywords, content: this.tag.keywordsContent },
       { name: this.tag.description, content: this.tag.descriptionContent },
@@ -22,19 +27,26 @@ export class FilmsComponent implements OnInit {
       { property: this.tag.ogImage, content: this.tag.ogImageContent },
       { property: this.tag.ogUrl, content: this.tag.ogUrlContent }
     ]);
+
+    this.gqlService = gqlService.initQuery(filmsQuery);
   }
 
   displayedColumns: string[] = ['name', 'nominal', 'price'];
-  dataSource1 = new MatTableDataSource(ELEMENT_DATA_FILMS);
+  filmsSource = new MatTableDataSource();
 
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   ngOnInit() {
-    this.dataSource1.sort = this.sort;
-    this.dataSource1.paginator = this.paginator;
+
+    this.gqlService.subscribe(films => {
+      this.filmsSource.data = films;
+      this.filmsSource.sort = this.sort;
+      this.filmsSource.paginator = this.paginator;
+    })
   }
   applyFilter(filterValue: string) {
-    this.dataSource1.filter = filterValue.trim().toLowerCase();
+    this.filmsSource.filter = filterValue.trim().toLowerCase();
   }
 }
+
