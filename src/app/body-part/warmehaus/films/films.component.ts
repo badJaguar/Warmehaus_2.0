@@ -1,8 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
-import { ELEMENT_DATA_FILMS } from '../../../../data/warmehaus/films.data';
-import { CanonicalService } from '../../../../services/canonical.service';
+import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 import { Meta } from '@angular/platform-browser';
+import { ELEMENT_DATA_FILMS } from '../../../../data/warmehaus/films.data';
 import { MetaFilms } from '../../../seo/open-graph/warmehaus/meta-data-cab-metaFilms';
 
 @Component({
