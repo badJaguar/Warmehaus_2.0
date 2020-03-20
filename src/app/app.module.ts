@@ -123,11 +123,17 @@ import { SqareCalculatorComponent } from './sqare-calculator/sqare-calculator.co
   exports: [],
   providers: [SafeHtmlPipe, Title, CookieService],
 })
+
 export class AppModule {
+
   constructor(apollo: Apollo, httpLink: HttpLink) {
     apollo.create({
-      link: httpLink.create({ uri: 'http://localhost:3000/graphql' }),
-      cache: new InMemoryCache()
+      link: httpLink.create({
+        uri: 'http://localhost:3000/graphql',
+      }),
+      cache: new InMemoryCache(),
+      connectToDevTools: true,
     });
+
   }
 }

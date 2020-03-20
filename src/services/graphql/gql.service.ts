@@ -11,17 +11,18 @@ import { IItem } from 'src/models/IItem.interface';
 })
 
 export class GraphQlService {
-  constructor(private apollo: Apollo) {
-  }
+  constructor(private apollo: Apollo) { }
 
   items: Observable<IItem[]>;
 
-  initQuery = (queryModelType: WatchQueryOptions<R>): Observable<IItem[]> => {
-    return this.items = this.apollo.watchQuery<Query>({ ...queryModelType })
-      .valueChanges.pipe(map(result => result.data.items));
+  getItems = (queryModelType: WatchQueryOptions<R>, type: keyof QueryType): Observable<IItem[]> => {
+    return this.items = this.apollo.watchQuery<QueryType>({ ...queryModelType })
+      .valueChanges.pipe(map(result => result.data[type]));
   }
 }
 
-export class Query {
-  items: IItem[];
+export class QueryType {
+  films: IItem[];
+  cab14W: IItem[];
 }
+export const propertyOf = <TObj>(name: keyof TObj) => name;

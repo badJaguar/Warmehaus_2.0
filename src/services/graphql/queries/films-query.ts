@@ -1,13 +1,13 @@
 import gql from 'graphql-tag';
 
-export const filmsQuery = {
+export const getFilmsQuery = {
   query: gql`
 query{
-  items{
+  films{
     id
     name
     nominal
     price
   }
 }
-`}
+`};
