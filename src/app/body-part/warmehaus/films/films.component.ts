@@ -2,10 +2,10 @@ import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 import { Meta } from '@angular/platform-browser';
 import { Observable } from 'rxjs';
-import { MetaFilms } from 'src/app/seo/open-graph/warmehaus/meta-data-cab-metaFilms';
-import { IItem } from 'src/models/IItem.interface';
-import { GraphQlService, propertyOf, QueryType } from 'src/services/graphql/gql.service';
-import { getFilmsQuery } from 'src/services/graphql/queries/films-query';
+import { MetaFilms } from '../../../../app/seo/open-graph/warmehaus/meta-data-cab-metaFilms';
+import { IItem } from '../../../../models/IItem.interface';
+import { GraphQlService, propertyOf, QueryType } from '../../../../services/graphql/gql.service';
+import { getFilmsQuery } from '../../../../services/graphql/queries/films-query';
 
 
 @Component({
@@ -16,6 +16,7 @@ import { getFilmsQuery } from 'src/services/graphql/queries/films-query';
 })
 export class FilmsComponent implements AfterViewInit {
   gqlService: Observable<IItem[]>;
+  filmsSource = new MatTableDataSource();
 
   constructor(private meta: Meta, private tag: MetaFilms, gqlService: GraphQlService) {
     this.meta.addTags([
@@ -32,7 +33,6 @@ export class FilmsComponent implements AfterViewInit {
   }
 
   displayedColumns: string[] = ['name', 'nominal', 'price'];
-  filmsSource = new MatTableDataSource();
 
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -45,6 +45,7 @@ export class FilmsComponent implements AfterViewInit {
       this.filmsSource.paginator = this.paginator;
     });
   }
+
   applyFilter(filterValue: string) {
     this.filmsSource.filter = filterValue.trim().toLowerCase();
   }

@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ITile } from '../../../models/ITile.interface';
-import { CanonicalService } from '../../../services/canonical.service';
-import { MetaSrartPage } from '../../seo/open-graph/warmehaus/meta-data-startPage';
 import { CookieService } from 'ngx-cookie-service';
+import { ITile } from '../../../models/ITile.interface';
+import { MetaSrartPage } from '../../seo/open-graph/warmehaus/meta-data-startPage';
 
 @Component({
   selector: 'app-start-page',

@@ -1,8 +1,8 @@
-import { PhonesSheetComponent } from '../../footer-part/phones-sheet/phones-sheet.component';
-
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { MatBottomSheet } from '@angular/material';
 import { Title } from '@angular/platform-browser';
+import { PhonesSheetComponent } from '../../footer-part/phones-sheet/phones-sheet.component';
+
 
 @Component({
   selector: 'app-header-menu',
