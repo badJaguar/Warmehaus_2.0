@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import { Meta, Title } from '@angular/platform-browser';
 import { IMAGEVIEWER_CONFIG } from '@hallysonh/ngx-imageviewer';
 import { MY_IMAGEVIEWER_CONFIG } from '../../../../constants/image-view-styles';

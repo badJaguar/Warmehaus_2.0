@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import { ELEMENT_DATA_MAT_160W } from '../../../../data/warmehaus/heating-mat160W.data';
 import { MetaMat160 } from '../../../seo/open-graph/warmehaus/meta-data-cab-metaMat160';
 

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import { Meta } from '@angular/platform-browser';
 import { MetaAntiIcing } from '../../../../../app/seo/open-graph/warmehaus/meta-data-antiIcing';
 import { ELEMENT_DATA_PIPE_HEATING_CABLE } from '../../../../../data/warmehaus/anti-icing/pipe-heating-cable-data';

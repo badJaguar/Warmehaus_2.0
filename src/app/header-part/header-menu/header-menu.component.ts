@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { MatBottomSheet } from '@angular/material';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { Title } from '@angular/platform-browser';
 import { PhonesSheetComponent } from '../../footer-part/phones-sheet/phones-sheet.component';
 

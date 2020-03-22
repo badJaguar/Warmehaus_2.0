@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import { Meta } from '@angular/platform-browser';
 import { MetaMillimat } from '../../../../app/seo/open-graph/nexans/meta-data-millimat';
 import { ELEMENT_DATA_TXLP_2R } from '../../../../data/nexans/txlp2r';
