@@ -4,7 +4,7 @@ import { R } from 'apollo-angular/types';
 import { WatchQueryOptions } from 'apollo-client';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { IItem } from 'src/models/IItem.interface';
+import { IItem } from '../../models/IItem.interface';
 
 @Injectable({
   providedIn: 'root'

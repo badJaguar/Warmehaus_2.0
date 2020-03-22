@@ -17,7 +17,10 @@
     "lib": [
       "es2018",
       "dom",
-      "esnext.asynciterable"
-    ]
-  }
+    ],
+  },
+  "include": [
+    "src/**/*.ts",
+    "declarations.d.ts"
+  ]
 }
