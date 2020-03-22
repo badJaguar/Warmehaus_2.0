@@ -164,5 +164,8 @@
       }
     }
   },
-  "defaultProject": "WarmehausSecond"
+  "defaultProject": "WarmehausSecond",
+  "cli": {
+    "analytics": "c1a2d643-45ff-4e7b-b701-3a777836f6b3"
+  }
 }
