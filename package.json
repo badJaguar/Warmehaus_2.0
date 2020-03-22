@@ -40,6 +40,7 @@
     "@ng-toolkit/pwa": "^8.0.4",
     "@ng-toolkit/universal": "^7.1.2",
     "@ngu/carousel": "^1.5.5",
+    "@nguniversal/aspnetcore-engine": "^9.0.2",
     "@nguniversal/common": "9.0.2",
     "@nguniversal/express-engine": "9.0.2",
     "@nguniversal/module-map-ngfactory-loader": "0.0.0",
