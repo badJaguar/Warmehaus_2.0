@@ -1,8 +1,7 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { CanonicalService } from '../../../../../services/canonical.service';
+import { Component, OnInit } from '@angular/core';
+import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 import { Meta } from '@angular/platform-browser';
 import { MetaAntiIcing } from '../../../../../app/seo/open-graph/warmehaus/meta-data-antiIcing';
-import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
 import { ELEMENT_DATA_PIPE_HEATING_CABLE } from '../../../../../data/warmehaus/anti-icing/pipe-heating-cable-data';
 
 @Component({
@@ -29,8 +28,8 @@ export class PipeCoolingComponent implements OnInit {
   pipeHeatingDataSource = new MatTableDataSource(ELEMENT_DATA_PIPE_HEATING_CABLE);
 
 
-  @ViewChild(MatSort) sort: MatSort;
-  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
   ngOnInit() {
     this.pipeHeatingDataSource.sort = this.sort;

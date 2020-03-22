@@ -1,14 +1,11 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { ELEMENT_ANTI_ICING_SYSTEMS_DATA } from '../../../../data/warmehaus/anti-icing/anti-icing-systems-data';
-import { ELEMENT_DATA_PIPE_HEATING_CABLE } from '../../../../data/warmehaus/anti-icing/pipe-heating-cable-data';
-import { IMAGEVIEWER_CONFIG } from '@hallysonh/ngx-imageviewer';
-import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
-import { trigger, state, style, transition, animate } from '@angular/animations';
-import { MY_IMAGEVIEWER_CONFIG } from '../../../../constants/image-view-styles';
-import { CanonicalService } from '../../../../services/canonical.service';
+import { Component, OnInit } from '@angular/core';
+import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 import { Meta, Title } from '@angular/platform-browser';
-import { MetaAntiIcing } from '../../../seo/open-graph/warmehaus/meta-data-antiIcing';
+import { IMAGEVIEWER_CONFIG } from '@hallysonh/ngx-imageviewer';
+import { MY_IMAGEVIEWER_CONFIG } from '../../../../constants/image-view-styles';
+import { ELEMENT_ANTI_ICING_SYSTEMS_DATA } from '../../../../data/warmehaus/anti-icing/anti-icing-systems-data';
 import { ITermostat } from '../../../../models/IMatTebleItem.interface';
+import { MetaAntiIcing } from '../../../seo/open-graph/warmehaus/meta-data-antiIcing';
 
 @Component({
   selector: 'app-anit-icing',
@@ -43,8 +40,8 @@ export class AnitIcingComponent implements OnInit {
   headerNames: string[] = ['Тип', 'м2/Вт', 'Цена'];
   //
 
-  @ViewChild(MatSort) sort: MatSort;
-  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
   ngOnInit() {
     this.dataSource.sort = this.sort;

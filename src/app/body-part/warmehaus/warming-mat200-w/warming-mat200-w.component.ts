@@ -18,8 +18,8 @@ export class WarmingMat200WComponent implements OnInit {
   displayedColumns: string[] = ['name', 'nominal', 'price'];
   dataSource = new MatTableDataSource(ELEMENT_DATA_MAT_200W);
 
-  @ViewChild(MatSort) sort: MatSort;
-  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
   ngOnInit() {
     this.dataSource.sort = this.sort;

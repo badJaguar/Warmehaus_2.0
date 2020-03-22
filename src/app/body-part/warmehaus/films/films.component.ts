@@ -34,8 +34,8 @@ export class FilmsComponent implements AfterViewInit {
 
   displayedColumns: string[] = ['name', 'nominal', 'price'];
 
-  @ViewChild(MatSort) sort: MatSort;
-  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
   ngAfterViewInit() {
 

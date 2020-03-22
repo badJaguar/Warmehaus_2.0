@@ -1,9 +1,8 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator, MatTableDataSource, MatSort } from '@angular/material';
-import { CanonicalService } from '../../../../services/canonical.service';
+import { Component, OnInit } from '@angular/core';
+import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 import { Meta } from '@angular/platform-browser';
-import { MetaMillimat } from './../../../../app/seo/open-graph/nexans/meta-data-millimat';
 import { ELEMENT_DATA_TXLP_1 } from '../../../../data/nexans/txlp1';
+import { MetaMillimat } from './../../../../app/seo/open-graph/nexans/meta-data-millimat';
 
 @Component({
   selector: 'app-txlp1',
@@ -29,8 +28,8 @@ export class Txlp1Component implements OnInit {
   displayedColumns: string[] = ['name', 'nominal', 'price'];
   dataSource2 = new MatTableDataSource(ELEMENT_DATA_TXLP_1);
 
-  @ViewChild(MatSort) sort: MatSort;
-  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
   ngOnInit() {
     this.dataSource2.sort = this.sort;

@@ -1,8 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
-import { ELEMENT_DATA_MAT_CAB_20W_UV_PROTECTION } from '../../../../data/warmehaus/cab-20W.data';
-import { CanonicalService } from '../../../../services/canonical.service';
+import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 import { Meta } from '@angular/platform-browser';
+import { ELEMENT_DATA_MAT_CAB_20W_UV_PROTECTION } from '../../../../data/warmehaus/cab-20W.data';
 import { MetaCab20Watt } from '../../../seo/open-graph/warmehaus/meta-data-cab-20Watt';
 
 @Component({
@@ -27,8 +26,8 @@ export class Cab20WComponent implements OnInit {
   displayedColumns: string[] = ['name', 'nominal', 'price'];
   dataSource1 = new MatTableDataSource(ELEMENT_DATA_MAT_CAB_20W_UV_PROTECTION);
 
-  @ViewChild(MatSort) sort: MatSort;
-  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
   ngOnInit() {
     this.dataSource1.sort = this.sort;
