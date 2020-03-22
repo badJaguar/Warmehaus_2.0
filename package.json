@@ -37,7 +37,7 @@
     "@angular/service-worker": "~9.0.7",
     "@hallysonh/ngx-imageviewer": "^2.0.4",
     "@nestjs/ng-universal": "^3.1.0",
-    "@ng-toolkit/pwa": "^7.1.2",
+    "@ng-toolkit/pwa": "^8.0.1",
     "@ng-toolkit/universal": "^7.1.2",
     "@ngu/carousel": "^1.5.5",
     "@nguniversal/common": "0.0.0",
