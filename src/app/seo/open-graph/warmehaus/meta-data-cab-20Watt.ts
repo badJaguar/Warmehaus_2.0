@@ -1,5 +1,7 @@
 import { IMetaData } from '../../../../models/IMetaData.interface';
+import { Injectable } from "@angular/core";
 
+@Injectable()
 export class MetaCab20Watt implements IMetaData {
   keywords = 'keywords';
   // tslint:disable-next-line: max-line-length

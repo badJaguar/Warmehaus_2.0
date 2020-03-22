@@ -1,5 +1,7 @@
 import { IMetaData } from '../../../../models/IMetaData.interface';
+import { Injectable } from "@angular/core";
 
+@Injectable()
 export class MetaContacts implements IMetaData {
   keywords = 'keywords';
   keywordsContent = 'магазин, как проехать, где находится, адрес, позвонить, написать, вармхаус адрес, вармхаус бай';
