@@ -6,7 +6,7 @@ import { Meta } from '@angular/platform-browser';
 import { Observable } from 'rxjs';
 import { MetaFilms } from '../../../../app/seo/open-graph/warmehaus/meta-data-cab-metaFilms';
 import { IItem } from '../../../../models/IItem.interface';
-import { GraphQlService, propertyOf, QueryType } from '../../../../services/graphql/gql.service';
+import { GraphQlService, propertyOf, QueryModel } from '../../../../services/graphql/gql.service';
 import { getFilmsQuery } from '../../../../services/graphql/queries/films-query';
 
 
@@ -31,7 +31,7 @@ export class FilmsComponent implements AfterViewInit {
       { property: this.tag.ogUrl, content: this.tag.ogUrlContent }
     ]);
 
-    this.gqlService = gqlService.getItems(getFilmsQuery, propertyOf<QueryType>('films'));
+    this.gqlService = gqlService.getItems(getFilmsQuery, propertyOf<QueryModel>('films'));
   }
 
   displayedColumns: string[] = ['name', 'nominal', 'price'];
@@ -42,7 +42,7 @@ export class FilmsComponent implements AfterViewInit {
   ngAfterViewInit() {
 
     this.gqlService.subscribe(films => {
-      this.filmsSource.data = films;
+      this.filmsSource.data = !!films && films;
       this.filmsSource.sort = this.sort;
       this.filmsSource.paginator = this.paginator;
     });

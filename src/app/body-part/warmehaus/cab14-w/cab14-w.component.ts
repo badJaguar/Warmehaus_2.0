@@ -5,7 +5,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Meta } from '@angular/platform-browser';
 import { Observable } from 'rxjs';
 import { IItem } from '../../../../models/IItem.interface';
-import { GraphQlService, propertyOf, QueryType } from '../../../../services/graphql/gql.service';
+import { GraphQlService, propertyOf, QueryModel } from '../../../../services/graphql/gql.service';
 import { getCab14WQuery } from '../../../../services/graphql/queries/cab14W-query';
 import { MetaCab14Watt } from '../../../seo/open-graph/warmehaus/meta-data-cab-14Watt';
 
@@ -30,7 +30,7 @@ export class Cab14WComponent implements AfterViewInit {
       { property: this.tag.ogUrl, content: this.tag.ogUrlContent }
     ]);
 
-    this.gqlService = gqlService.getItems(getCab14WQuery, propertyOf<QueryType>('cab14W'));
+    this.gqlService = gqlService.getItems(getCab14WQuery, propertyOf<QueryModel>('cab14W'));
   }
 
   displayedColumns: string[] = ['name', 'nominal', 'price'];

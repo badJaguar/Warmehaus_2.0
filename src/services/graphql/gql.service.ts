@@ -15,14 +15,22 @@ export class GraphQlService {
 
   items: Observable<IItem[]>;
 
-  getItems = (queryModelType: WatchQueryOptions<R>, type: keyof QueryType): Observable<IItem[]> => {
-    return this.items = this.apollo.watchQuery<QueryType>({ ...queryModelType })
-      .valueChanges.pipe(map(result => result.data[type]));
+  getItems = (queryModelType: WatchQueryOptions<R>, type: keyof QueryModel): Observable<IItem[]> => {
+    return this.items = this.apollo.watchQuery<QueryType, R>({ ...queryModelType })
+      .valueChanges.pipe(map(result => {
+        const res = result.data;
+        return res;
+      })).pipe(map((result) => result.floors[1][type] as IItem[]));
   }
 }
 
-export class QueryType {
+export class QueryModel {
   films: IItem[];
   cab14W: IItem[];
 }
+
+export class QueryType {
+  floors: QueryModel;
+}
+
 export const propertyOf = <TObj>(name: keyof TObj) => name;
