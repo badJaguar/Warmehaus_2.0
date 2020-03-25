@@ -42,7 +42,7 @@ export class FilmsComponent implements AfterViewInit {
   ngAfterViewInit() {
 
     this.gqlService.subscribe(films => {
-      this.filmsSource.data = !!films && films;
+      this.filmsSource.data = films;
       this.filmsSource.sort = this.sort;
       this.filmsSource.paginator = this.paginator;
     });

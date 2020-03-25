@@ -1,7 +1,6 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { MetaInstructionsPage } from '../../seo/open-graph/warmehaus/meta-data-instructions';
-import { CanonicalService } from '../../../services/canonical.service';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
+import { MetaInstructionsPage } from '../../seo/open-graph/warmehaus/meta-data-instructions';
 
 @Component({
   selector: 'app-info',
@@ -10,7 +9,7 @@ import { Meta } from '@angular/platform-browser';
   providers: [MetaInstructionsPage]
 })
 export class InfoComponent implements OnInit {
-
+  @ViewChild('tabMenu') document: ElementRef;
   constructor(
     private meta: Meta,
     private tag: MetaInstructionsPage) {

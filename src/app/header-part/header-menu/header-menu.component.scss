@@ -100,6 +100,26 @@ a {
   margin-right: 4px;
 }
 
+.phone-container {
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+  background: #ffcb03;
+  box-shadow: 5px 5px 10px #d9ad03, -5px -5px 10px #ffe903;
+  margin: auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:active {
+    border-radius: 50px;
+    background: #ffcb03;
+    box-shadow: inset 5px 5px 10px #d9ad03,
+      inset -5px -5px 10px #ffe903;
+  }
+}
+
 .mat-fab .mat-button-wrapper {
   padding: 0 0 !important;
   display: inline-block;

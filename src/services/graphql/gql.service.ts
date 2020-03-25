@@ -18,9 +18,9 @@ export class GraphQlService {
   getItems = (queryModelType: WatchQueryOptions<R>, type: keyof QueryModel): Observable<IItem[]> => {
     return this.items = this.apollo.watchQuery<QueryType, R>({ ...queryModelType })
       .valueChanges.pipe(map(result => {
-        const res = result.data;
-        return res;
-      })).pipe(map((result) => result.floors[1][type] as IItem[]));
+        const data = result.data.floors.warmehausFloors[type];
+        return data;
+      }));
   }
 }
 
@@ -30,7 +30,11 @@ export class QueryModel {
 }
 
 export class QueryType {
-  floors: QueryModel;
+  floors: FloorsKind;
+}
+
+export class FloorsKind {
+  warmehausFloors: QueryModel;
 }
 
 export const propertyOf = <TObj>(name: keyof TObj) => name;
