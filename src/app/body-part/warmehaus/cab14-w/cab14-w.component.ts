@@ -5,8 +5,9 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Meta } from '@angular/platform-browser';
 import { Observable } from 'rxjs';
 import { IItem } from '../../../../models/IItem.interface';
-import { GraphQlService, propertyOf, QueryModel } from '../../../../services/graphql/gql.service';
+import { GraphQlService, propertyOf } from '../../../../services/graphql/gql.service';
 import { getCab14WQuery } from '../../../../services/graphql/queries/cab14W-query';
+import { FloorsKind, ModelType } from '../../../../services/graphql/query-model-types/warmehaus-query-models';
 import { MetaCab14Watt } from '../../../seo/open-graph/warmehaus/meta-data-cab-14Watt';
 
 @Component({
@@ -30,7 +31,12 @@ export class Cab14WComponent implements AfterViewInit {
       { property: this.tag.ogUrl, content: this.tag.ogUrlContent }
     ]);
 
-    this.gqlService = gqlService.getItems(getCab14WQuery, propertyOf<QueryModel>('cab14W'));
+    this.gqlService = gqlService.getItems({
+      queryModelType: getCab14WQuery,
+      floorsKind: propertyOf<FloorsKind>('warmehausFloors'),
+      model: propertyOf<ModelType>('cab14W')
+    }
+    );
   }
 
   displayedColumns: string[] = ['name', 'nominal', 'price'];
@@ -39,11 +45,11 @@ export class Cab14WComponent implements AfterViewInit {
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
   ngAfterViewInit() {
-    this.gqlService.subscribe(cabs => {
-      this.cab14WSource.data = cabs;
-      this.cab14WSource.sort = this.sort;
-      this.cab14WSource.paginator = this.paginator;
-    });
+    // this.gqlService.subscribe(cabs => {
+    //   this.cab14WSource.data = cabs;
+    this.cab14WSource.sort = this.sort;
+    this.cab14WSource.paginator = this.paginator;
+    // });
   }
 
   applyFilter(filterValue: string) {
