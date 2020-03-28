@@ -133,7 +133,7 @@ export class AppModule {
       }),
       cache: new InMemoryCache(),
       connectToDevTools: true,
-    });
 
+    });
   }
 }

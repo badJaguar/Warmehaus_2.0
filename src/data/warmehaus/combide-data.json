@@ -1,0 +1,710 @@
+{
+  "warmehausFloors": {
+    "cab20W": [
+      {
+        "id": 61,
+        "name": "Двужильный WÄRMEHAUS CAB 20W UV PROTECTION",
+        "nominal": "10,0м - 200W",
+        "price": 160.00
+      },
+      {
+        "id": 62,
+        "name": "Двужильный WÄRMEHAUS CAB 20W UV PROTECTION",
+        "nominal": "13,7м - 274W",
+        "price": 190.00
+      },
+      {
+        "id": 63,
+        "name": "Двужильный WÄRMEHAUS CAB 20W UV PROTECTION",
+        "nominal": "17,2м - 344W",
+        "price": 220.00
+      },
+      {
+        "id": 64,
+        "name": "Двужильный WÄRMEHAUS CAB 20W UV PROTECTION",
+        "nominal": "22,5м - 450W",
+        "price": 250.00
+      },
+      {
+        "id": 65,
+        "name": "Двужильный WÄRMEHAUS CAB 20W UV PROTECTION",
+        "nominal": "27,0м - 540W",
+        "price": 280.00
+      },
+      {
+        "id": 66,
+        "name": "Двужильный WÄRMEHAUS CAB 20W UV PROTECTION",
+        "nominal": "32,0м - 640W",
+        "price": 310.00
+      },
+      {
+        "id": 67,
+        "name": "Двужильный WÄRMEHAUS CAB 20W UV PROTECTION",
+        "nominal": "39,0м - 780W",
+        "price": 360.00
+      },
+      {
+        "id": 68,
+        "name": "Двужильный WÄRMEHAUS CAB 20W UV PROTECTION",
+        "nominal": "44,0м - 880W",
+        "price": 400.00
+      },
+      {
+        "id": 69,
+        "name": "Двужильный WÄRMEHAUS CAB 20W UV PROTECTION",
+        "nominal": "53,5м - 1070W",
+        "price": 440.00
+      },
+      {
+        "id": 70,
+        "name": "Двужильный WÄRMEHAUS CAB 20W UV PROTECTION",
+        "nominal": "64,0м - 1280W",
+        "price": 520.00
+      },
+      {
+        "id": 71,
+        "name": "Двужильный WÄRMEHAUS CAB 20W UV PROTECTION",
+        "nominal": "79,0м - 1580W",
+        "price": 600.00
+      },
+      {
+        "id": 72,
+        "name": "Двужильный WÄRMEHAUS CAB 20W UV PROTECTION",
+        "nominal": "92,0м - 1840W",
+        "price": 720.00
+      },
+      {
+        "id": 73,
+        "name": "Двужильный WÄRMEHAUS CAB 20W UV PROTECTION",
+        "nominal": "116,0м - 2320W",
+        "price": 840.00
+      },
+      {
+        "id": 74,
+        "name": "Двужильный WÄRMEHAUS CAB 20W UV PROTECTION",
+        "nominal": "140,0м - 2800W",
+        "price": 960.00
+      }
+    ],
+    "cab14W": [
+      {
+        "id": 46,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "10,0м - 140W",
+        "price": 160.00
+      },
+      {
+        "id": 47,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "10,0м - 160W",
+        "price": 170.00
+      },
+      {
+        "id": 48,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "14,3м - 200W",
+        "price": 180.00
+      },
+      {
+        "id": 49,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "16,0м - 240W",
+        "price": 190.00
+      },
+      {
+        "id": 50,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "21,5м - 300W",
+        "price": 210.00
+      },
+      {
+        "id": 51,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "21,5м - 320W",
+        "price": 220.00
+      },
+      {
+        "id": 52,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "27,0м - 400W",
+        "price": 230.00
+      },
+      {
+        "id": 53,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "28,6м - 400W",
+        "price": 240.00
+      },
+      {
+        "id": 54,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "32,0м - 480W",
+        "price": 260.00
+      },
+      {
+        "id": 55,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "35,8м - 500W",
+        "price": 270.00
+      },
+      {
+        "id": 56,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "39,0м - 560W",
+        "price": 290.00
+      },
+      {
+        "id": 57,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "42,9м - 600W",
+        "price": 300.00
+      },
+      {
+        "id": 58,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "44,0м - 640W",
+        "price": 330.00
+      },
+      {
+        "id": 59,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "48,0м - 720W",
+        "price": 340.00
+      },
+      {
+        "id": 60,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "50,1м - 700W",
+        "price": 350.00
+      },
+      {
+        "id": 1146,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "53,5м - 800W",
+        "price": 360.00
+      },
+      {
+        "id": 1147,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "57,2м - 800W",
+        "price": 370.00
+      },
+      {
+        "id": 1148,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "64,4м - 900W",
+        "price": 380.00
+      },
+      {
+        "id": 1149,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "64,4м - 960W",
+        "price": 390.00
+      },
+      {
+        "id": 1150,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "71,5м - 1000W",
+        "price": 420.00
+      },
+      {
+        "id": 1151,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "75,0м - 1120W",
+        "price": 470.00
+      },
+      {
+        "id": 1152,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "85,8м - 1200W",
+        "price": 500.00
+      },
+      {
+        "id": 1153,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "79,0м - 1280W",
+        "price": 520.00
+      },
+      {
+        "id": 1154,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "92,0м - 1440W",
+        "price": 540.00
+      },
+      {
+        "id": 1155,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "100,1м - 1400W",
+        "price": 550.00
+      },
+      {
+        "id": 1156,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "100,1м - 1600W",
+        "price": 570.00
+      },
+      {
+        "id": 1157,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "114,4м - 1600W",
+        "price": 610.00
+      },
+      {
+        "id": 1158,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "128,7м - 1800W",
+        "price": 680.00
+      },
+      {
+        "id": 1159,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "128,7м - 1920W",
+        "price": 740.00
+      },
+      {
+        "id": 1160,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "143,0м - 2000W",
+        "price": 800.00
+      },
+      {
+        "id": 1160,
+        "name": "Двужильный WÄRMEHAUS CAB 14W Thin",
+        "nominal": "155,0м - 2400W",
+        "price": 880.00
+      }
+    ],
+    "films": [
+      {
+        "id": 86,
+        "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
+        "nominal": "HighPower 220W/m2. 0,5м.кв. - 110Вт",
+        "price": 36.00
+      },
+      {
+        "id": 87,
+        "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
+        "nominal": "HighPower 220W/m2. 1,0м.кв. - 220Вт",
+        "price": 51.00
+      },
+      {
+        "id": 88,
+        "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
+        "nominal": "HighPower 220W/m2. 1,5м.кв. - 330Вт",
+        "price": 74.00
+      },
+      {
+        "id": 89,
+        "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
+        "nominal": "HighPower 220W/m2. 2,0м.кв. - 440Вт",
+        "price": 89.00
+      },
+      {
+        "id": 90,
+        "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
+        "nominal": "HighPower 220W/m2. 2,5м.кв. - 550Вт",
+        "price": 106.00
+      },
+      {
+        "id": 91,
+        "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
+        "nominal": "HighPower 220W/m2. 3,0м.кв. - 660Вт",
+        "price": 129.00
+      },
+      {
+        "id": 92,
+        "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
+        "nominal": "HighPower 220W/m2. 3,5м.кв. - 770Вт",
+        "price": 146.00
+      },
+      {
+        "id": 93,
+        "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
+        "nominal": "HighPower 220W/m2. 4,0м.кв. - 880Вт",
+        "price": 169.00
+      },
+      {
+        "id": 94,
+        "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
+        "nominal": "HighPower 220W/m2. 4,5м.кв. - 990Вт",
+        "price": 188.00
+      },
+      {
+        "id": 95,
+        "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
+        "nominal": "HighPower 220W/m2. 5,0м.кв. - 1100Вт",
+        "price": 209.00
+      },
+      {
+        "id": 96,
+        "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
+        "nominal": "HighPower 220W/m2. 6,0м.кв. - 1320Вт",
+        "price": 243.00
+      },
+      {
+        "id": 97,
+        "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
+        "nominal": "HighPower 220W/m2. 7,0м.кв. - 1540Вт",
+        "price": 276.00
+      },
+      {
+        "id": 98,
+        "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
+        "nominal": "HighPower 220W/m2. 8,0м.кв. - 1760Вт",
+        "price": 315.00
+      },
+      {
+        "id": 101,
+        "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
+        "nominal": "EcoPower 150W/m2. 0,5м.кв. - 75Вт",
+        "price": 36.00
+      },
+      {
+        "id": 102,
+        "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
+        "nominal": "EcoPower 150W/m2. 1,0м.кв. - 150Вт",
+        "price": 51.00
+      },
+      {
+        "id": 103,
+        "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
+        "nominal": "EcoPower 150W/m2. /1,5м.кв. - 225Вт",
+        "price": 74.00
+      },
+      {
+        "id": 104,
+        "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
+        "nominal": "EcoPower 150W/m2. /2,0м.кв. - 300Вт",
+        "price": 89.00
+      },
+      {
+        "id": 105,
+        "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
+        "nominal": "EcoPower 150W/m2. /2,5м.кв. - 375Вт",
+        "price": 106.00
+      },
+      {
+        "id": 106,
+        "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
+        "nominal": "EcoPower 150W/m2. /3,0м.кв. - 450Вт",
+        "price": 129.00
+      },
+      {
+        "id": 107,
+        "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
+        "nominal": "EcoPower 150W/m2. /3,5м.кв. - 525Вт",
+        "price": 146.00
+      },
+      {
+        "id": 108,
+        "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
+        "nominal": "EcoPower 150W/m2. /4,0м.кв. - 600Вт",
+        "price": 169.00
+      },
+      {
+        "id": 109,
+        "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
+        "nominal": "EcoPower 150W/m2. /4,5м.кв. - 675Вт",
+        "price": 188.00
+      },
+      {
+        "id": 110,
+        "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
+        "nominal": "EcoPower 150W/m2. /5,0м.кв. - 750Вт",
+        "price": 209.00
+      },
+      {
+        "id": 111,
+        "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
+        "nominal": "EcoPower 150W/m2. /6,0м.кв. - 900Вт",
+        "price": 243.00
+      },
+      {
+        "id": 112,
+        "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
+        "nominal": "EcoPower 150W/m2. /7,0м.кв. - 1050Вт",
+        "price": 276.00
+      },
+      {
+        "id": 113,
+        "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
+        "nominal": "EcoPower 150W/m2. /8,0м.кв. - 1200Вт",
+        "price": 315.00
+      }
+    ],
+    "mat160W": [
+      {
+        "id": 1111,
+        "name": "Двужильный WÄRMEHAUS MAT 160W",
+        "nominal": "0,7м2 - 112W",
+        "price": 160.00
+      },
+      {
+        "id": 1112,
+        "name": "Двужильный WÄRMEHAUS MAT 160W",
+        "nominal": "1,0м2 - 160W",
+        "price": 180.00
+      },
+      {
+        "id": 1113,
+        "name": "Двужильный WÄRMEHAUS MAT 160W",
+        "nominal": "1,5м2 - 240W",
+        "price": 210.00
+      },
+      {
+        "id": 1114,
+        "name": "Двужильный WÄRMEHAUS MAT 160W",
+        "nominal": "2,0м2 - 320W",
+        "price": 250.00
+      },
+      {
+        "id": 1115,
+        "name": "Двужильный WÄRMEHAUS MAT 160W",
+        "nominal": "2,5м2 - 400W",
+        "price": 280.00
+      },
+      {
+        "id": 1116,
+        "name": "Двужильный WÄRMEHAUS MAT 160W",
+        "nominal": "3,0м2 - 480W",
+        "price": 310.00
+      },
+      {
+        "id": 1117,
+        "name": "Двужильный WÄRMEHAUS MAT 160W",
+        "nominal": "3,5м2 - 560W",
+        "price": 350.00
+      },
+      {
+        "id": 1118,
+        "name": "Двужильный WÄRMEHAUS MAT 160W",
+        "nominal": "4,0м2 - 640W",
+        "price": 400.00
+      },
+      {
+        "id": 1119,
+        "name": "Двужильный WÄRMEHAUS MAT 160W",
+        "nominal": "4,5м2 - 720W",
+        "price": 440.00
+      },
+      {
+        "id": 11110,
+        "name": "Двужильный WÄRMEHAUS MAT 160W",
+        "nominal": "5,0м2 - 800W",
+        "price": 480.00
+      },
+      {
+        "id": 11111,
+        "name": "Двужильный WÄRMEHAUS MAT 160W",
+        "nominal": "6,0м2 - 960W",
+        "price": 540.00
+      },
+      {
+        "id": 11112,
+        "name": "Двужильный WÄRMEHAUS MAT 160W",
+        "nominal": "7,0м2 - 1120W",
+        "price": 600.00
+      },
+      {
+        "id": 11113,
+        "name": "Двужильный WÄRMEHAUS MAT 160W",
+        "nominal": "8,0м2 - 1280W",
+        "price": 660.00
+      },
+      {
+        "id": 11114,
+        "name": "Двужильный WÄRMEHAUS MAT 160W",
+        "nominal": "9,0м2 - 1440W",
+        "price": 720.00
+      },
+      {
+        "id": 11115,
+        "name": "Двужильный WÄRMEHAUS MAT 160W",
+        "nominal": "10,0м2 - 1600W",
+        "price": 800.00
+      },
+      {
+        "id": 1111115,
+        "name": "Двужильный WÄRMEHAUS MAT 160W",
+        "nominal": "12,0м2 - 1920W",
+        "price": 960.00
+      },
+      {
+        "id": 1111115,
+        "name": "Двужильный WÄRMEHAUS MAT 160W",
+        "nominal": "15,0м2 - 2400W",
+        "price": 1200.00
+      }
+    ],
+    "mat200W": [
+      {
+        "id": 16,
+        "name": "Двужильный WÄRMEHAUS MAT 200W",
+        "nominal": "0,7м2 - 140W",
+        "price": 200.00
+      },
+      {
+        "id": 17,
+        "name": "Двужильный WÄRMEHAUS MAT 200W",
+        "nominal": "0,8м2 - 160W",
+        "price": 210.00
+      },
+      {
+        "id": 18,
+        "name": "Двужильный WÄRMEHAUS MAT 200W",
+        "nominal": "1,0м2 - 200W",
+        "price": 230.00
+      },
+      {
+        "id": 19,
+        "name": "Двужильный WÄRMEHAUS MAT 200W",
+        "nominal": "1,2м2 - 240W",
+        "price": 250.00
+      },
+      {
+        "id": 20,
+        "name": "Двужильный WÄRMEHAUS MAT 200W",
+        "nominal": "1,5м2 - 300W",
+        "price": 270.00
+      },
+      {
+        "id": 21,
+        "name": "Двужильный WÄRMEHAUS MAT 200W",
+        "nominal": "1,6м2 - 320W",
+        "price": 290.00
+      },
+      {
+        "id": 22,
+        "name": "Двужильный WÄRMEHAUS MAT 200W",
+        "nominal": "2,0м2 - 400W",
+        "price": 310.00
+      },
+      {
+        "id": 23,
+        "name": "Двужильный WÄRMEHAUS MAT 200W",
+        "nominal": "2,4м2 - 480W",
+        "price": 340.00
+      },
+      {
+        "id": 24,
+        "name": "Двужильный WÄRMEHAUS MAT 200W",
+        "nominal": "2,5м2 - 500W",
+        "price": 350.00
+      },
+      {
+        "id": 25,
+        "name": "Двужильный WÄRMEHAUS MAT 200W",
+        "nominal": "2,8м2 - 560W",
+        "price": 380.00
+      },
+      {
+        "id": 26,
+        "name": "Двужильный WÄRMEHAUS MAT 200W",
+        "nominal": "3,0м2 - 600W",
+        "price": 400.00
+      },
+      {
+        "id": 27,
+        "name": "Двужильный WÄRMEHAUS MAT 200W",
+        "nominal": "3,2м2 - 640W",
+        "price": 420.00
+      },
+      {
+        "id": 28,
+        "name": "Двужильный WÄRMEHAUS MAT 200W",
+        "nominal": "3,5м2 - 700W",
+        "price": 450.00
+      },
+      {
+        "id": 29,
+        "name": "Двужильный WÄRMEHAUS MAT 200W",
+        "nominal": "3,6м2 - 720W",
+        "price": 460.00
+      },
+      {
+        "id": 30,
+        "name": "Двужильный WÄRMEHAUS MAT 200W",
+        "nominal": "4,0м2 - 800W",
+        "price": 500.00
+      },
+      {
+        "id": 2216,
+        "name": "Двужильный WÄRMEHAUS MAT 200W",
+        "nominal": "4,5м2 - 900W",
+        "price": 570.00
+      },
+      {
+        "id": 2217,
+        "name": "Двужильный WÄRMEHAUS MAT 200W",
+        "nominal": "4,8м2 - 960W",
+        "price": 610.00
+      },
+      {
+        "id": 2218,
+        "name": "Двужильный WÄRMEHAUS MAT 200W",
+        "nominal": "5,0м2 - 1000W",
+        "price": 640.00
+      },
+      {
+        "id": 2219,
+        "name": "Двужильный WÄRMEHAUS MAT 200W",
+        "nominal": "5,6м2 - 1120W",
+        "price": 680.00
+      },
+      {
+        "id": 2220,
+        "name": "Двужильный WÄRMEHAUS MAT 200W",
+        "nominal": "6,0м2 - 1200W",
+        "price": 720.00
+      },
+      {
+        "id": 2221,
+        "name": "Двужильный WÄRMEHAUS MAT 200W",
+        "nominal": "6,4м2 - 1280W",
+        "price": 750.00
+      },
+      {
+        "id": 2222,
+        "name": "Двужильный WÄRMEHAUS MAT 200W",
+        "nominal": "7,0м2 - 1400W",
+        "price": 790.00
+      },
+      {
+        "id": 2223,
+        "name": "Двужильный WÄRMEHAUS MAT 200W",
+        "nominal": "7,2м2 - 1440W",
+        "price": 810.00
+      },
+      {
+        "id": 2224,
+        "name": "Двужильный WÄRMEHAUS MAT 200W",
+        "nominal": "8,0м2 - 1600W",
+        "price": 870.00
+      },
+      {
+        "id": 2225,
+        "name": "Двужильный WÄRMEHAUS MAT 200W",
+        "nominal": "9,0м2 - 1800W",
+        "price": 960.00
+      },
+      {
+        "id": 2226,
+        "name": "Двужильный WÄRMEHAUS MAT 200W",
+        "nominal": "9,6м2 - 1920W",
+        "price": 1020.00
+      },
+      {
+        "id": 2227,
+        "name": "Двужильный WÄRMEHAUS MAT 200W",
+        "nominal": "10,0м2 - 2000W",
+        "price": 1080.00
+      },
+      {
+        "id": 2228,
+        "name": "Двужильный WÄRMEHAUS MAT 200W",
+        "nominal": "12,0м2 - 2400W",
+        "price": 1200.00
+      }
+    ]
+  }
+}

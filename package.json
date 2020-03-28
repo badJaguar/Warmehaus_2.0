@@ -81,6 +81,7 @@
     "@types/jasminewd2": "^2.0.8",
     "@types/node": "^13.9.2",
     "codelyzer": "~4.5.0",
+    "dotenv": "^8.2.0",
     "gulp": "^4.0.2",
     "gulp-purifycss": "^0.2.0",
     "gzipper": "^2.10.4",

@@ -31,7 +31,10 @@ export class AppComponent implements OnInit {
       this.titleService.setTitle(this.title + ' | ' + title);
 
       const description: string = snapshot.data.description;
-      this.metaService.updateTag({ name: 'description', content: this.metaDescription + ' ' + description }, 'name=description');
+      this.metaService.updateTag({
+        name: 'description', content: this.metaDescription + ' ' + description
+      }, 'name=description');
+
       this.canonicalService.createCanonicalURL();
       this.window.scrollTo(0, 0);
     });

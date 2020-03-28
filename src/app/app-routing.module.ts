@@ -1,36 +1,35 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
-import { StartPageComponent } from './body-part/start-page/start-page.component';
-import { WarmingMat160WComponent } from './body-part/warmehaus/warming-mat160-w/warming-mat160-w.component';
-import { WarmingMat200WComponent } from './body-part/warmehaus/warming-mat200-w/warming-mat200-w.component';
-import { Cab11WComponent } from './body-part/warmehaus/cab11-w/cab11-w.component';
-import { Cab14WComponent } from './body-part/warmehaus/cab14-w/cab14-w.component';
-import { Cab20WComponent } from './body-part/warmehaus/cab20-w/cab20-w.component';
-import { FilmsComponent } from './body-part/warmehaus/films/films.component';
-import { AnitIcingComponent } from './body-part/warmehaus/anit-icing/anit-icing.component';
-import { TermostatsComponent } from './body-part/warmehaus/termostats/termostats.component';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { ContactsComponent } from './body-part/contacts/contacts.component';
 import { InfoComponent } from './body-part/info/info.component';
-import { TermostatsItemComponent } from './body-part/warmehaus/termostats-item/termostats-item.component';
-import { WarmehausMainPageComponent } from './body-part/warmehaus/main-page/main-page.component';
 import { NexansMainPageComponent } from './body-part/nexans/main-page/main-page.component';
 import { MillimatComponent } from './body-part/nexans/millimat/millimat.component';
 import { Txlp1Component } from './body-part/nexans/txlp1/txlp1.component';
 import { Txlp2rComponent } from './body-part/nexans/txlp2r/txlp2r.component';
-import { PipeCoolingComponent } from './body-part/warmehaus/anit-icing/pipe-cooling/pipe-cooling.component';
-import { GutterCoolingComponent } from './body-part/warmehaus/anit-icing/gutter-cooling/gutter-cooling.component';
+import { StartPageComponent } from './body-part/start-page/start-page.component';
+import { AnitIcingComponent } from './body-part/warmehaus/anit-icing/anit-icing.component';
 import { GutterCoolingItemComponent } from './body-part/warmehaus/anit-icing/gutter-cooling-item/gutter-cooling-item.component';
-import { MetaSrartPage } from './seo/open-graph/warmehaus/meta-data-startPage';
-import { MetaContacts } from './seo/open-graph/warmehaus/meta-data-contacts';
-import { MetaInstructionsPage } from './seo/open-graph/warmehaus/meta-data-instructions';
-import { MetaMat160 } from './seo/open-graph/warmehaus/meta-data-cab-metaMat160';
-import { MetaMat200 } from './seo/open-graph/warmehaus/meta-data-cab-metaMat200';
+import { GutterCoolingComponent } from './body-part/warmehaus/anit-icing/gutter-cooling/gutter-cooling.component';
+import { PipeCoolingComponent } from './body-part/warmehaus/anit-icing/pipe-cooling/pipe-cooling.component';
+import { Cab14WComponent } from './body-part/warmehaus/cab14-w/cab14-w.component';
+import { Cab20WComponent } from './body-part/warmehaus/cab20-w/cab20-w.component';
+import { FilmsComponent } from './body-part/warmehaus/films/films.component';
+import { WarmehausMainPageComponent } from './body-part/warmehaus/main-page/main-page.component';
+import { TermostatsItemComponent } from './body-part/warmehaus/termostats-item/termostats-item.component';
+import { TermostatsComponent } from './body-part/warmehaus/termostats/termostats.component';
+import { WarmingMat160WComponent } from './body-part/warmehaus/warming-mat160-w/warming-mat160-w.component';
+import { WarmingMat200WComponent } from './body-part/warmehaus/warming-mat200-w/warming-mat200-w.component';
+import { MetaAntiIcing } from './seo/open-graph/warmehaus/meta-data-antiIcing';
 import { MetaCab14Watt } from './seo/open-graph/warmehaus/meta-data-cab-14Watt';
 import { MetaCab20Watt } from './seo/open-graph/warmehaus/meta-data-cab-20Watt';
 import { MetaFilms } from './seo/open-graph/warmehaus/meta-data-cab-metaFilms';
-import { MetaAntiIcing } from './seo/open-graph/warmehaus/meta-data-antiIcing';
+import { MetaMat160 } from './seo/open-graph/warmehaus/meta-data-cab-metaMat160';
+import { MetaMat200 } from './seo/open-graph/warmehaus/meta-data-cab-metaMat200';
 import { MetaTermostats } from './seo/open-graph/warmehaus/meta-data-cab-metaTernostats';
+import { MetaContacts } from './seo/open-graph/warmehaus/meta-data-contacts';
+import { MetaInstructionsPage } from './seo/open-graph/warmehaus/meta-data-instructions';
+import { MetaSrartPage } from './seo/open-graph/warmehaus/meta-data-startPage';
 
 const metaStartPage: MetaSrartPage = new MetaSrartPage();
 const metaContacts: MetaContacts = new MetaContacts();
@@ -113,11 +112,10 @@ const routes: Routes = [
   { path: 'nexans/txlp1', component: Txlp1Component },
   { path: 'nexans/txlp2r', component: Txlp2rComponent },
 
-
   { path: 'home', redirectTo: '', pathMatch: 'full' },
   { path: 'contacts', redirectTo: 'home/contacts', pathMatch: 'full' },
   { path: 'info', redirectTo: 'home/instructions', pathMatch: 'full' },
-  { path: '**', redirectTo: '', pathMatch: 'full' }
+  { path: '**', redirectTo: '', pathMatch: 'full' } // TODO: Create 404 Component
 ];
 
 @NgModule({
