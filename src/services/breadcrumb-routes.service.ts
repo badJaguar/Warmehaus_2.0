@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { ITermostat } from '../models/IMatTebleItem.interface';
-import { ELEMENT_DATA_TERMOSTATS } from '../data/warmehaus/termostats.data';
 import { ELEMENT_ANTI_ICING_SYSTEMS_DATA } from '../data/warmehaus/anti-icing/anti-icing-systems-data';
+import { ELEMENT_DATA_TERMOSTATS } from '../data/warmehaus/termostats.data';
+import { ITermostat } from '../models/IMatTebleItem.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -68,6 +68,12 @@ export class BreadcrumbRoutesService {
           { name: 'Millimat', path: './millimat' },
           { name: 'TXLP/1', path: './txlp1' },
           { name: 'TXLP/2R', path: './txlp2r' },
+        ]
+      },
+      {
+        name: 'Raychem', path: './raychem', children: [
+          { name: 'T2Blue', path: './t2blue' },
+          { name: 'T2QuickNet', path: './t2quicknet' },
         ]
       },
     ];

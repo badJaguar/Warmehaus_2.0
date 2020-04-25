@@ -7,6 +7,9 @@ import { NexansMainPageComponent } from './body-part/nexans/main-page/main-page.
 import { MillimatComponent } from './body-part/nexans/millimat/millimat.component';
 import { Txlp1Component } from './body-part/nexans/txlp1/txlp1.component';
 import { Txlp2rComponent } from './body-part/nexans/txlp2r/txlp2r.component';
+import { RaychemMainPageComponent } from './body-part/raychem/main-page/main-page.component';
+import { RaychemT2quicknetComponent } from './body-part/raychem/raychem-t2quicknet/raychem-t2quicknet.component';
+import { RaychemT2BlueComponent } from './body-part/raychem/raychem/raychem.component';
 import { StartPageComponent } from './body-part/start-page/start-page.component';
 import { AnitIcingComponent } from './body-part/warmehaus/anit-icing/anit-icing.component';
 import { GutterCoolingItemComponent } from './body-part/warmehaus/anit-icing/gutter-cooling-item/gutter-cooling-item.component';
@@ -30,6 +33,7 @@ import { MetaTermostats } from './seo/open-graph/warmehaus/meta-data-cab-metaTer
 import { MetaContacts } from './seo/open-graph/warmehaus/meta-data-contacts';
 import { MetaInstructionsPage } from './seo/open-graph/warmehaus/meta-data-instructions';
 import { MetaSrartPage } from './seo/open-graph/warmehaus/meta-data-startPage';
+import { MetaRaychem } from './seo/open-graph/warmehaus/raychem.data';
 
 const metaStartPage: MetaSrartPage = new MetaSrartPage();
 const metaContacts: MetaContacts = new MetaContacts();
@@ -41,6 +45,8 @@ const metaCab20W: MetaCab20Watt = new MetaCab20Watt();
 const metaFilms: MetaFilms = new MetaFilms();
 const metaAntiIcing: MetaAntiIcing = new MetaAntiIcing();
 const metaTermostats: MetaTermostats = new MetaTermostats();
+
+const metaRaychem: MetaRaychem = new MetaRaychem();
 
 const routes: Routes = [
   {
@@ -105,12 +111,23 @@ const routes: Routes = [
       title: metaTermostats.ogTitleContent, description: metaTermostats.descriptionContent,
     }
   },
-  { path: 'warmehaus/termostats/:id', component: TermostatsItemComponent },
+  {
+    path: 'warmehaus/termostats/:id', component: TermostatsItemComponent,
+  },
 
   { path: 'nexans', component: NexansMainPageComponent },
   { path: 'nexans/millimat', component: MillimatComponent },
   { path: 'nexans/txlp1', component: Txlp1Component },
   { path: 'nexans/txlp2r', component: Txlp2rComponent },
+
+  {
+    path: 'raychem', component: RaychemMainPageComponent, data: {
+      title: metaRaychem.ogTitleContent, description: metaRaychem.descriptionContent
+    },
+  },
+  { path: 'raychem/t2blue', component: RaychemT2BlueComponent },
+  { path: 'raychem/t2quicknet', component: RaychemT2quicknetComponent },
+
 
   { path: 'home', redirectTo: '', pathMatch: 'full' },
   { path: 'contacts', redirectTo: 'home/contacts', pathMatch: 'full' },

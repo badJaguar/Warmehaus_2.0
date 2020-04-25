@@ -41,6 +41,13 @@ export class StartPageComponent implements OnInit {
       rows: 1,
       alt: 'Теплые полы Nexans',
     },
+    {
+      route: '/raychem',
+      picUrl: 'assets/images/main-page-pics/raychem-banner.gif',
+      cols: 2,
+      rows: 1,
+      alt: 'Теплые полы Raychem',
+    },
   ];
   ngOnInit() {
 

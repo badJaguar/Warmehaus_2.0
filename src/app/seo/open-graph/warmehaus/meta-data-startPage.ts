@@ -1,5 +1,5 @@
+import { Injectable } from '@angular/core';
 import { IMetaData } from '../../../../models/IMetaData.interface';
-import { Injectable } from "@angular/core";
 
 @Injectable()
 export class MetaSrartPage implements IMetaData {
@@ -10,7 +10,7 @@ export class MetaSrartPage implements IMetaData {
   // tslint:disable-next-line:max-line-length
   descriptionContent = 'Качественные теплые полы по приемлимым ценам, терморегуляторы для теплых полов: аналоговые, wi-fi, сенсорные, системы антиоблединения крыш (кровельных покрытий) высокого качества. Всё это представляет компания WÄRMEHAUS в Беларуси.';
   ogTitle = 'og:title';
-  ogTitleContent = 'Теплый пол';
+  ogTitleContent = 'Теплые полы';
   ogDescription = 'og:description';
   // tslint:disable-next-line:max-line-length
   ogDescriptionContent = 'Если вы не знаете, где приобрести теплый пол в Минске, то наш магазин поможет вам в этом. Уже более шести лет мы занимается продажей электрических теплых полов для любых помещений.';

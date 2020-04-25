@@ -16,9 +16,8 @@ import { NguCarouselModule } from '@ngu/carousel';
 import { TransferHttpCacheModule } from '@nguniversal/common';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { GtagModule } from 'angular-gtag';
-import { Apollo, ApolloModule } from 'apollo-angular';
-import { HttpLink, HttpLinkModule } from 'apollo-angular-link-http';
-import { InMemoryCache } from 'apollo-cache-inmemory';
+import { ApolloModule } from 'apollo-angular';
+import { HttpLinkModule } from 'apollo-angular-link-http';
 import { CookieService } from 'ngx-cookie-service';
 import { NgxJsonLdModule } from 'ngx-json-ld';
 import { PinchZoomModule } from 'ngx-pinch-zoom';
@@ -30,6 +29,8 @@ import { NexansMainPageComponent } from './body-part/nexans/main-page/main-page.
 import { MillimatComponent } from './body-part/nexans/millimat/millimat.component';
 import { Txlp1Component } from './body-part/nexans/txlp1/txlp1.component';
 import { Txlp2rComponent } from './body-part/nexans/txlp2r/txlp2r.component';
+import { RaychemMainPageComponent } from './body-part/raychem/main-page/main-page.component';
+import { RaychemT2BlueComponent } from './body-part/raychem/raychem/raychem.component';
 import { StartPageComponent } from './body-part/start-page/start-page.component';
 import { AnitIcingComponent } from './body-part/warmehaus/anit-icing/anit-icing.component';
 import { GutterCoolingItemComponent } from './body-part/warmehaus/anit-icing/gutter-cooling-item/gutter-cooling-item.component';
@@ -54,6 +55,7 @@ import { MaterialShareModule } from './modules/material-share/material-share.mod
 import { SafeHtmlPipe } from './safe-html';
 import { SchemaMarkupComponent } from './seo/schema-markup/schema-markup.component';
 import { SqareCalculatorComponent } from './sqare-calculator/sqare-calculator.component';
+import { RaychemT2quicknetComponent } from './body-part/raychem/raychem-t2quicknet/raychem-t2quicknet.component';
 
 @NgModule({
   declarations: [
@@ -87,6 +89,9 @@ import { SqareCalculatorComponent } from './sqare-calculator/sqare-calculator.co
     PipeCoolingComponent,
     GutterCoolingComponent,
     GutterCoolingItemComponent,
+    RaychemT2BlueComponent,
+    RaychemMainPageComponent,
+    RaychemT2quicknetComponent,
   ],
   imports: [
     HttpClientModule,
@@ -126,14 +131,14 @@ import { SqareCalculatorComponent } from './sqare-calculator/sqare-calculator.co
 
 export class AppModule {
 
-  constructor(apollo: Apollo, httpLink: HttpLink) {
-    apollo.create({
-      link: httpLink.create({
-        uri: 'http://localhost:3000/graphql',
-      }),
-      cache: new InMemoryCache(),
-      connectToDevTools: true,
+  // constructor(apollo: Apollo, httpLink: HttpLink) {
+  //   apollo.create({
+  //     link: httpLink.create({
+  //       uri: 'http://localhost:3000/graphql',
+  //     }),
+  //     cache: new InMemoryCache(),
+  //     connectToDevTools: true,
 
-    });
-  }
+  //   });
+  // }
 }
