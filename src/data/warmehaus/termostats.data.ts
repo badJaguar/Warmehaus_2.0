@@ -7,7 +7,7 @@ export let ELEMENT_DATA_TERMOSTATS: ITermostat[] = [
     id: 75,
     name: 'TouchScreen',
     nominal: 'Сенсорный',
-    price: 247.00,
+    price: 280.00,
     description: `
       <div>
   <hr>
@@ -183,7 +183,7 @@ export let ELEMENT_DATA_TERMOSTATS: ITermostat[] = [
     id: 76,
     name: 'WH100',
     nominal: 'Аналоговый',
-    price: 114.00,
+    price: 140.00,
     description: `
       <div>
       <hr>
@@ -316,7 +316,7 @@ export let ELEMENT_DATA_TERMOSTATS: ITermostat[] = [
     id: 77,
     name: 'WH200',
     nominal: 'Аналоговый',
-    price: 114.00,
+    price: 140.00,
     description: `
       <div>
       <hr>
@@ -451,7 +451,7 @@ export let ELEMENT_DATA_TERMOSTATS: ITermostat[] = [
   {
     id: 78,
     name: 'WH400 PRO',
-    nominal: 'Сенсорный', price: 247.00,
+    nominal: 'Сенсорный', price: 330.00,
     description: `
       <div>
       <hr>
@@ -607,7 +607,7 @@ export let ELEMENT_DATA_TERMOSTATS: ITermostat[] = [
     id: 79,
     name: 'WH500 PRO',
     nominal: 'Сенсорный',
-    price: 247.00,
+    price: 360.00,
     description: `
       <div>
       <hr>
@@ -788,7 +788,7 @@ export let ELEMENT_DATA_TERMOSTATS: ITermostat[] = [
     id: 80,
     name: 'WH600 PRO',
     nominal: 'Сенсорный',
-    price: 228.00,
+    price: 310.00,
     description: `
       <div>
       <hr>
@@ -944,7 +944,7 @@ export let ELEMENT_DATA_TERMOSTATS: ITermostat[] = [
     id: 81,
     name: 'WH1000 PRO',
     nominal: 'Аналоговый',
-    price: 228.00,
+    price: 280.00,
     description: `
       <div>
       <hr>
@@ -1115,7 +1115,7 @@ export let ELEMENT_DATA_TERMOSTATS: ITermostat[] = [
     id: 82,
     name: 'WH900 DIGITAL',
     nominal: 'Сенсорный',
-    price: 133.00,
+    price: 180.00,
     description: `
       <div>
       <hr>
@@ -1280,7 +1280,7 @@ export let ELEMENT_DATA_TERMOSTATS: ITermostat[] = [
     id: 83,
     name: 'WH300 WI-FI',
     nominal: 'WI-FI',
-    price: 266.00, description: `
+    price: 360.00, description: `
     <div>
     <hr>
         <h4 align="center">
@@ -1395,7 +1395,7 @@ export let ELEMENT_DATA_TERMOSTATS: ITermostat[] = [
     id: 84,
     name: 'WH800 BASIC',
     nominal: 'Аналоговый',
-    price: 105.00,
+    price: 120.00,
     description: `
       <div>
       <hr>
@@ -1546,7 +1546,7 @@ export let ELEMENT_DATA_TERMOSTATS: ITermostat[] = [
     id: 85,
     name: 'WH700 CLASSIC',
     nominal: 'Аналоговый',
-    price: 105.00,
+    price: 120.00,
     description: `
       <div>
       <hr>
