@@ -16,8 +16,8 @@ import { NguCarouselModule } from '@ngu/carousel';
 import { TransferHttpCacheModule } from '@nguniversal/common';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { GtagModule } from 'angular-gtag';
-import { ApolloModule } from 'apollo-angular';
-import { HttpLinkModule } from 'apollo-angular-link-http';
+import { ApolloModule, Apollo } from 'apollo-angular';
+import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
 import { CookieService } from 'ngx-cookie-service';
 import { NgxJsonLdModule } from 'ngx-json-ld';
 import { PinchZoomModule } from 'ngx-pinch-zoom';
@@ -56,7 +56,7 @@ import { SafeHtmlPipe } from './safe-html';
 import { SchemaMarkupComponent } from './seo/schema-markup/schema-markup.component';
 import { SqareCalculatorComponent } from './sqare-calculator/sqare-calculator.component';
 import { RaychemT2quicknetComponent } from './body-part/raychem/raychem-t2quicknet/raychem-t2quicknet.component';
-
+import { InMemoryCache } from 'apollo-cache-inmemory';
 @NgModule({
   declarations: [
     AppComponent,
@@ -131,14 +131,14 @@ import { RaychemT2quicknetComponent } from './body-part/raychem/raychem-t2quickn
 
 export class AppModule {
 
-  // constructor(apollo: Apollo, httpLink: HttpLink) {
-  //   apollo.create({
-  //     link: httpLink.create({
-  //       uri: 'http://localhost:3000/graphql',
-  //     }),
-  //     cache: new InMemoryCache(),
-  //     connectToDevTools: true,
+  constructor(apollo: Apollo, httpLink: HttpLink) {
+    apollo.create({
+      link: httpLink.create({
+        uri: 'http://localhost:3000/graphql',
+      }),
+      cache: new InMemoryCache(),
+      connectToDevTools: true,
 
-  //   });
-  // }
+    });
+  }
 }
