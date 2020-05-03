@@ -1,6 +1,10 @@
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { ArnoldRakCab20wComponent } from './body-part/arnold-rak/arnold-rak-cab20w/arnold-rak-cab20w.component';
+import { ArnoldRakMat180wComponent } from './body-part/arnold-rak/arnold-rak-mat180w/arnold-rak-mat180w.component';
+import { ArnoldRakMat200wComponent } from './body-part/arnold-rak/arnold-rak-mat200w/arnold-rak-mat200w.component';
+import { ArnoldRakMainPageComponent } from './body-part/arnold-rak/main-page/main-page.component';
 import { ContactsComponent } from './body-part/contacts/contacts.component';
 import { InfoComponent } from './body-part/info/info.component';
 import { NexansMainPageComponent } from './body-part/nexans/main-page/main-page.component';
@@ -128,6 +132,10 @@ const routes: Routes = [
   { path: 'raychem/t2blue', component: RaychemT2BlueComponent },
   { path: 'raychem/t2quicknet', component: RaychemT2quicknetComponent },
 
+  { path: 'arnold-rak', component: ArnoldRakMainPageComponent },
+  { path: 'arnold-rak/mat-180w', component: ArnoldRakMat180wComponent },
+  { path: 'arnold-rak/mat-200w', component: ArnoldRakMat200wComponent },
+  { path: 'arnold-rak/cab-20w', component: ArnoldRakCab20wComponent },
 
   { path: 'home', redirectTo: '', pathMatch: 'full' },
   { path: 'contacts', redirectTo: 'home/contacts', pathMatch: 'full' },

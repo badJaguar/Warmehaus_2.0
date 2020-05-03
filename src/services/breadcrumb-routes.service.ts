@@ -76,6 +76,13 @@ export class BreadcrumbRoutesService {
           { name: 'T2QuickNet', path: './t2quicknet' },
         ]
       },
+      {
+        name: 'Arnold Rak', path: './arnold-rak', children: [
+          { name: 'Мат 180 Ватт', path: './mat-180w' },
+          { name: 'Мат 200 Ватт', path: './mat-200w' },
+          { name: 'Кабель 20 Ватт', path: './cab-20w' },
+        ]
+      },
     ];
     return routes;
   }

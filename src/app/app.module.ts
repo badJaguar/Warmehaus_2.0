@@ -16,13 +16,16 @@ import { NguCarouselModule } from '@ngu/carousel';
 import { TransferHttpCacheModule } from '@nguniversal/common';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { GtagModule } from 'angular-gtag';
-import { ApolloModule, Apollo } from 'apollo-angular';
-import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
+import { Apollo, ApolloModule } from 'apollo-angular';
+import { HttpLink, HttpLinkModule } from 'apollo-angular-link-http';
+import { InMemoryCache } from 'apollo-cache-inmemory';
 import { CookieService } from 'ngx-cookie-service';
 import { NgxJsonLdModule } from 'ngx-json-ld';
 import { PinchZoomModule } from 'ngx-pinch-zoom';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ArnoldRakMat180wComponent } from './body-part/arnold-rak/arnold-rak-mat180w/arnold-rak-mat180w.component';
+import { ArnoldRakMainPageComponent } from './body-part/arnold-rak/main-page/main-page.component';
 import { ContactsComponent } from './body-part/contacts/contacts.component';
 import { InfoComponent } from './body-part/info/info.component';
 import { NexansMainPageComponent } from './body-part/nexans/main-page/main-page.component';
@@ -30,6 +33,7 @@ import { MillimatComponent } from './body-part/nexans/millimat/millimat.componen
 import { Txlp1Component } from './body-part/nexans/txlp1/txlp1.component';
 import { Txlp2rComponent } from './body-part/nexans/txlp2r/txlp2r.component';
 import { RaychemMainPageComponent } from './body-part/raychem/main-page/main-page.component';
+import { RaychemT2quicknetComponent } from './body-part/raychem/raychem-t2quicknet/raychem-t2quicknet.component';
 import { RaychemT2BlueComponent } from './body-part/raychem/raychem/raychem.component';
 import { StartPageComponent } from './body-part/start-page/start-page.component';
 import { AnitIcingComponent } from './body-part/warmehaus/anit-icing/anit-icing.component';
@@ -55,8 +59,8 @@ import { MaterialShareModule } from './modules/material-share/material-share.mod
 import { SafeHtmlPipe } from './safe-html';
 import { SchemaMarkupComponent } from './seo/schema-markup/schema-markup.component';
 import { SqareCalculatorComponent } from './sqare-calculator/sqare-calculator.component';
-import { RaychemT2quicknetComponent } from './body-part/raychem/raychem-t2quicknet/raychem-t2quicknet.component';
-import { InMemoryCache } from 'apollo-cache-inmemory';
+import { ArnoldRakMat200wComponent } from './body-part/arnold-rak/arnold-rak-mat200w/arnold-rak-mat200w.component';
+import { ArnoldRakCab20wComponent } from './body-part/arnold-rak/arnold-rak-cab20w/arnold-rak-cab20w.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -92,6 +96,10 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
     RaychemT2BlueComponent,
     RaychemMainPageComponent,
     RaychemT2quicknetComponent,
+    ArnoldRakMainPageComponent,
+    ArnoldRakMat180wComponent,
+    ArnoldRakMat200wComponent,
+    ArnoldRakCab20wComponent,
   ],
   imports: [
     HttpClientModule,

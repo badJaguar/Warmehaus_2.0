@@ -48,6 +48,13 @@ export class StartPageComponent implements OnInit {
       rows: 1,
       alt: 'Теплые полы Raychem',
     },
+    {
+      route: '/arnold-rak',
+      picUrl: 'assets/images/main-page-pics/arnold-rak-banner.jpg',
+      cols: 2,
+      rows: 1,
+      alt: 'Теплые полы Arnold Rak',
+    },
   ];
   ngOnInit() {
 
