@@ -18,14 +18,14 @@ export class StartPageComponent implements OnInit {
 
   breakpoint: number;
   warmehausTiles: ITile[] = [
-    {
-      route: '',
-      picUrl: 'assets/images/gridPics/grid-1-web.jpg',
-      cols: 4,
-      rows: 2,
-      alt: 'Теплые полы в Минске',
-      disableStyles: true
-    },
+    // {
+    //   route: '',
+    //   picUrl: 'assets/images/gridPics/grid-1-web.jpg',
+    //   cols: 4,
+    //   rows: 2,
+    //   alt: 'Теплые полы в Минске',
+    //   disableStyles: true
+    // },
 
     {
       route: '/warmehaus',
@@ -62,8 +62,8 @@ export class StartPageComponent implements OnInit {
     this.cookieValue = this.cookieService.get('/');
 
     if (window.innerWidth >= 416) {
-      this.warmehausTiles[0].cols = 4;
-      this.warmehausTiles[0].rows = 2;
+      this.warmehausTiles[0].cols = 2;
+      this.warmehausTiles[0].rows = 1;
     } else {
       this.warmehausTiles[0].cols = 2;
       this.warmehausTiles[0].rows = 1;
@@ -77,8 +77,8 @@ export class StartPageComponent implements OnInit {
       this.warmehausTiles[0].cols = 2;
       this.warmehausTiles[0].rows = 1;
     } else {
-      this.warmehausTiles[0].cols = 4;
-      this.warmehausTiles[0].rows = 2;
+      this.warmehausTiles[0].cols = 2;
+      this.warmehausTiles[0].rows = 1;
     }
   }
 }
