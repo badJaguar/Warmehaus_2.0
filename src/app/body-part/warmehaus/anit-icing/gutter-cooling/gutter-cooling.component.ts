@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CanonicalService } from '../../../../../services/canonical.service';
 import { Meta, Title } from '@angular/platform-browser';
 import { MetaAntiIcing } from '../../../../../app/seo/open-graph/warmehaus/meta-data-antiIcing';
 import { ELEMENT_ANTI_ICING_SYSTEMS_DATA } from '../../../../../data/warmehaus/anti-icing/anti-icing-systems-data';

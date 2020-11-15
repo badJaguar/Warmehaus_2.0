@@ -16,11 +16,11 @@ export class AppComponent implements OnInit {
   private metaDescription: string = this.metaService.getTag('name=description').content;
 
   constructor(@Inject(WINDOW) private window: any,
-    private canonicalService: CanonicalService,
-    private swUpdate: SwUpdate,
-    private titleService: Title,
-    private metaService: Meta,
-    private router: Router
+              private canonicalService: CanonicalService,
+              private swUpdate: SwUpdate,
+              private titleService: Title,
+              private metaService: Meta,
+              private router: Router
   ) {
   }
   ngOnInit() {

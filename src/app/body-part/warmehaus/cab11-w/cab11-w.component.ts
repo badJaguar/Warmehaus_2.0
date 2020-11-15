@@ -28,12 +28,12 @@ export class Cab11WComponent implements OnInit {
   displayedColumns: string[] = ['name', 'nominal', 'price'];
   dataSource1 = new MatTableDataSource(ELEMENT_DATA_MAT_CAB_11W_THIN);
 
-  @ViewChild(MatSort, { static: true }) sort: MatSort;
-  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+  // @ViewChild(MatSort, { static: true }) sort: MatSort;
+  // @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
   ngOnInit() {
-    this.dataSource1.sort = this.sort;
-    this.dataSource1.paginator = this.paginator;
+    // this.dataSource1.sort = this.sort;
+    // this.dataSource1.paginator = this.paginator;
   }
   applyFilter(filterValue: string) {
     this.dataSource1.filter = filterValue.trim().toLowerCase();

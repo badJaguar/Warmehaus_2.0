@@ -28,14 +28,6 @@ export class WarmehausMainPageComponent implements OnInit {
       alt: 'Нагревательный мат 200 Вт',
       description: 'Готовая к применению нагревательная система ТЕПЛЫЙ ПОЛ повышенной...',
     },
-    // {
-    //   route: '/warmehaus/cable-11Watt',
-    //   picUrl: 'assets/images/main-page-pics/warmehaus/Heating_Cable_To_Layer_11W.jpg',
-    //   cols: 2,
-    //   rows: 1,
-    //   alt: 'Нагревательный Кабель 11Вт'
-    // },
-
     {
       route: '/warmehaus/cable-14Watt',
       picUrl: 'assets/images/main-page-pics/warmehaus/WARMEHAUS-CAB-14W-2-s-400-1.jpg',

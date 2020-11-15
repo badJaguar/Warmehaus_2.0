@@ -105,7 +105,6 @@ import { ArnoldRakCab20wComponent } from './body-part/arnold-rak/arnold-rak-cab2
     HttpClientModule,
     ApolloModule,
     HttpLinkModule,
-
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
