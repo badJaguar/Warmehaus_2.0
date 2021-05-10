@@ -2,6 +2,54 @@ import { IItem } from '../../../models/IItem.interface';
 
 export let ELEMENT_DATA_PIPE_HEATING_CABLE: IItem[] = [
   {
+    id: 1114,
+    name: 'Комплект WÄRMEHAUS AFG 15W',
+    nominal: 'CAB AFG 15W - 1,0м.п - 15Вт',
+    price: 65.00
+  },
+  {
+    id: 1115,
+    name: 'Комплект WÄRMEHAUS AFG 15W',
+    nominal: 'CAB AFG 15W - 2,0м.п - 15Вт',
+    price: 90.00
+  },
+  {
+    id: 1116,
+    name: 'Комплект WÄRMEHAUS AFG 15W',
+    nominal: 'CAB AFG 15W - 4,0м.п - 15Вт',
+    price: 130.00
+  },
+  {
+    id: 1117,
+    name: 'Комплект WÄRMEHAUS AFG 15W',
+    nominal: 'CAB AFG 15W - 6,0м.п - 15Вт',
+    price: 165.00
+  },
+  {
+    id: 1118,
+    name: 'Комплект WÄRMEHAUS AFG 15W',
+    nominal: 'CAB AFG 15W - 8,0м.п - 15Вт',
+    price: 195.00
+  },
+  {
+    id: 1119,
+    name: 'Комплект WÄRMEHAUS AFG 15W',
+    nominal: 'CAB AFG 15W - 10,0м.п - 15Вт',
+    price: 230.00
+  },
+  {
+    id: 1120,
+    name: 'Комплект WÄRMEHAUS AFG 15W',
+    nominal: 'CAB AFG 15W - 20,0м.п - 15Вт',
+    price: 410.00
+  },
+  {
+    id: 1121,
+    name: 'Комплект WÄRMEHAUS AFG 15W',
+    nominal: 'CAB AFG 15W - 30,0м.п - 15Вт',
+    price: 590.00
+  },
+  {
     id: 114,
     name: 'Комплект WÄRMEHAUS AFG 20W',
     nominal: 'CAB AFG 20W - 1,0м.п - 20Вт',
@@ -41,7 +89,7 @@ export let ELEMENT_DATA_PIPE_HEATING_CABLE: IItem[] = [
     id: 120,
     name: 'Комплект WÄRMEHAUS AFG 20W',
     nominal: 'CAB AFG 20W - 20,0м.п - 400Вт',
-    price: 538.00
+    price: 576.00
   },
   {
     id: 121,
