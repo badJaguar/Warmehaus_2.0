@@ -58,7 +58,7 @@
     "ngx-json-ld": "^0.3.1",
     "ngx-pinch-zoom": "^1.2.5",
     "node-gyp": "^4.0.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
