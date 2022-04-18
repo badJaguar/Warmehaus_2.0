@@ -138,14 +138,14 @@ import { ArnoldRakCab20wComponent } from './body-part/arnold-rak/arnold-rak-cab2
 
 export class AppModule {
 
-  constructor(apollo: Apollo, httpLink: HttpLink) {
-    apollo.create({
-      link: httpLink.create({
-        uri: 'http://localhost:3000/graphql',
-      }),
-      cache: new InMemoryCache(),
-      connectToDevTools: true,
+  // constructor(apollo: Apollo, httpLink: HttpLink) {
+  //   apollo.create({
+  //     link: httpLink.create({
+  //       uri: 'http://localhost:3000/graphql',
+  //     }),
+  //     cache: new InMemoryCache(),
+  //     connectToDevTools: true,
 
-    });
-  }
+  //   });
+  // }
 }
