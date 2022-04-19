@@ -3,12 +3,12 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Meta } from '@angular/platform-browser';
-import { Observable } from 'rxjs';
+// import { Observable } from 'rxjs';
 import { ELEMENT_DATA_MAT_CAB_14W_THIN } from '../../../../data/warmehaus/cab-14W.data';
-import { IItem } from '../../../../models/IItem.interface';
+// import { IItem } from '../../../../models/IItem.interface';
 import { GraphQlService, propertyOf } from '../../../../services/graphql/gql.service';
-import { getCab14WQuery } from '../../../../services/graphql/queries/cab14W-query';
-import { FloorsKind, ModelType } from '../../../../services/graphql/query-model-types/warmehaus-query-models';
+// import { getCab14WQuery } from '../../../../services/graphql/queries/cab14W-query';
+// import { FloorsKind, ModelType } from '../../../../services/graphql/query-model-types/warmehaus-query-models';
 import { MetaCab14Watt } from '../../../seo/open-graph/warmehaus/meta-data-cab-14Watt';
 
 @Component({
@@ -18,7 +18,7 @@ import { MetaCab14Watt } from '../../../seo/open-graph/warmehaus/meta-data-cab-1
   providers: [MetaCab14Watt]
 })
 export class Cab14WComponent implements AfterViewInit {
-  gqlService: Observable<IItem[]>;
+  // gqlService: Observable<IItem[]>;
   cab14WSource = new MatTableDataSource(ELEMENT_DATA_MAT_CAB_14W_THIN);
 
   constructor(private meta: Meta, private tag: MetaCab14Watt, gqlService: GraphQlService) {
@@ -32,12 +32,12 @@ export class Cab14WComponent implements AfterViewInit {
       { property: this.tag.ogUrl, content: this.tag.ogUrlContent }
     ]);
 
-    this.gqlService = gqlService.getItems({
-      queryModelType: getCab14WQuery,
-      floorsKind: propertyOf<FloorsKind>('warmehausFloors'),
-      model: propertyOf<ModelType>('cab14W')
-    }
-    );
+    // this.gqlService = gqlService.getItems({
+    //   queryModelType: getCab14WQuery,
+    //   floorsKind: propertyOf<FloorsKind>('warmehausFloors'),
+    //   model: propertyOf<ModelType>('cab14W')
+    // }
+    // );
   }
 
   displayedColumns: string[] = ['name', 'nominal', 'price'];

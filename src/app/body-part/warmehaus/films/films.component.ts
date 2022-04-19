@@ -19,7 +19,7 @@ import { FloorsKind, ModelType } from '../../../../services/graphql/query-model-
   providers: [MetaFilms]
 })
 export class FilmsComponent implements AfterViewInit {
-  gqlService: Observable<IItem[]>;
+  // gqlService: Observable<IItem[]>;
   filmsSource = new MatTableDataSource(ELEMENT_DATA_FILMS);
 
   constructor(private meta: Meta, private tag: MetaFilms, gqlService: GraphQlService) {
@@ -33,12 +33,12 @@ export class FilmsComponent implements AfterViewInit {
       { property: this.tag.ogUrl, content: this.tag.ogUrlContent }
     ]);
 
-    this.gqlService = gqlService.getItems({
-      queryModelType: getFilmsQuery,
-      floorsKind: propertyOf<FloorsKind>('warmehausFloors'),
-      model: propertyOf<ModelType>('films')
-    }
-    );
+    // this.gqlService = gqlService.getItems({
+    //   queryModelType: getFilmsQuery,
+    //   floorsKind: propertyOf<FloorsKind>('warmehausFloors'),
+    //   model: propertyOf<ModelType>('films')
+    // }
+    // );
   }
 
   displayedColumns: string[] = ['name', 'nominal', 'price'];
@@ -50,7 +50,7 @@ export class FilmsComponent implements AfterViewInit {
 
     // this.gqlService.subscribe(films => {
     //   this.filmsSource.data = films;
-    this.filmsSource.sort = this.sort;
+    // this.filmsSource.sort = this.sort;
     this.filmsSource.paginator = this.paginator;
     // });
   }

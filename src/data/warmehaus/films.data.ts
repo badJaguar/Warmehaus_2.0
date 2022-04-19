@@ -2,159 +2,177 @@ import { IItem } from "../../models/IItem.interface";
 
 export let ELEMENT_DATA_FILMS: IItem[] = [
   {
+    "id": 85,
+    "name": "SelfReg PTC Саморегулируемая",
+    "nominal": "",
+    "price": 0
+  },
+  {
     "id": 86,
-    "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
-    "nominal": "HighPower 220W/m2. 0,5м.кв. - 110Вт",
-    "price": 36.00
+    "name": "Warmehaus TermoFilm Комплект Termo Film (На отрез/Рулон 70м.кв.)",
+    "nominal": "220W/m2",
+    "price": 55.00
+  },
+  {
+    "id": 86,
+    "name": "Warmehaus TermoFilm Саморегулируемая",
+    "nominal": "Комплект 0.5 SelfReg PTC 70 - 110Вт",
+    "price": 62.00
   },
   {
     "id": 87,
-    "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
-    "nominal": "HighPower 220W/m2. 1,0м.кв. - 220Вт",
-    "price": 51.00
+    "name": "Warmehaus TermoFilm Саморегулируемая",
+    "nominal": "Комплект 1.0 SelfReg PTC 140 - 220Вт",
+    "price": 97.00
   },
   {
     "id": 88,
-    "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
-    "nominal": "HighPower 220W/m2. 1,5м.кв. - 330Вт",
-    "price": 74.00
+    "name": "Warmehaus TermoFilm Саморегулируемая",
+    "nominal": "Комплект 1.5 SelfReg PTC 210 - 330Вт",
+    "price": 139.00
   },
   {
     "id": 89,
-    "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
-    "nominal": "HighPower 220W/m2. 2,0м.кв. - 440Вт",
-    "price": 89.00
+    "name": "Warmehaus TermoFilm Саморегулируемая",
+    "nominal": "Комплект 2.0 SelfReg PTC 280 - 440Вт",
+    "price": 174.00
   },
   {
     "id": 90,
-    "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
-    "nominal": "HighPower 220W/m2. 2,5м.кв. - 550Вт",
-    "price": 106.00
+    "name": "Warmehaus TermoFilm Саморегулируемая",
+    "nominal": "Комплект 2.5 SelfReg PTC 350 - 550Вт",
+    "price": 209.00
   },
   {
     "id": 91,
-    "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
-    "nominal": "HighPower 220W/m2. 3,0м.кв. - 660Вт",
-    "price": 129.00
+    "name": "Warmehaus TermoFilm Саморегулируемая",
+    "nominal": "Комплект 3.0 SelfReg PTC 420 - 660Вт",
+    "price": 252.00
   },
   {
     "id": 92,
-    "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
-    "nominal": "HighPower 220W/m2. 3,5м.кв. - 770Вт",
-    "price": 146.00
+    "name": "Warmehaus TermoFilm Саморегулируемая",
+    "nominal": "Комплект 3.5 SelfReg PTC 490 - 770Вт",
+    "price": 287.00
   },
   {
     "id": 93,
-    "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
-    "nominal": "HighPower 220W/m2. 4,0м.кв. - 880Вт",
-    "price": 169.00
+    "name": "Warmehaus TermoFilm Саморегулируемая",
+    "nominal": "Комплект 4.0 SelfReg PTC 560 - 880Вт",
+    "price": 330.00
   },
   {
     "id": 94,
-    "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
-    "nominal": "HighPower 220W/m2. 4,5м.кв. - 990Вт",
-    "price": 188.00
+    "name": "Warmehaus TermoFilm Саморегулируемая",
+    "nominal": "Комплект 4.5 SelfReg PTC 630 - 990Вт",
+    "price": 367.00
   },
   {
     "id": 95,
-    "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
-    "nominal": "HighPower 220W/m2. 5,0м.кв. - 1100Вт",
-    "price": 209.00
+    "name": "Warmehaus TermoFilm Саморегулируемая",
+    "nominal": "Комплект 5.0 SelfReg PTC 700 - 1100Вт",
+    "price": 409.00
   },
   {
     "id": 96,
-    "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
-    "nominal": "HighPower 220W/m2. 6,0м.кв. - 1320Вт",
-    "price": 243.00
+    "name": "Warmehaus TermoFilm Саморегулируемая",
+    "nominal": "Комплект 6.0 SelfReg PTC 840 - 1320Вт",
+    "price": 480.00
   },
   {
     "id": 97,
-    "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
-    "nominal": "HighPower 220W/m2. 7,0м.кв. - 1540Вт",
-    "price": 276.00
+    "name": "Warmehaus TermoFilm Саморегулируемая",
+    "nominal": "Комплект 7.0 SelfReg PTC 980 - 1540Вт",
+    "price": 550.00
   },
   {
     "id": 98,
-    "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
-    "nominal": "HighPower 220W/m2. 8,0м.кв. - 1760Вт",
-    "price": 315.00
+    "name": "Warmehaus TermoFilm Саморегулируемая",
+    "nominal": "Комплект 8.0 SelfReg PTC 1120 - 1760Вт",
+    "price": 629.00
+  },
+  {
+    "id": 100,
+    "name": "EcoPower Постоянной мощности",
+    "nominal": "",
+    "price": 0
   },
   {
     "id": 101,
-    "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
-    "nominal": "EcoPower 150W/m2. 0,5м.кв. - 75Вт",
-    "price": 36.00
+    "name": "Warmehaus TermoFilm ECO Power Постоянной мощности",
+    "nominal": "Комплект 0,5м.кв. - 75Вт",
+    "price": 50.00
   },
   {
     "id": 102,
-    "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
-    "nominal": "EcoPower 150W/m2. 1,0м.кв. - 150Вт",
-    "price": 51.00
+    "name": "Warmehaus TermoFilm ECO Power Постоянной мощности",
+    "nominal": "Комплект 1,0м.кв. - 150Вт",
+    "price": 73.00
   },
   {
     "id": 103,
-    "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
-    "nominal": "EcoPower 150W/m2. /1,5м.кв. - 225Вт",
-    "price": 74.00
+    "name": "Warmehaus TermoFilm ECO Power Постоянной мощности",
+    "nominal": "Комплект 1,5м.кв. - 225Вт",
+    "price": 104.00
   },
   {
     "id": 104,
-    "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
-    "nominal": "EcoPower 150W/m2. /2,0м.кв. - 300Вт",
-    "price": 89.00
+    "name": "Warmehaus TermoFilm ECO Power Постоянной мощности",
+    "nominal": "Комплект 2,0м.кв. - 300Вт",
+    "price": 126.00
   },
   {
     "id": 105,
-    "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
-    "nominal": "EcoPower 150W/m2. /2,5м.кв. - 375Вт",
-    "price": 106.00
+    "name": "Warmehaus TermoFilm ECO Power Постоянной мощности",
+    "nominal": "Комплект 2,5м.кв. - 375Вт",
+    "price": 148.00
   },
   {
     "id": 106,
-    "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
-    "nominal": "EcoPower 150W/m2. /3,0м.кв. - 450Вт",
-    "price": 129.00
+    "name": "Warmehaus TermoFilm ECO Power Постоянной мощности",
+    "nominal": "Комплект 3,0м.кв. - 450Вт",
+    "price": 182.00
   },
   {
     "id": 107,
-    "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
-    "nominal": "EcoPower 150W/m2. /3,5м.кв. - 525Вт",
-    "price": 146.00
+    "name": "Warmehaus TermoFilm ECO Power Постоянной мощности",
+    "nominal": "Комплект 3,5м.кв. - 525Вт",
+    "price": 204.00
   },
   {
     "id": 108,
-    "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
-    "nominal": "EcoPower 150W/m2. /4,0м.кв. - 600Вт",
-    "price": 169.00
+    "name": "Warmehaus TermoFilm ECO Power Постоянной мощности",
+    "nominal": "Комплект 4,0м.кв. - 600Вт",
+    "price": 238.00
   },
   {
     "id": 109,
-    "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
-    "nominal": "EcoPower 150W/m2. /4,5м.кв. - 675Вт",
-    "price": 188.00
+    "name": "Warmehaus TermoFilm ECO Power Постоянной мощности",
+    "nominal": "Комплект 4,5м.кв. - 675Вт",
+    "price": 263.00
   },
   {
     "id": 110,
-    "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
-    "nominal": "EcoPower 150W/m2. /5,0м.кв. - 750Вт",
-    "price": 209.00
+    "name": "Warmehaus TermoFilm ECO Power Постоянной мощности",
+    "nominal": "Комплект 5,0м.кв. - 750Вт",
+    "price": 294.00
   },
   {
     "id": 111,
-    "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
-    "nominal": "EcoPower 150W/m2. /6,0м.кв. - 900Вт",
-    "price": 243.00
+    "name": "Warmehaus TermoFilm ECO Power Постоянной мощности",
+    "nominal": "Комплект 6,0м.кв. - 900Вт",
+    "price": 342.00
   },
   {
     "id": 112,
-    "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
-    "nominal": "EcoPower 150W/m2. /7,0м.кв. - 1050Вт",
-    "price": 276.00
+    "name": "Warmehaus TermoFilm ECO Power Постоянной мощности",
+    "nominal": "Комплект 7,0м.кв. - 1050Вт",
+    "price": 386.00
   },
   {
     "id": 113,
-    "name": "Инфракрасная нагревательная пленка WÄRMEHAUS infrared Film",
-    "nominal": "EcoPower 150W/m2. /8,0м.кв. - 1200Вт",
-    "price": 315.00
+    "name": "Warmehaus TermoFilm ECO Power Постоянной мощности",
+    "nominal": "Комплект 8,0м.кв. - 1200Вт",
+    "price": 442.00
   },
 ];
