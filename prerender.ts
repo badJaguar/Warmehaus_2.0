@@ -1,8 +1,8 @@
-const domino = require('domino');
-const fs = require('fs');
+import * as domino from 'domino';
+import * as fs from 'fs';
 const template = fs.readFileSync('./dist/browser/index.html').toString();
 const win = domino.createWindow(template);
-const filesBrowser = fs.readdirSync(`${process.cwd()}/dist/browser`)
+const filesBrowser = fs.readdirSync(`${process.cwd()}/dist/browser`);
 
 global['window'] = win;
 Object.defineProperty(win.document.body.style, 'transform', {
@@ -17,7 +17,7 @@ global['document'] = win.document;
 global['CSS'] = null;
 global['Prism'] = null;
 
-import * as ts from 'typescript';
+import ts from 'typescript';
 
 // Load zone.js for the server.
 import 'zone.js/dist/zone-node';
@@ -73,7 +73,7 @@ entryFileSource.forEachChild(node => {
       if (ts.isStringLiteral(node)) {
         entryModulePath = (sourceDir + node.text + '.ts');
       }
-    })
+    });
   }
 });
 
@@ -83,8 +83,10 @@ let routing = findRoutes(fs.readFileSync(entryModulePath).toString(), entryModul
 
 function routingMapper(entry) {
   if (entry.children) {
-    return { path: entry.path, children: entry.children.map(routingMapper), visit: 
-      (!!entry.component || !!entry.redirectTo) };
+    return {
+      path: entry.path, children: entry.children.map(routingMapper), visit:
+        (!!entry.component || !!entry.redirectTo)
+    };
   } else {
     return { path: entry.path, visit: (!!entry.component || !!entry.redirectTo) };
   }
@@ -100,7 +102,7 @@ if (allRoutes.length == 0) {
 
 console.log(`Got following static routes:`);
 allRoutes.forEach(route => console.log(route));
-console.log(`And following found in the application:`)
+console.log(`And following found in the application:`);
 
 function addToRoutes(routing: any[], basePath: string) {
   routing.forEach(element => {
@@ -188,14 +190,14 @@ function findRoutes(sourceCode: string, path: string) {
                 identifierNodes.forEach(node => {
                   if (ts.isCallExpression(node)) {
                     if (((node.expression as ts.PropertyAccessExpression)
-                    .expression as ts.Identifier)
-                    .escapedText === 'RouterModule') {
+                      .expression as ts.Identifier)
+                      .escapedText === 'RouterModule') {
                       // RouterModule Found!
                       const argument = node.arguments[0];
                       // tslint:disable-next-line:no-shadowed-variable
                       let routes;
                       if (ts.isIdentifier(argument)) {
-                        // variable 
+                        // variable
                         const varName = argument.escapedText;
                         SourceCodeObj.forEachChild(node => {
                           if (ts.isVariableStatement(node) &&
@@ -222,7 +224,7 @@ function findRoutes(sourceCode: string, path: string) {
               }
             });
           }
-        }))
+        }));
       }
     });
   });
@@ -235,7 +237,7 @@ function findRoutes(sourceCode: string, path: string) {
           identifiers[identifierIndex] = {
             module: identifiers[identifierIndex],
             path: path.substring(0, entryModulePath.lastIndexOf('/') + 1) + (node.moduleSpecifier as ts.StringLiteral).text + '.ts'
-          }
+          };
         }
       });
     }
