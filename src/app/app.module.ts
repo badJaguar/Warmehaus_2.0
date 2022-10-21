@@ -16,9 +16,6 @@ import { NguCarouselModule } from '@ngu/carousel';
 import { TransferHttpCacheModule } from '@nguniversal/common';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { GtagModule } from 'angular-gtag';
-import { Apollo, ApolloModule } from 'apollo-angular';
-import { HttpLink, HttpLinkModule } from 'apollo-angular-link-http';
-import { InMemoryCache } from 'apollo-cache-inmemory';
 import { CookieService } from 'ngx-cookie-service';
 import { NgxJsonLdModule } from 'ngx-json-ld';
 import { PinchZoomModule } from 'ngx-pinch-zoom';
@@ -103,8 +100,6 @@ import { ArnoldRakCab20wComponent } from './body-part/arnold-rak/arnold-rak-cab2
   ],
   imports: [
     HttpClientModule,
-    ApolloModule,
-    HttpLinkModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
@@ -138,14 +133,7 @@ import { ArnoldRakCab20wComponent } from './body-part/arnold-rak/arnold-rak-cab2
 
 export class AppModule {
 
-  constructor(apollo: Apollo, httpLink: HttpLink) {
-    apollo.create({
-      link: httpLink.create({
-        uri: 'http://localhost:3000/graphql',
-      }),
-      cache: new InMemoryCache(),
-      connectToDevTools: true,
+  constructor() {
 
-    });
   }
 }

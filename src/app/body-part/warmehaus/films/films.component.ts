@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { Meta } from '@angular/platform-browser';
-import { Observable } from 'rxjs';
-import { WarmehausService } from 'src/services/warmehaus/warmehaus.service';
+import { WarmehausService } from '../../../../../src/services/warmehaus/warmehaus.service';
 import { MetaFilms } from '../../../../app/seo/open-graph/warmehaus/meta-data-cab-metaFilms';
 import { IItem } from '../../../../models/IItem.interface';
 

@@ -86,15 +86,15 @@ const routes: Routes = [
   },
   // { path: 'warmehaus/cable-11Watt', component: Cab11WComponent },
   {
-    path: 'warmehaus/cable-14Watt', component: Cab14WComponent, data: {
+    path: 'warmehaus/cable-17Watt', component: Cab14WComponent, data: {
       title: metaCab14W.ogTitleContent, description: metaCab14W.descriptionContent,
     }
   },
-  {
-    path: 'warmehaus/cable-20Watt', component: Cab20WComponent, data: {
-      title: metaCab20W.ogTitleContent, description: metaCab20W.descriptionContent,
-    }
-  },
+  // {
+  //   path: 'warmehaus/cable-20Watt', component: Cab20WComponent, data: {
+  //     title: metaCab20W.ogTitleContent, description: metaCab20W.descriptionContent,
+  //   }
+  // },
   {
     path: 'warmehaus/films', component: FilmsComponent, data: {
       title: metaFilms.ogTitleContent, description: metaFilms.descriptionContent,

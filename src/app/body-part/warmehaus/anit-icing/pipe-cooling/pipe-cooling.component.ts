@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { Meta } from '@angular/platform-browser';
-import { IItem } from 'src/models/IItem.interface';
-import { WarmehausService } from 'src/services/warmehaus/warmehaus.service';
+import { IItem } from '../../../../../../src/models/IItem.interface';
+import { WarmehausService } from '../../../../../../src/services/warmehaus/warmehaus.service';
 import { MetaAntiIcing } from '../../../../../app/seo/open-graph/warmehaus/meta-data-antiIcing';
 
 const compareFn = (a: IItem, b: IItem) => {

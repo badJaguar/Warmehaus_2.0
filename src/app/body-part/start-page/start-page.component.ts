@@ -30,7 +30,7 @@ export class StartPageComponent implements OnInit {
     },
     {
       route: '/devi',
-      picUrl: 'assets/images/main-page-pics/raychem-banner.gif',
+      picUrl: 'assets/images/devi/devi-tile.png',
       alt: 'Теплые полы Raychem',
     },
     {

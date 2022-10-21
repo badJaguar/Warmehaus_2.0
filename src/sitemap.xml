@@ -53,18 +53,18 @@
   </url>
 
   <url>
-    <loc>https://warmehaus.com.by/warmehaus/cable-14Watt</loc>
+    <loc>https://warmehaus.com.by/warmehaus/cable-17Watt</loc>
     <lastmod>2020-05-03T15:21:59+00:00</lastmod>
     <priority>0.85</priority>
     <changefreq>monthly</changefreq>
   </url>
 
-  <url>
+  <!-- <url>
     <loc>https://warmehaus.com.by/warmehaus/cable-20Watt</loc>
     <lastmod>2020-05-03T15:21:59+00:00</lastmod>
     <priority>0.85</priority>
     <changefreq>monthly</changefreq>
-  </url>
+  </url> -->
 
   <url>
     <loc>https://warmehaus.com.by/warmehaus/films</loc>

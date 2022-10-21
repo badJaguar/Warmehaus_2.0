@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { IItem } from 'src/models/IItem.interface';
-import { WarmehausService } from 'src/services/warmehaus/warmehaus.service';
+import { IItem } from '../../../../../src/models/IItem.interface';
+import { WarmehausService } from '../../../../../src/services/warmehaus/warmehaus.service';
 import { MetaMat160 } from '../../../seo/open-graph/warmehaus/meta-data-cab-metaMat160';
 
 const compareFn = (a: IItem, b: IItem) => {

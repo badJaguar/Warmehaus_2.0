@@ -1,7 +1,7 @@
 <div class="card-wrapper">
 <mat-card class="card card-container" *ngFor="let item of warmehausTiles">
   <mat-card-header>
-    <mat-card-title (click)="setTitle('Раздел', item.alt)" routerLink="{{item.route}}" routerLinkActive="active">
+    <mat-card-title class="mat-card-title" (click)="setTitle('Раздел', item.alt)" routerLink="{{item.route}}" routerLinkActive="active">
       {{item.alt}}
     </mat-card-title>
   </mat-card-header>

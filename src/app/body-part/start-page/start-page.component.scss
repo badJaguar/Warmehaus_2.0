@@ -43,13 +43,29 @@ button{
   background-color: gold;
   padding: 10px 24px;
 }
-
 .card-wrapper {
   display: grid;
   grid-template-columns: repeat(2, minmax(200px, 800px));
   grid-gap: 24px;
   justify-content: center;
 }
+
+@media screen and (max-width: 640px) {
+  .mat-card-title{
+    font-size: 16px;
+  }
+  button{
+    background-color: gold;
+    padding: 4px 8px;
+  }
+  .card-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 12px;
+    justify-content: center;
+  }
+}
+
 .card-container{
   display: flex;
   flex: 1;

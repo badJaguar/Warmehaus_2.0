@@ -1,10 +1,8 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
+import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { Meta } from '@angular/platform-browser';
-import { IItem } from 'src/models/IItem.interface';
-import { WarmehausService } from 'src/services/warmehaus/warmehaus.service';
+import { IItem } from '../../../../../src/models/IItem.interface';
+import { WarmehausService } from '../../../../../src/services/warmehaus/warmehaus.service';
 import { MetaCab20Watt } from '../../../seo/open-graph/warmehaus/meta-data-cab-20Watt';
 
 const compareFn = (a: IItem, b: IItem) => {
