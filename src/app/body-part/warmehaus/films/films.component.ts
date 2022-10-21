@@ -1,16 +1,19 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
+import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { Meta } from '@angular/platform-browser';
 import { Observable } from 'rxjs';
+import { WarmehausService } from 'src/services/warmehaus/warmehaus.service';
 import { MetaFilms } from '../../../../app/seo/open-graph/warmehaus/meta-data-cab-metaFilms';
-import { ELEMENT_DATA_FILMS } from '../../../../data/warmehaus/films.data';
 import { IItem } from '../../../../models/IItem.interface';
-import { GraphQlService, propertyOf } from '../../../../services/graphql/gql.service';
-import { getFilmsQuery } from '../../../../services/graphql/queries/films-query';
-import { FloorsKind, ModelType } from '../../../../services/graphql/query-model-types/warmehaus-query-models';
 
+
+const compareFn = (a: IItem, b: IItem) => {
+  if (a.description < b.description)
+    return -1;
+  if (a.description > b.description)
+    return 1;
+  return 0;
+};
 
 @Component({
   selector: 'app-films',
@@ -18,11 +21,10 @@ import { FloorsKind, ModelType } from '../../../../services/graphql/query-model-
   styleUrls: ['./films.component.scss'],
   providers: [MetaFilms]
 })
-export class FilmsComponent implements AfterViewInit {
-  gqlService: Observable<IItem[]>;
-  filmsSource = new MatTableDataSource(ELEMENT_DATA_FILMS);
+export class FilmsComponent implements OnInit {
+  filmsSource = new MatTableDataSource([]);
 
-  constructor(private meta: Meta, private tag: MetaFilms, gqlService: GraphQlService) {
+  constructor(private meta: Meta, private tag: MetaFilms, private service: WarmehausService) {
     this.meta.addTags([
       { name: this.tag.keywords, content: this.tag.keywordsContent },
       { name: this.tag.description, content: this.tag.descriptionContent },
@@ -32,27 +34,17 @@ export class FilmsComponent implements AfterViewInit {
       { property: this.tag.ogImage, content: this.tag.ogImageContent },
       { property: this.tag.ogUrl, content: this.tag.ogUrlContent }
     ]);
-
-    this.gqlService = gqlService.getItems({
-      queryModelType: getFilmsQuery,
-      floorsKind: propertyOf<FloorsKind>('warmehausFloors'),
-      model: propertyOf<ModelType>('films')
-    }
-    );
   }
 
-  displayedColumns: string[] = ['name', 'nominal', 'price'];
+  displayedColumns: string[] = ['description', 'nominal', 'price'];
 
-  @ViewChild(MatSort, { static: true }) sort: MatSort;
-  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
-
-  ngAfterViewInit() {
-
-    // this.gqlService.subscribe(films => {
-    //   this.filmsSource.data = films;
-    this.filmsSource.sort = this.sort;
-    this.filmsSource.paginator = this.paginator;
-    // });
+  ngOnInit() {
+    this.service.getPosts({
+      brandKey: 'warmehaus',
+      typeKey: 'film'
+    }).subscribe(values => {
+      this.filmsSource.data = values.sort(compareFn);
+    });
   }
 
   applyFilter(filterValue: string) {

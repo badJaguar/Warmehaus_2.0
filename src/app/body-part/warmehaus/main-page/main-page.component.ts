@@ -41,7 +41,7 @@ export class WarmehausMainPageComponent implements OnInit {
       picUrl: 'assets/images/main-page-pics/warmehaus/WARM_FLOOR_WARMEHAUS_CAB_20W_UV_3_s_800.jpg',
       cols: 2,
       rows: 1,
-      alt: 'Нагревательный Кабель в стяжку 20Вт',
+      alt: 'Нагревательный Кабель в стяжку 17Вт',
       description: 'Укладывается в бетонный пол и применяется на том этапе строительства...',
     },
     {

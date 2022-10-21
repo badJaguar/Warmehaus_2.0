@@ -35,22 +35,10 @@ export class AnitIcingComponent implements OnInit {
     ]);
   }
 
-  //
-  expandedElement: ITermostat | null;
-  dataSource = new MatTableDataSource(ELEMENT_ANTI_ICING_SYSTEMS_DATA);
-  columnsToDisplay = ['name', 'nominal', 'price'];
-  headerNames: string[] = ['Тип', 'м2/Вт', 'Цена'];
-  //
-
-  @ViewChild(MatSort, { static: true }) sort: MatSort;
-  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
-
   ngOnInit() {
-    this.dataSource.sort = this.sort;
   }
-  applyFilter(filterValue: string) {
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
+
+
   public setTitle(newTitle: string) {
     this.titleService.setTitle(newTitle);
   }

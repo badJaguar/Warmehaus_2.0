@@ -18,67 +18,34 @@ export class StartPageComponent implements OnInit {
 
   breakpoint: number;
   warmehausTiles: ITile[] = [
-    // {
-    //   route: '',
-    //   picUrl: 'assets/images/gridPics/grid-1-web.jpg',
-    //   cols: 4,
-    //   rows: 2,
-    //   alt: 'Теплые полы в Минске',
-    //   disableStyles: true
-    // },
-
     {
       route: '/warmehaus',
       picUrl: 'assets/images/main-page-pics/warmehaus-banner.jpg',
-      cols: 2,
-      rows: 1,
       alt: 'Теплые полы Warmehaus',
     },
     {
       route: '/nexans',
       picUrl: 'assets/images/main-page-pics/nexans-banner.jpg',
-      cols: 2,
-      rows: 1,
       alt: 'Теплые полы Nexans',
     },
     {
-      route: '/raychem',
+      route: '/devi',
       picUrl: 'assets/images/main-page-pics/raychem-banner.gif',
-      cols: 2,
-      rows: 1,
       alt: 'Теплые полы Raychem',
     },
     {
       route: '/arnold-rak',
       picUrl: 'assets/images/main-page-pics/arnold-rak-banner.jpg',
-      cols: 2,
-      rows: 1,
       alt: 'Теплые полы Arnold Rak',
+    },
+    {
+      route: '/warmehaus/termostats',
+      picUrl: 'assets/images/main-page-pics/tile-termostat.png',
+      alt: 'Турморегуляторы',
     },
   ];
   ngOnInit() {
-
     this.cookieService.set('/', '/', 30, 'None', 'None', true, 'None');
     this.cookieValue = this.cookieService.get('/');
-
-    if (window.innerWidth >= 416) {
-      this.warmehausTiles[0].cols = 2;
-      this.warmehausTiles[0].rows = 1;
-    } else {
-      this.warmehausTiles[0].cols = 2;
-      this.warmehausTiles[0].rows = 1;
-    }
-    this.breakpoint = (window.innerWidth <= 416) ? 2 : 4;
-  }
-
-  onResize(event) {
-    this.breakpoint = (event.target.innerWidth <= 416) ? 2 : 4;
-    if (event.target.innerWidth <= 416) {
-      this.warmehausTiles[0].cols = 2;
-      this.warmehausTiles[0].rows = 1;
-    } else {
-      this.warmehausTiles[0].cols = 2;
-      this.warmehausTiles[0].rows = 1;
-    }
   }
 }

@@ -125,12 +125,12 @@ const routes: Routes = [
   { path: 'nexans/txlp2r', component: Txlp2rComponent },
 
   {
-    path: 'raychem', component: RaychemMainPageComponent, data: {
+    path: 'devi', component: RaychemMainPageComponent, data: {
       title: metaRaychem.ogTitleContent, description: metaRaychem.descriptionContent
     },
   },
-  { path: 'raychem/t2blue', component: RaychemT2BlueComponent },
-  { path: 'raychem/t2quicknet', component: RaychemT2quicknetComponent },
+  { path: 'devi/devi-flex-18t', component: RaychemT2BlueComponent },
+  { path: 'devi/devi-comfort-150t', component: RaychemT2quicknetComponent },
 
   { path: 'arnold-rak', component: ArnoldRakMainPageComponent },
   { path: 'arnold-rak/mat-180w', component: ArnoldRakMat180wComponent },

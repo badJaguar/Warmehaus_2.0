@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ITermostat } from '../../../../../models/IMatTebleItem.interface';
 import { ActivatedRoute } from '@angular/router';
-import { CanonicalService } from '../../../../../services/canonical.service';
 import { ELEMENT_ANTI_ICING_SYSTEMS_DATA } from '../../../../../data/warmehaus/anti-icing/anti-icing-systems-data';
 
 @Component({
@@ -25,5 +24,5 @@ export class GutterCoolingItemComponent implements OnInit {
     if (filtered) {
       return filtered[0];
     }
-  }
+  };
 }

@@ -1,7 +1,7 @@
 <app-chips></app-chips>
 
 <mat-card class="mat-elevation-z8">
-  <mat-card-title>Кабель Двужильный CAB 20W UV PROTECTION</mat-card-title>
+  <mat-card-title>Кабель Двужильный CAB 17W UV PROTECTION</mat-card-title>
   <mat-divider></mat-divider>
   <div class="uponTable">
     <img class="upper-image" src="assets/images/WARM_FLOOR_WARMEHAUS_CAB_20W_UV_3_s_800.jpg"
@@ -9,7 +9,7 @@
     <div class="container upon">
       <ul>
         <li>
-          WÄRMEHAUS <sup><small>®</small></sup> CAB 20W UV Германия - готовая к применению нагревательная
+          WÄRMEHAUS <sup><small>®</small></sup> CAB 17W UV Германия - готовая к применению нагревательная
           система ТЕПЛЫЙ ПОЛ под керамическую плитку, ламинат, паркетную доску, линолеум или система для обогрева
           открытых площадок, труб, желобов и водостоков.
         </li>
@@ -31,7 +31,7 @@
   </div>
 
   <div class="mat-elevation-z8 table">
-    <table mat-table [dataSource]="dataSource1" matSort>
+    <table mat-table [dataSource]="cableSource" matSort>
 
       <!-- ID Column -->
       <ng-container matColumnDef="id">
@@ -48,9 +48,9 @@
 
 
       <!-- Name Column -->
-      <ng-container matColumnDef="name">
+      <ng-container matColumnDef="description">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Тип </th>
-        <td mat-cell *matCellDef="let row">{{row.name}} </td>
+        <td mat-cell *matCellDef="let row">{{row.description}} </td>
       </ng-container>
 
       <!-- Color Column -->
@@ -75,8 +75,8 @@
 
         <div class="vertTab"></div>
         <p>
-          WÄRMEHAUS<sup><small>®</small></sup> CAB 20W UV Германия - армированный экранированный двужильный
-          нагревательный резистивный кабель диаметром 5,2...5,9мм, линейной мощностью 20Вт/м.
+          WÄRMEHAUS<sup><small>®</small></sup> CAB 17Вт UV Германия - армированный экранированный двужильный
+          нагревательный резистивный кабель диаметром 5,2...5,9мм, линейной мощностью 17Вт/м.
         </p>
         <p>
           Укладывается в бетонный пол и применяется на том этапе строительства, когда стяжка полов еще не сделана.
@@ -86,7 +86,7 @@
           условии отсутствия вокруг кабеля воздушных карманов после заливки штрабы.
         </p>
         <p>
-          Линейная мощность 20Вт/м позволяет достичь равномерного прогрева пола при стяжке 3...4см.
+          Линейная мощность 17Вт/м позволяет достичь равномерного прогрева пола при стяжке 3...4см.
         </p>
         <p>
           Применяется в т.ч. для систем снеготаяния и антиобледенения. Имеет специальную защиту от УФ лучей.
@@ -97,7 +97,7 @@
         </p>
         Армирующая нить из стекловолокна защищает кабель от продольных нагрузок растяжения.
         <p>
-          Выбирая ширину шага от 5 до 20см возможно добиться удельной мощности от 400Вт/м2 до 100Вт/м2,что решает любые
+          Выбирая ширину шага от 5 до 17Вт возможно добиться удельной мощности от 400Вт/м2 до 100Вт/м2,что решает любые
           задачи в жилых и промышленных помещениях, а также на открытых площадках, на кровле и в водостоках (кабель
           имеет специальную защиту от ультрафиолетовых лучей - UV PROTECTION), а так же для обогрева трубопроводов.
         </p>
@@ -137,10 +137,10 @@
           <img src="assets/images/WarmehausCAB20UVTABs1000.jpg" alt="Таблица укладки теплых полов кабеля на 20Вт">
         </p>
         <p>
-          <i>Рекомендуемая удельная мощность и шаг укладки CAB 20W UV для комфорт обогрева в зависимости от типа
+          <i>Рекомендуемая удельная мощность и шаг укладки CAB 17W UV для комфорт обогрева в зависимости от типа
             помещения:</i>
         </p>
-        <img src="assets/images/WarmehausCAB20UVTAB1s600.jpg" alt="Таблица укладки теплых полов кабеля на 20Вт">
+        <img src="assets/images/WarmehausCAB20UVTAB1s600.jpg" alt="Таблица укладки теплых полов кабеля на 17Вт">
         <p>
           ***
         </p>
@@ -175,7 +175,7 @@
 
     <mat-tab label="Строение кабеля">
       <div class="content">
-        <h2>Строение нагревательного кабеля WÄRMEHAUS<sup><small class="h2small">®</small></sup> CAB 20W UV :</h2>
+        <h2>Строение нагревательного кабеля WÄRMEHAUS<sup><small class="h2small">®</small></sup> CAB 17W UV :</h2>
 
         <img src="assets/images/warmehauscab20wlogosc.jpg" alt="Теплый пол кабель в разрезе" align="left" hspace="10">
         <p>
@@ -187,7 +187,7 @@
           стойкого к высоким, до 300˚С, температурам материала изоляции.
         </p>
         <p>
-          3. Высокую стойкость кабеля WÄRMEHAUS® CAB 20W UV к механическим нагрузкам обеспечивает дополнительный
+          3. Высокую стойкость кабеля WÄRMEHAUS® CAB 17W UV к механическим нагрузкам обеспечивает дополнительный
           изоляционный слой нагревательных жил из высокопрочного TXLP сшитого полиэтилена.
         </p>
         <p>

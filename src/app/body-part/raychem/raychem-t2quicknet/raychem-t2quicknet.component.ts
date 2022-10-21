@@ -1,8 +1,16 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
+import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { ELEMENT_DATA_RAYCHEM_T2QUICKNET } from '../../../../data/raychem/raychem-t2quicknet.data';
+import { IItem } from 'src/models/IItem.interface';
+import { WarmehausService } from 'src/services/warmehaus/warmehaus.service';
+
+
+const compareFn = (a: IItem, b: IItem) => {
+  if (a.price < b.price)
+    return -1;
+  if (a.price > b.price)
+    return 1;
+  return 0;
+};
 
 @Component({
   selector: 'app-raychem-t2quicknet',
@@ -11,19 +19,23 @@ import { ELEMENT_DATA_RAYCHEM_T2QUICKNET } from '../../../../data/raychem/rayche
 })
 export class RaychemT2quicknetComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: WarmehausService) { }
 
-  displayedColumns: string[] = ['name', 'nominal', 'price'];
-  dataSource1 = new MatTableDataSource(ELEMENT_DATA_RAYCHEM_T2QUICKNET);
+  displayedColumns: string[] = ['description', 'nominal', 'price'];
+  matsSource = new MatTableDataSource([]);
 
-  @ViewChild(MatSort, { static: true }) sort: MatSort;
-  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
   ngOnInit() {
-    this.dataSource1.sort = this.sort;
-    this.dataSource1.paginator = this.paginator;
+    this.service.getPosts({
+      brandKey: 'raychem',
+      typeKey: 'mats'
+    }).subscribe(values => {
+      this.matsSource.data = values.sort(compareFn);
+    });
   }
+
+
   applyFilter(filterValue: string) {
-    this.dataSource1.filter = filterValue.trim().toLowerCase();
+    this.matsSource.filter = filterValue.trim().toLowerCase();
   }
 }

@@ -1,12 +1,17 @@
-<mat-card class="card">
-  <mat-grid-list [cols]="breakpoint" rowHeight="2:2" (window:resize)="onResize($event)" gutterSize="10">
-    <mat-grid-tile *ngFor="let tile of warmehausTiles; let i=index; first as isFirst" [class.first]="isFirst"
-      [colspan]="tile.cols" [rowspan]="tile.rows" matRipple>
-      <a href="#" routerLink={{tile.route}} routerLinkActive="active">
-        <img class="image-tile" src={{tile.picUrl}} alt={{tile.alt}}></a>
-    </mat-grid-tile>
-  </mat-grid-list>
+<div class="card-wrapper">
+<mat-card class="card card-container" *ngFor="let item of warmehausTiles">
+  <mat-card-header>
+    <mat-card-title (click)="setTitle('Раздел', item.alt)" routerLink="{{item.route}}" routerLinkActive="active">
+      {{item.alt}}
+    </mat-card-title>
+  </mat-card-header>
+    <img class="image-tile" routerLink="{{item.route}}" src="{{item.picUrl}}" alt="{{item.alt}}">
+  <mat-card-actions align="end" style="margin-right: 2px;">
+    <button routerLink="{{item.route}}" mat-button>Посмотреть</button>
+  </mat-card-actions>
 </mat-card>
+</div>
+
 <div class="clearfix">
   <h1>ТЕПЛЫЙ ПОЛ ПОД ПЛИТКУ И ЛАМИНАТ ПО ДОСТУПНОЙ ЦЕНЕ</h1>
   <article>

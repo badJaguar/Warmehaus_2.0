@@ -1,10 +1,16 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { ELEMENT_DATA_MAT_200W } from '../../../../data/warmehaus/heating-mat200-w.data';
+import { IItem } from 'src/models/IItem.interface';
+import { WarmehausService } from 'src/services/warmehaus/warmehaus.service';
 import { MetaMat200 } from '../../../seo/open-graph/warmehaus/meta-data-cab-metaMat200';
 
+const compareFn = (a: IItem, b: IItem) => {
+  if (a.price < b.price)
+    return -1;
+  if (a.price > b.price)
+    return 1;
+  return 0;
+};
 
 @Component({
   selector: 'app-warming-mat200-w',
@@ -13,21 +19,22 @@ import { MetaMat200 } from '../../../seo/open-graph/warmehaus/meta-data-cab-meta
   providers: [MetaMat200]
 })
 export class WarmingMat200WComponent implements OnInit {
-
-  constructor() {
+  constructor(private service: WarmehausService) {
   }
 
-  displayedColumns: string[] = ['name', 'nominal', 'price'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA_MAT_200W);
-
-  @ViewChild(MatSort, { static: true }) sort: MatSort;
-  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+  displayedColumns: string[] = ['description', 'nominal', 'price'];
+  matsSource = new MatTableDataSource([]);
 
   ngOnInit() {
-    this.dataSource.sort = this.sort;
-    this.dataSource.paginator = this.paginator;
+    this.service.getPosts({
+      brandKey: 'warmehaus',
+      typeKey: 'mats'
+    }).subscribe(values => {
+      this.matsSource.data = values.filter(value => value.description.includes('200W')).sort(compareFn);
+    });
   }
+
   applyFilter(filterValue: string) {
-    this.dataSource.filter = filterValue.trim().toLowerCase();
+    this.matsSource.filter = filterValue.trim().toLowerCase();
   }
 }

@@ -3,8 +3,17 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Meta } from '@angular/platform-browser';
-import { ELEMENT_DATA_MAT_CAB_20W_UV_PROTECTION } from '../../../../data/warmehaus/cab-20W.data';
+import { IItem } from 'src/models/IItem.interface';
+import { WarmehausService } from 'src/services/warmehaus/warmehaus.service';
 import { MetaCab20Watt } from '../../../seo/open-graph/warmehaus/meta-data-cab-20Watt';
+
+const compareFn = (a: IItem, b: IItem) => {
+  if (a.price < b.price)
+    return -1;
+  if (a.price > b.price)
+    return 1;
+  return 0;
+};
 
 @Component({
   selector: 'app-cab20-w',
@@ -13,7 +22,9 @@ import { MetaCab20Watt } from '../../../seo/open-graph/warmehaus/meta-data-cab-2
   providers: [MetaCab20Watt]
 })
 export class Cab20WComponent implements OnInit {
-  constructor(private meta: Meta, private tag: MetaCab20Watt) {
+  cableSource = new MatTableDataSource([]);
+
+  constructor(private meta: Meta, private tag: MetaCab20Watt, private service: WarmehausService) {
     this.meta.addTags([
       { name: this.tag.keywords, content: this.tag.keywordsContent },
       { name: this.tag.description, content: this.tag.descriptionContent },
@@ -25,17 +36,18 @@ export class Cab20WComponent implements OnInit {
     ]);
   }
 
-  displayedColumns: string[] = ['name', 'nominal', 'price'];
-  dataSource1 = new MatTableDataSource(ELEMENT_DATA_MAT_CAB_20W_UV_PROTECTION);
-
-  // @ViewChild(MatSort, { static: true }) sort: MatSort;
-  // @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+  displayedColumns: string[] = ['description', 'nominal', 'price'];
 
   ngOnInit() {
-    // this.dataSource1.sort = this.sort;
-    // this.dataSource1.paginator = this.paginator;
+    this.service.getPosts({
+      brandKey: 'warmehaus',
+      typeKey: 'cable'
+    }).subscribe(values => {
+      this.cableSource.data = values.sort(compareFn);
+    });
   }
+
   applyFilter(filterValue: string) {
-    this.dataSource1.filter = filterValue.trim().toLowerCase();
+    this.cableSource.filter = filterValue.trim().toLowerCase();
   }
 }

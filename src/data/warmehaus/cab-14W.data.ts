@@ -1,6 +1,6 @@
 import { IItem } from '../../models/IItem.interface';
 
-export let ELEMENT_DATA_MAT_CAB_14W_THIN: IItem[] = [
+export let ELEMENT_DATA_MAT_CAB_14W_THIN: Partial<IItem>[] = [
   { id: 46, name: 'Двужильный WÄRMEHAUS CAB 14W Thin', nominal: '10,0м - 140W', price: 208.00 },
   { id: 47, name: 'Двужильный WÄRMEHAUS CAB 14W Thin', nominal: '10,0м - 160W', price: 221.00 },
   { id: 48, name: 'Двужильный WÄRMEHAUS CAB 14W Thin', nominal: '14,3м - 200W', price: 234.00 },

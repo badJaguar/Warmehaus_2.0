@@ -70,9 +70,9 @@ export class BreadcrumbRoutesService {
         ]
       },
       {
-        name: 'Raychem', path: './raychem', children: [
-          { name: 'T2Blue', path: './t2blue' },
-          { name: 'T2QuickNet', path: './t2quicknet' },
+        name: 'Devi', path: './devi', children: [
+          { name: 'DEVI flex 18T', path: './devi-flex-18t' },
+          { name: 'DEVI comfort 150T', path: './devi-comfort-150t' },
         ]
       },
       {

@@ -35,6 +35,25 @@ h2 {
   margin-top: 10px;
 }
 
+.example-card {
+  max-width: 800px;
+}
+
+button{
+  background-color: gold;
+  padding: 10px 24px;
+}
+
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 800px));
+  grid-gap: 24px;
+  justify-content: center;
+}
+.card-container{
+  display: flex;
+  flex: 1;
+}
 article {
   width: 90%;
   margin: auto;
