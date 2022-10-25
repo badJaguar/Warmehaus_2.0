@@ -1,17 +1,17 @@
 <mat-card class="mat-elevation-z8">
-  <mat-card-title>Греющий кабель Raychem T2Blue</mat-card-title>
+  <mat-card-title>Греющий кабель DEVI flex 18T</mat-card-title>
   <mat-divider></mat-divider>
   <div class="uponTable">
-    <img class="upper-image" src="assets/images/raychem/10678-medium.png" alt="Теплые полы Raychem" align="left"
+    <img class="upper-image" src="assets/images/raychem/10678-medium.png" alt="Теплые полы Devi" align="left"
       hspace="25">
     <div class="container upon">
       <h5 style="margin-top: 10px;">Особенности греющего кабкля:</h5>
-      <p class="clearfix">Греющий кабель Raychem T2Blue представляет собой изготовленную в заводских условиях
+      <p class="clearfix">Греющий кабель DEVI flex 18T представляет собой изготовленную в заводских условиях
         нагревательную секцию. Такой греющий кабель подходит как для комфортного, так и для полного
         обогрева помещений со сложной конфигурацией. </p>
       <ul>
         <li>
-          Греющий кабель Raychem T2-Blue применяют для теплого пола всех видов: в цементную стяжку, в
+          Греющий кабель DEVI flex 18T применяют для теплого пола всех видов: в цементную стяжку, в
           самовыравнивающийся состав, на деревянные лаги.
         </li>
         <li>
@@ -23,6 +23,10 @@
     </div>
   </div>
   <p></p>
+  <div class="d-flex" style="justify-content: center;">
+      <div id="loading" class="spinner-border" role="status"></div>
+  </div>
+
   <div class="mat-elevation-z8 table clearfix">
     <table mat-table [dataSource]="cableSource" matSort>
 
@@ -38,7 +42,6 @@
         <th mat-header-cell *matHeaderCellDef mat-sort-header> м<sup><small>2</small></sup>/Вт </th>
         <td mat-cell *matCellDef="let row"> {{row.nominal}} </td>
       </ng-container>
-
 
       <!-- Name Column -->
       <ng-container matColumnDef="description">

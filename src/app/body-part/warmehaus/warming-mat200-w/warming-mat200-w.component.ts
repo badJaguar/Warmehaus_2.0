@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
+import { hideLoader } from '../../../../../src/helpers';
 import { IItem } from '../../../../../src/models/IItem.interface';
 import { WarmehausService } from '../../../../../src/services/warmehaus/warmehaus.service';
 import { MetaMat200 } from '../../../seo/open-graph/warmehaus/meta-data-cab-metaMat200';
@@ -30,6 +31,9 @@ export class WarmingMat200WComponent implements OnInit {
       brandKey: 'warmehaus',
       typeKey: 'mats'
     }).subscribe(values => {
+      if (values.length) {
+        hideLoader();
+      }
       this.matsSource.data = values.filter(value => value.description.includes('200W')).sort(compareFn);
     });
   }

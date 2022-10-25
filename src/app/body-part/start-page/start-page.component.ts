@@ -31,7 +31,7 @@ export class StartPageComponent implements OnInit {
     {
       route: '/devi',
       picUrl: 'assets/images/devi/devi-tile.png',
-      alt: 'Теплые полы Raychem',
+      alt: 'Теплые полы Devi',
     },
     {
       route: '/arnold-rak',

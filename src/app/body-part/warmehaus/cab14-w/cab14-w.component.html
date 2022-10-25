@@ -17,7 +17,9 @@
       </ul>
     </div>
   </div>
-
+  <div class="d-flex" style="justify-content: center;">
+    <div id="loading" class="spinner-border" role="status"></div>
+  </div>
   <div class="filter">
     <mat-form-field>
       <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Фильтр">

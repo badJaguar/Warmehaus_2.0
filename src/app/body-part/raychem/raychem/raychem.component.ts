@@ -2,8 +2,10 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { hideLoader } from '../../../../../src/helpers';
 import { IItem } from '../../../../../src/models/IItem.interface';
 import { WarmehausService } from '../../../../../src/services/warmehaus/warmehaus.service';
+import '../../../styles/loader.scss';
 
 const compareFn = (a: IItem, b: IItem) => {
   if (a.price < b.price)
@@ -33,6 +35,9 @@ export class RaychemT2BlueComponent implements OnInit {
       brandKey: 'raychem',
       typeKey: 'cable'
     }).subscribe(values => {
+      if (values.length) {
+        hideLoader();
+      }
       this.cableSource.data = values.sort(compareFn);
     });
   }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { Meta } from '@angular/platform-browser';
+import { hideLoader } from '../../../../../src/helpers';
 import { WarmehausService } from '../../../../../src/services/warmehaus/warmehaus.service';
 import { MetaFilms } from '../../../../app/seo/open-graph/warmehaus/meta-data-cab-metaFilms';
 import { IItem } from '../../../../models/IItem.interface';
@@ -42,6 +43,9 @@ export class FilmsComponent implements OnInit {
       brandKey: 'warmehaus',
       typeKey: 'film'
     }).subscribe(values => {
+      if (values.length) {
+        hideLoader();
+      }
       this.filmsSource.data = values.sort(compareFn);
     });
   }

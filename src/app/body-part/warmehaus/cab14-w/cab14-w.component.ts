@@ -2,6 +2,7 @@ import { OnInit, Component } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { Meta } from '@angular/platform-browser';
 import { Observable } from 'rxjs';
+import { hideLoader } from '../../../../../src/helpers';
 import { WarmehausService } from '../../../../../src/services/warmehaus/warmehaus.service';
 import { IItem } from '../../../../models/IItem.interface';
 import { MetaCab14Watt } from '../../../seo/open-graph/warmehaus/meta-data-cab-14Watt';
@@ -43,6 +44,9 @@ export class Cab14WComponent implements OnInit {
       brandKey: 'warmehaus',
       typeKey: 'cable'
     }).subscribe(values => {
+      if (values.length) {
+        hideLoader();
+      }
       this.cableSource.data = values.sort(compareFn);
     });
   }

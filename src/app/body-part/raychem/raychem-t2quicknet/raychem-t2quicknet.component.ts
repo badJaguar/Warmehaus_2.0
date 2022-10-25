@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
+import { hideLoader } from '../../../../../src/helpers';
 import { IItem } from '../../../../../src/models/IItem.interface';
 import { WarmehausService } from '../../../../../src/services/warmehaus/warmehaus.service';
 
@@ -24,12 +25,14 @@ export class RaychemT2quicknetComponent implements OnInit {
   displayedColumns: string[] = ['description', 'nominal', 'price'];
   matsSource = new MatTableDataSource([]);
 
-
   ngOnInit() {
     this.service.getPosts({
       brandKey: 'raychem',
       typeKey: 'mats'
     }).subscribe(values => {
+      if (values.length) {
+        hideLoader();
+      }
       this.matsSource.data = values.sort(compareFn);
     });
   }
