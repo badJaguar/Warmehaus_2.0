@@ -13,7 +13,7 @@ type PostsParams = {
   providedIn: 'root'
 })
 export class WarmehausService {
-  private url = 'https://warmehouse-be.vercel.app/floors/filterByParams';
+  private url = 'https://warmehaus-be.vercel.app/floors/filterByParams';
 
   constructor(private httpClient: HttpClient) { }
 
