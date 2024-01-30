@@ -7,7 +7,7 @@ export let ELEMENT_DATA_TERMOSTATS: Partial<ITermostat>[] = [
     id: 75,
     name: 'TouchScreen',
     nominal: 'Сенсорный',
-    price: 280.00,
+    price: 350.00,
     description: `
       <div>
   <hr>
@@ -178,12 +178,12 @@ export let ELEMENT_DATA_TERMOSTATS: Partial<ITermostat>[] = [
     picPath: 'assets/images/termostats/touchscreen24to7/02a94d427c05decb935dfa8f0251c059.jpg',
     picAlt: 'ТЕРМОРЕГУЛЯТОР WÄRMEHAUS TOUCHSCREEN'
   },
-  // Терморегулятор WÄRMEHAUS WH100
+  // Терморегулятор Terneo (Welrok) PRO
   {
     id: 76,
-    name: 'WH100',
+    name: 'PRO',
     nominal: 'Аналоговый',
-    price: 140.00,
+    price: 100.00,
     description: `
       <div>
       <hr>
@@ -191,7 +191,7 @@ export let ELEMENT_DATA_TERMOSTATS: Partial<ITermostat>[] = [
           Описание
         </h4>
         <div class="container text">
-        <i>Терморегулятор WÄRMEHAUS WH 100 Используется для постоянного поддержания комфортного теплого пола</i>
+        <i>Терморегулятор Terneo (Welrok) PRO Используется для постоянного поддержания комфортного теплого пола</i>
         <style>
         li{
           text-align: left;
@@ -223,10 +223,10 @@ export let ELEMENT_DATA_TERMOSTATS: Partial<ITermostat>[] = [
           Может быть установлен в комбинации с различными типами выключателей.
           </li>
           <li>
-          Все приборы WÄRMEHAUS PREMIUM обеспеченны полноценной трехлетней гарантией, инструкцией на русском языке и сервисной поддержкой.
+          Все приборы Terneo (Welrok) PRO PREMIUM обеспеченны полноценной трехлетней гарантией, инструкцией на русском языке и сервисной поддержкой.
           </li>
           <li>
-          Гарантия - 3 года.
+          Гарантия - 5 лет.
           </li>
         </ul>
         <hr>
@@ -292,7 +292,7 @@ export let ELEMENT_DATA_TERMOSTATS: Partial<ITermostat>[] = [
           Цветовая палитра
         </h4>
         <p align="center">
-          <i>Белый / Слоновая кость</i>
+          <i>Белый / Слоновая кость / черный / шампань</i>
         </p>
         <div id="container" align="center" class="imageCont">
         <img src="assets/images/termostats/analogWH100/5dabfed070c79d60f454568f2a74eb22.jpg"
@@ -311,12 +311,12 @@ export let ELEMENT_DATA_TERMOSTATS: Partial<ITermostat>[] = [
     picPath: 'assets/images/termostats/analogWH100/5dabfed070c79d60f454568f2a74eb22.jpg',
     picAlt: 'Терморегулятор регулируемый не программируемый (аналоговый)'
   },
-  // Терморегулятор WÄRMEHAUS WH200
+  // Терморегулятор WÄRMEHAUS WH100
   {
     id: 77,
-    name: 'WH200',
+    name: 'WH100',
     nominal: 'Аналоговый',
-    price: 140.00,
+    price: 165.00,
     description: `
       <div>
       <hr>
@@ -324,7 +324,7 @@ export let ELEMENT_DATA_TERMOSTATS: Partial<ITermostat>[] = [
           Описание
         </h4>
         <div class="container text">
-        <i>Терморегулятор WÄRMEHAUS WH 200 Используется для постоянного поддержания комфортного теплого пола</i>
+        <i>Терморегулятор WÄRMEHAUS WH 100 Используется для постоянного поддержания комфортного теплого пола</i>
         <style>
         li{
           text-align: left;
@@ -451,7 +451,7 @@ export let ELEMENT_DATA_TERMOSTATS: Partial<ITermostat>[] = [
   {
     id: 78,
     name: 'WH400 PRO',
-    nominal: 'Сенсорный', price: 330.00,
+    nominal: 'Сенсорный', price: 400.00,
     description: `
       <div>
       <hr>
@@ -607,7 +607,7 @@ export let ELEMENT_DATA_TERMOSTATS: Partial<ITermostat>[] = [
     id: 79,
     name: 'WH500 PRO',
     nominal: 'Сенсорный',
-    price: 360.00,
+    price: 430.00,
     description: `
       <div>
       <hr>
@@ -788,7 +788,7 @@ export let ELEMENT_DATA_TERMOSTATS: Partial<ITermostat>[] = [
     id: 80,
     name: 'WH600 PRO',
     nominal: 'Сенсорный',
-    price: 310.00,
+    price: 360.00,
     description: `
       <div>
       <hr>
@@ -939,12 +939,12 @@ export let ELEMENT_DATA_TERMOSTATS: Partial<ITermostat>[] = [
     picPath: 'assets/images/termostats/analogWH600Pro/53f99eeb16941dcc56f3ba439444e848.jpg',
     picAlt: 'Терморегулятор WÄRMEHAUS WH600 PRO сенсорный с кнопками'
   },
-  // Терморегулятор WÄRMEHAUS WH1000 PRO
+  // Терморегулятор Terneo (Welrok) AZ
   {
     id: 81,
-    name: 'WH1000 PRO',
-    nominal: 'Аналоговый',
-    price: 280.00,
+    name: 'Terneo (Welrok) AZ',
+    nominal: 'Программируемый, WI-FI',
+    price: 117.00,
     description: `
       <div>
       <hr>
@@ -952,7 +952,7 @@ export let ELEMENT_DATA_TERMOSTATS: Partial<ITermostat>[] = [
           Описание
         </h4>
         <div class="container text">
-        <i>Терморегулятор WÄRMEHAUS WH1000 PRO Используется для поддержания комфортного теплого пола в заданные временные интервалы</i>
+        <i>Терморегулятор Terneo (Welrok) AZ Используется для поддержания комфортного теплого пола, Имеет управление с телефона ( приложение Terneo )или с помощью умного дома ( Алиса, Gogle) в заданные временные интервалы</i>
         <style>
         li{
           text-align: left;
@@ -1005,7 +1005,7 @@ export let ELEMENT_DATA_TERMOSTATS: Partial<ITermostat>[] = [
           Прибор совместим с рамками <b>Schneider серия Unica, Simon серия 27 (Neos, Play)</b> и др.
           </li>
           <li>
-          Все приборы WÄRMEHAUS PREMIUM обеспеченны полноценной трехлетней гарантией, инструкцией на русском языке и сервисной поддержкой.
+          Все приборы Terneo (Welrok) AZ обеспеченны полноценной трехлетней гарантией, инструкцией на русском языке и сервисной поддержкой.
           </li>
           <li>
           Гарантия - 3 года.
@@ -1108,14 +1108,14 @@ export let ELEMENT_DATA_TERMOSTATS: Partial<ITermostat>[] = [
         </div>
       `,
     picPath: 'assets/images/termostats/analogWH1000Pro/9e990f49e7769a517f36e8a38a62ccd9.jpg',
-    picAlt: 'Терморегулятор WÄRMEHAUS WH1000 PRO лучшего качества'
+    picAlt: 'Терморегулятор Terneo (Welrok) AZ лучшего качества'
   },
   // Терморегулятор WÄRMEHAUS WH900 DIGITAL
   {
     id: 82,
-    name: 'WH900 DIGITAL',
+    name: 'Terneo (Welrok) S',
     nominal: 'Сенсорный',
-    price: 180.00,
+    price: 79.00,
     description: `
       <div>
       <hr>
@@ -1123,7 +1123,7 @@ export let ELEMENT_DATA_TERMOSTATS: Partial<ITermostat>[] = [
           Описание
         </h4>
         <div class="container text">
-        <i>Терморегулятор WÄRMEHAUS DIGITAL WH900 Используется для постоянного
+        <i>Терморегулятор Terneo (Welrok) S Используется для постоянного
         поддержания комфортного теплого пола в течении суток. Информативный LED индикатор состояний.</i>
         <style>
         li{
@@ -1185,7 +1185,7 @@ export let ELEMENT_DATA_TERMOSTATS: Partial<ITermostat>[] = [
           Прибор совместим с рамками <b>Schneider серия Unica, Simon серия 27 Neos</b>.
           </li>
           <li>
-          Все приборы WÄRMEHAUS PREMIUM обеспеченны полноценной трехлетней гарантией, инструкцией на русском языке и сервисной поддержкой.
+          Все приборы Terneo (Welrok) S обеспеченны полноценной трехлетней гарантией, инструкцией на русском языке и сервисной поддержкой.
           </li>
           <li>
           Гарантия - 3 года.
@@ -1275,19 +1275,19 @@ export let ELEMENT_DATA_TERMOSTATS: Partial<ITermostat>[] = [
     picPath: 'assets/images/termostats/touchscreenWH900Digital/fb4ecb3b053f98d31a08002badfeb442.jpg',
     picAlt: 'Терморегулятор WÄRMEHAUS WH900 DIGITAL для теплых полов домой и на дачу'
   },
-  // Терморегулятор WÄRMEHAUS WH300 WI-FI
+  // Терморегулятор Terneo (Welrok) SX WI-FI
   {
     id: 83,
-    name: 'WH300 WI-FI',
+    name: 'Terneo (Welrok) SX WI-FI',
     nominal: 'WI-FI',
-    price: 360.00, description: `
+    price: 132.00, description: `
     <div>
     <hr>
         <h4 align="center">
         Описание
       </h4>
       <div class="container text">
-      <i>Терморегулятор WÄRMEHAUS WH300 WIFI Используется для поддержания комфортного
+      <i>Терморегулятор Terneo (Welrok) SX WIFI Используется для поддержания комфортного
        теплого пола в течении суток. Информативный LED индикатор состояний.</i>
       <style>
       li{
@@ -1390,12 +1390,12 @@ export let ELEMENT_DATA_TERMOSTATS: Partial<ITermostat>[] = [
     picPath: 'assets/images/termostats/wi-fiWH300WIFI/wi-fi-termostat.jpg',
     picAlt: 'Тепморегулятор WI-FI WH300WIFI для теплого пола в Минске.'
   },
-  // Терморегулятор WÄRMEHAUS WH800 BASIC
+  // Терморегулятор Terneo (Welrok) RTP
   {
     id: 84,
-    name: 'WH800 BASIC',
+    name: 'Terneo (Welrok) RTP',
     nominal: 'Аналоговый',
-    price: 120.00,
+    price: 60.00,
     description: `
       <div>
       <hr>
@@ -1403,7 +1403,7 @@ export let ELEMENT_DATA_TERMOSTATS: Partial<ITermostat>[] = [
           Описание
         </h4>
         <div class="container text">
-        <i>Терморегулятор WÄRMEHAUS WH800 Используется для постоянного поддержания комфортного теплого пола в течении суток.
+        <i>Терморегулятор Terneo (Welrok) RTP Используется для постоянного поддержания комфортного теплого пола в течении суток.
         Управление в одно движение.</i>
         <style>
         li{
@@ -1539,14 +1539,14 @@ export let ELEMENT_DATA_TERMOSTATS: Partial<ITermostat>[] = [
         </div>
       `,
     picPath: 'assets/images/termostats/analogWH800Basic/95d4d01e3b520027bad3b33c5a331897.jpg',
-    picAlt: 'Терморегулятор WÄRMEHAUS WH800 BASIC простой и дешевый'
+    picAlt: 'Терморегулятор Terneo (Welrok) RTP простой и дешевый'
   },
-  // Терморегулятор WÄRMEHAUS WH700 CLASSIC
+  // Терморегулятор Terneo (Welrok) MEX
   {
     id: 85,
-    name: 'WH700 CLASSIC',
+    name: 'Terneo (Welrok) MEX',
     nominal: 'Аналоговый',
-    price: 120.00,
+    price: 64.00,
     description: `
       <div>
       <hr>
@@ -1554,7 +1554,7 @@ export let ELEMENT_DATA_TERMOSTATS: Partial<ITermostat>[] = [
           Описание
         </h4>
         <div class="container text">
-        <i>Терморегулятор WÄRMEHAUS WH700 Используется для постоянного поддержания комфортного теплого пола.</i>
+        <i>Терморегулятор Terneo (Welrok) MEX Используется для постоянного поддержания комфортного теплого пола.</i>
         <style>
         li{
           text-align: left;
@@ -1631,6 +1631,6 @@ export let ELEMENT_DATA_TERMOSTATS: Partial<ITermostat>[] = [
         </div>
       `,
     picPath: 'assets/images/termostats/analogWH700Classic/8160fefcd902745d5205765867e722ec.jpg',
-    picAlt: 'Терморегулятор WÄRMEHAUS WH700 CLASSIC не дорогой'
+    picAlt: 'Терморегулятор Terneo (Welrok) MEX не дорогой'
   },
 ];
