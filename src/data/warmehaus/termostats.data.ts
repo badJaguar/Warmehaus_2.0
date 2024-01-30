@@ -445,7 +445,7 @@ export let ELEMENT_DATA_TERMOSTATS: Partial<ITermostat>[] = [
         </div>
       `,
     picPath: 'assets/images/termostats/analogWH200/c23199a1167b9084c03738ea136ec863.jpg',
-    picAlt: 'Терморегулятор регулируемый не программируемый (аналоговый)'
+    picAlt: 'Терморегулятор регулируемый не программируемый analogWH200 (аналоговый)'
   },
   // Терморегулятор WÄRMEHAUS WH400 PRO
   {
@@ -1110,7 +1110,7 @@ export let ELEMENT_DATA_TERMOSTATS: Partial<ITermostat>[] = [
     picPath: 'assets/images/termostats/analogWH1000Pro/9e990f49e7769a517f36e8a38a62ccd9.jpg',
     picAlt: 'Терморегулятор Terneo (Welrok) AZ лучшего качества'
   },
-  // Терморегулятор WÄRMEHAUS WH900 DIGITAL
+  // Terneo (Welrok) S
   {
     id: 82,
     name: 'Terneo (Welrok) S',
@@ -1272,8 +1272,8 @@ export let ELEMENT_DATA_TERMOSTATS: Partial<ITermostat>[] = [
         <hr>
         </div>
       `,
-    picPath: 'assets/images/termostats/touchscreenWH900Digital/fb4ecb3b053f98d31a08002badfeb442.jpg',
-    picAlt: 'Терморегулятор WÄRMEHAUS WH900 DIGITAL для теплых полов домой и на дачу'
+    picPath: 'assets/images/termostats/touchscreenWH900Digital/asdv3654sdv65asd4fv65sad14v6.jpg',
+    picAlt: 'Terneo (Welrok) S для теплых полов домой и на дачу'
   },
   // Терморегулятор Terneo (Welrok) SX WI-FI
   {
