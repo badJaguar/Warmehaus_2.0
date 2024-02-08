@@ -36,7 +36,7 @@ export class StartPageComponent implements OnInit {
     {
       route: '/arnold-rak',
       picUrl: 'assets/images/main-page-pics/arnold-rak-banner.jpg',
-      alt: 'Теплые полы Arnold Rak',
+      alt: 'Теплые полы Grand Meyer',
     },
     {
       route: '/warmehaus/termostats',

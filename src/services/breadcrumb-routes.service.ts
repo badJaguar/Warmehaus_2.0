@@ -76,9 +76,9 @@ export class BreadcrumbRoutesService {
         ]
       },
       {
-        name: 'Arnold Rak', path: './arnold-rak', children: [
+        name: 'Grand Meyer', path: './arnold-rak', children: [
           { name: 'Мат 180 Ватт', path: './mat-180w' },
-          { name: 'Мат 200 Ватт', path: './mat-200w' },
+          { name: 'Мат 150 Ватт', path: './mat-200w' },
           { name: 'Кабель 20 Ватт', path: './cab-20w' },
         ]
       },
